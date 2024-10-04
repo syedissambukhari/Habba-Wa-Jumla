@@ -13,13 +13,14 @@ import { FaSearch } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import { GrFavorite } from "react-icons/gr";
 import { IoPersonOutline } from "react-icons/io5";
+import NavigationMenu from "./NavigationMenu";
 const Header = () => {
   return (
     <div className="flex flex-col">
       <div className="bg-black flex justify-between items-center p-2">
         <div className="flex gap-2 items-center px-[100px]">
           <p
-            className="bg-[#F3DE6D] px-4 py-2 "
+            className="bg-[#F3DE6D] text-[18px] px-4 py-2 "
             style={{ transform: "rotate(-2deg)" }}
           >
             Black
@@ -93,6 +94,7 @@ const Header = () => {
           <IoPersonOutline color="white" size={20.4} />
         </div>
       </div>
+      <NavigationMenu />
     </div>
   );
 };
