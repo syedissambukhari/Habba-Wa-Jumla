@@ -8,12 +8,12 @@ import { IoLogoYoutube } from "react-icons/io";
 import { FaInstagram } from "react-icons/fa";
 import { FaReddit } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
-import Logo from "../assets/Logo.png";
 import { FaSearch } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import { GrFavorite } from "react-icons/gr";
 import { IoPersonOutline } from "react-icons/io5";
 import NavigationMenu from "./NavigationMenu";
+import Logo from "../assets/Logo.png";
 const Header = () => {
   return (
     <div className="flex flex-col">
