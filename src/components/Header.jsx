@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import { FaTwitter } from "react-icons/fa";
@@ -14,7 +14,14 @@ import { IoCartOutline } from "react-icons/io5";
 import { GrFavorite } from "react-icons/gr";
 import { IoPersonOutline } from "react-icons/io5";
 import NavigationMenu from "./NavigationMenu";
+import LoginForm from "./LoginForm";
 const Header = () => {
+
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const handleIconClick = () => {
+    setIsPopupOpen(!isPopupOpen);
+  };
   return (
     <div className="flex flex-col">
       <div className="bg-black flex justify-between items-center p-2">
@@ -88,12 +95,16 @@ const Header = () => {
           </div>
         </div>
         {/* for icons */}
-        <div className="flex  items-center gap-4">
+        <div className="flex  items-center gap-4 position: relative">
           <IoCartOutline color="white" size={20.4} />
           <GrFavorite color="white" size={20.4} />
-          <IoPersonOutline color="white" size={20.4} />
-        </div>
+          <IoPersonOutline color="white" size={20.4} onClick={handleIconClick} />
+          <LoginForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
+
+          </div>
       </div>
+      
+
       <NavigationMenu />
     </div>
   );

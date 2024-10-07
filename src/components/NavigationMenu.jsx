@@ -13,7 +13,7 @@ const NavigationMenu = () => {
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
-    setIsSmartphoneDropdownOpen(false  );
+    setIsSmartphoneDropdownOpen(false );
   };
 
   const toggleSmartphoneDropdown = () => {
