@@ -4,7 +4,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 
 const HeroSection = () => {
   return (
-    <div className="mt-4 grid grid-cols-12 justify-between mx-auto w-[1320px] h-[520px]">
+    <div className="mt-4 grid grid-cols-12 justify-between mx-auto w-[1320px] h-[520px] ">
       {/* Left side section (Text and button) */}
       <div className="col-span-8 bg-slate-200 flex items-center justify-between relative p-8">
         {/* Padding added with p-8 for left spacing */}

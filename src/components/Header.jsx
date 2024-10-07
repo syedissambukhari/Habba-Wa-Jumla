@@ -33,7 +33,7 @@ const Header = () => {
           <p className="text-[20px] text-white">OFF</p>
         </div>
         <div className="flex items-center gap-2">
-          <button className="bg-[#EBC80C] font-[700] px-6 py-2 flex items-center gap-2">
+          <button className="bg-[#EBC80C] font-[700] px-6 py-2 flex items-center gap-2  ">
             Shop Now
             <span className="font-[700]">
               <IoIosArrowRoundForward size={25} />
@@ -45,7 +45,7 @@ const Header = () => {
         </div>
       </div>
       {/* social media links  */}
-      <div className="flex justify-between bg-[#073741] p-2 px-[120px] w-full">
+      <div className="flex justify-between bg-[#073741] p-2 px-[120px] w-full ">
         <div>
           <p className="font-public-sans text-[14px] text-white">
             Welcome to Saudi online Shopping store
