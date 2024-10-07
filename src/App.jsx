@@ -10,12 +10,18 @@ import ItemCard from "./components/ItemCard";
 import Items from "./components/Items";
 import NewsCard from "./components/Newscard";
 import Offer from "./components/Offer";
+import TrackOrder from "./components/TrackOrder";
+import OrderTracking from "./components/TrackOrderDetails";
 
 function App() {
   return (
     <>
       <div>
+       
         <Header />
+        <TrackOrder/>
+        {/* working on it and this will appear after clickin on button in track order page */}
+        {/* <OrderTracking/> */}
         <HeroSection />
         <Deals />
         <Categories />
