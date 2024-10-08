@@ -13,7 +13,7 @@ const NavigationMenu = () => {
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
-    setIsSmartphoneDropdownOpen(false );
+    setIsSmartphoneDropdownOpen(false);
   };
 
   const toggleSmartphoneDropdown = () => {
@@ -46,7 +46,6 @@ const NavigationMenu = () => {
                   onClick={toggleSmartphoneDropdown}
                 >
                   SmartPhone <IoIosArrowForward size={15} />
-
                   {isSmartphoneDropdownOpen && (
                     <div className="absolute top-[20px] ml-6 left-[240px]  shadow-md rounded-md z-50 w-[200px]">
                       <Dropdownpopup />

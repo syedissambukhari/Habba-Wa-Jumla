@@ -10,12 +10,8 @@ import { CiHeadphones } from "react-icons/ci";
 
 const HeroSection = () => {
   return (
-    <div className="mt-4 grid grid-cols-12 justify-between mx-auto w-[1320px] h-[520px]">
-      {/* Left side section (Text and button) */}
-      <div className="col-span-8 bg-slate-200 flex items-center justify-between relative p-8">
-        {/* Padding added with p-8 for left spacing */}
-
-        {/* Text content */}
+    <div className="mt-4 grid grid-cols-12 justify-between mx-auto px-[40px]">
+      <div className="col-span-8 bg-[#F2F4F5] flex items-center justify-between relative p-8 rounded-md">
         <div className="flex flex-col gap-6 w-[356px] h-[224px]">
           <div className="flex gap-1 items-center">
             <div className="h-[1px] w-[25px] border-[2px] border-[#2DA5F3] mx-4"></div>
@@ -37,8 +33,7 @@ const HeroSection = () => {
         </div>
 
         <div className="ml-6">
-          {" "}
-          <img src={image} alt="Xbox Console" className="w-auto h-auto" />{" "}
+          <img src={image} alt="Xbox Console" className="w-full h-auto" />
         </div>
 
         <div className="absolute top-4 right-5 bg-[#2DA5F3] rounded-full w-[101px] h-[101px] flex items-center justify-center text-white font-[700]">
@@ -46,7 +41,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="mx-4 col-span-4 flex flex-col gap-4 ">
+      <div className="mx-4 col-span-4 flex flex-col gap-4">
         <div className="bg-black flex h-[280px] rounded-md">
           <div className="flex flex-col justify-center w-[200px] px-[20px]">
             <p className="text-[#EBC80C] text-[14px]">SUMMER SALES</p>
@@ -61,17 +56,18 @@ const HeroSection = () => {
             </button>
           </div>
           <div className="flex flex-col justify-end relative">
-            <img src={mobile} alt="" className="h-full object-contain" />
-            <p className="bg-[#EFD33D] text-[16px] p-2 absolute top-[30px] left-[120px] transform -translate-x-1/2">
+            <img src={mobile} alt="" className="w-full h-auto" />
+            <p className="bg-[#EFD33D] text-[16px] p-2 absolute top-[90px] left-[120px] transform -translate-x-1/2 whitespace-nowrap">
               29% OFF
-            </p>{" "}
+            </p>
           </div>
         </div>
+
         <div className="bg-[#F2F4F5] flex h-[280px] rounded-md">
           <div className="flex items-center">
             <img src={headphone} alt="" />
           </div>
-          <div className="flex flex-col justify-center px-4 ">
+          <div className="flex flex-col justify-center px-4">
             <h4 className="text-black font-[600] text-[24px]">
               Xiaomi <br />
               FlipBuds Pro
@@ -84,7 +80,8 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      <div className="mt-6 grid grid-cols-4 gap-8 mx-auto w-[1250px] items-center  p-3 border border-[#E4E7E9]">
+
+      <div className="mt-6 grid grid-cols-4 gap-8 mx-auto w-[1250px] items-center p-3 border border-[#E4E7E9]">
         <div className="flex gap-2 items-center border-r border-gray-300 pr-4">
           <LuPackageCheck size={22.4} />
           <div className="flex flex-col">
@@ -94,7 +91,6 @@ const HeroSection = () => {
         </div>
         <div className="flex gap-2 items-center border-r border-gray-300 pr-4">
           <BsTrophy size={22.4} />
-
           <div className="flex flex-col">
             <h6>24 HOURS RETURN</h6>
             <p>100% money-back guarantee</p>

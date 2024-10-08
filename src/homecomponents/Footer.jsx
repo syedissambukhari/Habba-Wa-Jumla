@@ -21,15 +21,15 @@ const Footer = () => {
           ipsum.
         </p>
         <div className="bg-[#073741] p-2 w-full max-w-lg mt-4">
-          <div className="relative flex w-full">
+          <div className="bg-white p-1  shadow-md w-full flex justify-between items-center">
             <input
               type="text"
-              placeholder="Search for anything....."
-              className="border border-gray-300 py-2 pl-4 pr-10 w-full focus:outline-none focus:ring focus:ring-blue-500 rounded-l-md"
+              placeholder="Email Address"
+              className="p-1 w-full mr-4 outline-none focus:outline-none" // Remove outline on focus
             />
-            <button className="flex items-center bg-green-500 text-white px-4 py-2 ">
-              <span>Search</span>
-              <IoIosArrowForward className="ml-2" />
+            <button className="bg-[#0B5D51] text-white font-[700] flex items-center px-4 py-2">
+              <span>Subscribe</span>
+              <IoIosArrowRoundForward size={20} className="ml-2" />
             </button>
           </div>
         </div>
