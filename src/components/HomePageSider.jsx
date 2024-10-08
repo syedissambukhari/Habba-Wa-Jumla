@@ -20,7 +20,7 @@ const HomePageSider = () => {
       <Checkbox tagname={"Warable Technology"} classname={"category"} />
       <hr className="mt-5" />
 
-      <h2 className="mb-5 mt-5 text-[16px] font-semibold uppercase">Price Range</h2>
+      <h2 className="mb-5 mt-7 text-[16px] font-semibold uppercase">Price Range</h2>
       <input type="range"  className='mb-5 accent-[#0B5D51]' name="" id="" />
      <div className="flex gap-3 text-[#77878F] mb-5">
         <button className="text-left h-[40px] flex-1 border-2 border-[#E4E7E9] px-4 rounded-sm">
@@ -39,8 +39,8 @@ const HomePageSider = () => {
       <Checkbox tagname={"$1,000 to $10,000"} classname={"category"} />
       <hr className="mt-5" />
 
-      <h2 className="mb-5 mt-5 text-[16px] font-semibold">POPULAR BRANDS</h2>
-      <div className="flex flex-col gap-2  w-[70%]">
+      <h2 className="mb-5 mt-7 text-[16px] font-semibold">POPULAR BRANDS</h2>
+      <div className="flex flex-col gap-2 w-[70%]">
         <div className="flex justify-between">
           <div className="flex gap-2">
             <input
@@ -175,7 +175,7 @@ const HomePageSider = () => {
       </div>
       <hr className="mt-5" />
 
-      <h2 className="mb-5 mt-5 text-[16px] font-semibold">POPULAR TAG</h2>
+      <h2 className="mb-5 mt-7 text-[16px] font-semibold">POPULAR TAG</h2>
       <div className="flex gap-2">
         <Tag tag={"Game"} />
         <Tag tag={"iPhone"} />

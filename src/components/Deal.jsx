@@ -7,7 +7,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import apple from "../assets/apple.png";
 const Deal = () => {
   return (
-    <div className="flex flex-col items-center justify-center mt-5 py-10 px-5 text-center border-4 border-[#0B5D51]">
+    <div className="flex flex-col items-center justify-center mt-7 py-10 px-5 text-center border-4 border-[#0B5D51]">
       <div className="w-full h-20% flex  items-center justify-center">
         <img src={watches} alt="" className="w-[180px] h-[180px]"/>
       </div>
