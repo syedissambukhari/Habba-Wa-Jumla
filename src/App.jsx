@@ -9,6 +9,7 @@ import Shoping from "./pages/Shoping";
 import Footer from "./homecomponents/Footer";
 import Wishlist from "./pages/Wishlist";
 import TrackOrder from "./homecomponents/TrackOrder";
+import CompareProduct from "./pages/CompareProduct";
 function App() {
   return (
     <>
@@ -22,7 +23,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Wishlist" element={<Wishlist/>} />
           <Route path="/TrackOrder" element={<TrackOrder/>} />
-          
         </Routes>
         <Routes>
        

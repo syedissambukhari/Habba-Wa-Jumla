@@ -5,7 +5,7 @@ import { GoXCircle } from "react-icons/go";
 import { PiShoppingCartSimple } from "react-icons/pi";
 import { FaRegHeart } from "react-icons/fa";
 
-const ProductGrid = () => {
+const CompareProduct = () => {
   const data = [
     {
       img1: Category2,
@@ -176,4 +176,4 @@ const ProductGrid = () => {
   );
 };
 
-export default ProductGrid;
+export default CompareProduct;
