@@ -4,7 +4,7 @@ export const Dropdownpopup = () => {
   return (
     <div className='w-[868px] h-full flex bg-white  p-4 shadow-lg rounded-lg'>
       {/* Sidebar */}
-      <div className='bg-white w-1/4 p-4'>
+      <div className='bg-white w-1/4 p-1'>
         <ul className=' '>
         <li className='hover:bg-gray-200 rounded-md px-4 py-2'>All</li>
 
