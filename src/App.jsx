@@ -7,18 +7,23 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Shoping from "./pages/Shoping";
 import Footer from "./homecomponents/Footer";
+import Wishlist from "./pages/Wishlist";
 function App() {
   return (
     <>
       <div>
         <Header />
+       
         {/* <Breadcrumb/> */}
         {/* <HeroSection /> */}
         {/* <ShopPage/> */}
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/Wishlist" element={<Wishlist/>} />
         </Routes>
         <Routes>
+       
+
           <Route path="/shop" element={<><Breadcrumb/><ShopPage/></>} />
         </Routes>
         <Footer/>
