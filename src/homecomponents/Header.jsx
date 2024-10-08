@@ -13,7 +13,9 @@ import { IoCartOutline } from "react-icons/io5";
 import { GrFavorite } from "react-icons/gr";
 import { IoPersonOutline } from "react-icons/io5";
 import NavigationMenu from "./NavigationMenu";
-import Logo from "../assets/Logo.png";
+import Logo from "../assets/logo-2.png";
+// import Logo from "../assets/logo-2.png";
+
 import LoginForm from "./LoginForm";
 import { Link } from "react-router-dom";
 
