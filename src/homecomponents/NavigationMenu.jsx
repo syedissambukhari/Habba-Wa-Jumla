@@ -7,7 +7,6 @@ import { AiOutlineCustomerService } from "react-icons/ai";
 import { CiCircleInfo } from "react-icons/ci";
 import { BiPhoneCall } from "react-icons/bi";
 import { Dropdownpopup } from "./Dropdownpopup"; // Assuming this is your custom popup component
-import { Link } from "react-router-dom";
 const NavigationMenu = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isSmartphoneDropdownOpen, setIsSmartphoneDropdownOpen] =
