@@ -17,6 +17,8 @@ import Logo from "../assets/logo-2.png";
 // import Logo from "../assets/logo-2.png";
 
 import LoginForm from "./LoginForm";
+import { Link } from "react-router-dom";
+
 const Header = () => {
 
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -99,8 +101,12 @@ const Header = () => {
         {/* for icons */}
         <div className="flex  items-center gap-4 position: relative">
           <IoCartOutline color="white" size={20.4} />
-          <GrFavorite color="white" size={20.4} />
-          <IoPersonOutline color="white" size={20.4} onClick={handleIconClick} />
+
+          <Link to="/Wishlist">
+        <GrFavorite color="white" size={20.4} />
+    
+      </Link>          
+      <IoPersonOutline color="white" size={20.4} onClick={handleIconClick} />
           <LoginForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
 
           </div>
