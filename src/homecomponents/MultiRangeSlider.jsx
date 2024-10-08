@@ -13,11 +13,8 @@ import { IoCartOutline } from "react-icons/io5";
 import { GrFavorite } from "react-icons/gr";
 import { IoPersonOutline } from "react-icons/io5";
 import NavigationMenu from "./NavigationMenu";
-<<<<<<<< HEAD:src/homecomponents/MultiRangeSlider.jsx
 import Logo from "../assets/Logo.png";
-========
 import LoginForm from "./LoginForm";
->>>>>>>> f2168960beef802f9bb63e500f4bb1dd889b85fd:src/homecomponents/Header.jsx
 const Header = () => {
 
   const [isPopupOpen, setIsPopupOpen] = useState(false);

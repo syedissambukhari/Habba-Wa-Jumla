@@ -1,6 +1,6 @@
 import React from 'react'
-import HomePageSider from '../components/HomePageSider'
-import ShopProducts from '../components/ShopProducts'
+import HomePageSider from '../homecomponents/HomePageSider'
+import ShopProducts from '../homecomponents/ShopProducts'
 
 const ShopPage = () => {
   return (

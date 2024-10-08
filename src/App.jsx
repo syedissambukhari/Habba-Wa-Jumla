@@ -1,33 +1,28 @@
 import "./App.css";
-<<<<<<< HEAD
-import Breadcrumb from "./components/BreadCrumbs";
-import Header from "./components/MultiRangeSlider";
-import HeroSection from "./components/HeroSection";
+import Breadcrumb from "./homecomponents/BreadCrumbs";
+import Header from "./homecomponents/MultiRangeSlider";
 import ShopPage from "./pages/ShopPage";
 
-=======
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Shoping from "./pages/Shoping";
->>>>>>> f2168960beef802f9bb63e500f4bb1dd889b85fd
+import Footer from "./homecomponents/Footer";
 function App() {
   return (
     <>
       <div>
-<<<<<<< HEAD
         <Header />
-        <Breadcrumb/>
+        {/* <Breadcrumb/> */}
         {/* <HeroSection /> */}
-        <ShopPage/>
-=======
+        {/* <ShopPage/> */}
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
         <Routes>
-          <Route path="/shopping" element={<Shoping />} />
+          <Route path="/shop" element={<><Breadcrumb/><ShopPage/></>} />
         </Routes>
->>>>>>> f2168960beef802f9bb63e500f4bb1dd889b85fd
-      </div>
+        <Footer/>
+        </div>
     </>
   );
 }

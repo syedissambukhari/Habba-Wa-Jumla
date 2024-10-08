@@ -16,7 +16,7 @@ import OrderTracking from "../homecomponents/TrackOrderDetails";
 const Home = () => {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       {/* <TrackOrder /> */}
       {/* working on it and this will appear after clickin on button in track order page */}
       {/* <OrderTracking/> */}
