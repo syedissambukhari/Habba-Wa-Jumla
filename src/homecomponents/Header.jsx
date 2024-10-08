@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import { FaTwitter } from "react-icons/fa";
@@ -13,8 +13,18 @@ import { IoCartOutline } from "react-icons/io5";
 import { GrFavorite } from "react-icons/gr";
 import { IoPersonOutline } from "react-icons/io5";
 import NavigationMenu from "./NavigationMenu";
+<<<<<<<< HEAD:src/homecomponents/MultiRangeSlider.jsx
 import Logo from "../assets/Logo.png";
+========
+import LoginForm from "./LoginForm";
+>>>>>>>> f2168960beef802f9bb63e500f4bb1dd889b85fd:src/homecomponents/Header.jsx
 const Header = () => {
+
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const handleIconClick = () => {
+    setIsPopupOpen(!isPopupOpen);
+  };
   return (
     <div className="flex flex-col">
       <div className="bg-black flex justify-between items-center p-2">
@@ -33,7 +43,7 @@ const Header = () => {
           <p className="text-[20px] text-white">OFF</p>
         </div>
         <div className="flex items-center gap-2">
-          <button className="bg-[#EBC80C] font-[700] px-6 py-2 flex items-center gap-2">
+          <button className="bg-[#EBC80C] font-[700] px-6 py-2 flex items-center gap-2  ">
             Shop Now
             <span className="font-[700]">
               <IoIosArrowRoundForward size={25} />
@@ -45,7 +55,7 @@ const Header = () => {
         </div>
       </div>
       {/* social media links  */}
-      <div className="flex justify-between bg-[#073741] p-2 px-[120px] w-full">
+      <div className="flex justify-between bg-[#073741] p-2 px-[120px] w-full ">
         <div>
           <p className="font-public-sans text-[14px] text-white">
             Welcome to Saudi online Shopping store
@@ -88,12 +98,16 @@ const Header = () => {
           </div>
         </div>
         {/* for icons */}
-        <div className="flex  items-center gap-4">
+        <div className="flex  items-center gap-4 position: relative">
           <IoCartOutline color="white" size={20.4} />
           <GrFavorite color="white" size={20.4} />
-          <IoPersonOutline color="white" size={20.4} />
-        </div>
+          <IoPersonOutline color="white" size={20.4} onClick={handleIconClick} />
+          <LoginForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
+
+          </div>
       </div>
+      
+
       <NavigationMenu />
     </div>
   );
