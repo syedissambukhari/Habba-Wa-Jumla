@@ -99,12 +99,12 @@ const Header = () => {
         {/* for icons */}
         <div className="flex  items-center gap-4 position: relative">
           <IoCartOutline color="white" size={20.4} />
-
-          <Link to="/Wishlist">
-        <GrFavorite color="white" size={20.4} />
+          <Link to="/Wishlist" >
+          <GrFavorite color="white" size={20.4} />
+       
     
-      </Link>          
-      <IoPersonOutline color="white" size={20.4} onClick={handleIconClick} />
+      </Link> 
+          <IoPersonOutline color="white" size={20.4} onClick={handleIconClick} />
           <LoginForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
 
           </div>
