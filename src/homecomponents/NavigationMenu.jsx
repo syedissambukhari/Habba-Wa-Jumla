@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'; // Added Link here
+import TrackOrder from './TrackOrder'; 
 import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
 import { PiMapPinLine, PiArrowsCounterClockwise } from "react-icons/pi";
 import { AiOutlineCustomerService } from "react-icons/ai";
@@ -42,7 +44,7 @@ const NavigationMenu = () => {
                   Computer Accessories
                 </li>
                 <li
-                  className="px-4 py-2 hover:bg-gray-100 flex  items-center justify-between cursor-pointer"
+                  className="px-4 py-2 hover:bg-gray-100 flex items-center justify-between cursor-pointer"
                   onClick={toggleSmartphoneDropdown}
                 >
                   SmartPhone <IoIosArrowForward size={15} />
@@ -81,30 +83,39 @@ const NavigationMenu = () => {
           )}
         </div>
 
+      
         <div className="flex items-center gap-2 text-[#5F6C72]">
           <PiMapPinLine size={20} />
-          <span>Track Order</span>
+          <Link to="/track-order" className="hover:underline">
+            <span>Track Order</span>
+          </Link>
         </div>
         <div className="flex items-center gap-2 text-[#5F6C72]">
-          <PiArrowsCounterClockwise size={20} />
-          <span>Compare</span>
+          <PiMapPinLine size={20} />
+          <Link to="/track-order" className="hover:underline">
+            <span>Compare</span>
+          </Link>
         </div>
         <div className="flex items-center gap-2 text-[#5F6C72]">
-          <AiOutlineCustomerService size={20} />
-          <span>Customer Support</span>
+          <PiMapPinLine size={20} />
+          <Link to="/track-order" className="hover:underline">
+            <span>Customer Support</span>
+          </Link>
         </div>
         <div className="flex items-center gap-2 text-[#5F6C72]">
-          <CiCircleInfo size={20} />
-          <span>Need Help</span>
+          <PiMapPinLine size={20} />
+          <Link to="/track-order" className="hover:underline">
+            <span>Need Help</span>
+          </Link>
         </div>
+
       </div>
 
+      {/* Phone Number */}
       <div className="flex gap-2 items-center">
         <BiPhoneCall size={20.4} />
         <p className="text-[18px] text-[#191C1F] font-[400]">+1-202-555-0104</p>
       </div>
-
-      {/* Dropdown popup for Smartphone */}
     </div>
   );
 };
