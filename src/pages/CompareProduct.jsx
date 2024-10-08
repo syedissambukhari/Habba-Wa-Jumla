@@ -63,8 +63,8 @@ const CompareProduct = () => {
   ];
 
   return (
-    <div>
-      <div className="flex items-center justify-center h-screen">
+
+      <div className="flex mt-10 items-center justify-center h-screen">
         {" "}
         {/* Flex container for centering */}
         <div
@@ -172,7 +172,7 @@ const CompareProduct = () => {
           </div>
         </div>
       </div>
-    </div>
+ 
   );
 };
 

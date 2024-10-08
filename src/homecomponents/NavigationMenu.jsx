@@ -7,7 +7,7 @@ import { AiOutlineCustomerService } from "react-icons/ai";
 import { CiCircleInfo } from "react-icons/ci";
 import { BiPhoneCall } from "react-icons/bi";
 import { Dropdownpopup } from "./Dropdownpopup"; // Assuming this is your custom popup component
-import { Link } from "react-router-dom";
+  
 const NavigationMenu = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isSmartphoneDropdownOpen, setIsSmartphoneDropdownOpen] =
@@ -90,7 +90,7 @@ const NavigationMenu = () => {
         </div>
         <div className="flex items-center gap-2 text-[#5F6C72]">
           <PiMapPinLine size={20} />
-          <Link to="/track-order" className="hover:underline">
+          <Link to="/CompareProduct" className="hover:underline">
             <span>Compare</span>
           </Link>
         </div>

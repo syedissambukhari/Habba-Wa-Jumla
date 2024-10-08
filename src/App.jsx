@@ -23,6 +23,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Wishlist" element={<Wishlist/>} />
           <Route path="/TrackOrder" element={<TrackOrder/>} />
+          <Route path="/CompareProduct" element={<CompareProduct/>} />
+       
         </Routes>
         <Routes>
        
