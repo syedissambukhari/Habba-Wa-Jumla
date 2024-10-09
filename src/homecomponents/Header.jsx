@@ -100,7 +100,6 @@ const Header = () => {
           <GrFavorite color="white" size={20.4} />
           <IoPersonOutline color="white" size={20.4} onClick={handleIconClick} />
           <LoginForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
-
           </div>
       </div>
       
