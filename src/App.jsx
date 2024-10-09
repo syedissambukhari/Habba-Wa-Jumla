@@ -28,8 +28,7 @@ function App() {
        
         </Routes>
         <Routes>
-       
-
+          
           <Route path="/shop" element={<><Breadcrumb/><ShopPage/></>} />
           <Route path="/faq" element={<FAQPage />} />
         </Routes>
