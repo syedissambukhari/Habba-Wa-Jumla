@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { IoEyeOutline } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 
 const LoginForm = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
@@ -43,11 +44,11 @@ const LoginForm = ({ isOpen, onClose }) => {
         
 
           {/* Login Button */}
-          <button
+          <Link to="/UserDashboard"
             type="submit"
             className="w-full bg-[#0B5D51] text-white py-2 flex justify-center items-center space-x-2 hover:bg-green-800"
           >
-            <span>LOGIN</span>
+          <span>LOGIN</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -62,7 +63,7 @@ const LoginForm = ({ isOpen, onClose }) => {
                 d="M17 9l4 4m0 0l-4 4m4-4H7"
               />
             </svg>
-          </button>
+          </Link>
           <label className="flex items-center text-sm font-medium text-gray-700">
   <hr className="flex-1 border-t border-gray-300 mr-2" /> 
   Don’t have an account

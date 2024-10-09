@@ -11,6 +11,7 @@ import Wishlist from "./pages/Wishlist";
 import TrackOrder from "./homecomponents/TrackOrder";
 import CompareProduct from "./pages/CompareProduct";
 import FAQPage from "./pages/FAQPage.jsx";
+import { UserDashboard } from "./pages/Dashboard/UserDashboard.jsx";
 function App() {
   return (
     <>
@@ -25,7 +26,15 @@ function App() {
           <Route path="/Wishlist" element={<Wishlist/>} />
           <Route path="/TrackOrder" element={<TrackOrder/>} />
           <Route path="/CompareProduct" element={<CompareProduct/>} />
+
        
+        </Routes>
+
+        <Routes>
+        <Route path="/UserDashboard" element={<UserDashboard/>} />
+
+
+
         </Routes>
         <Routes>
        
