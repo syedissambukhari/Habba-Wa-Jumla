@@ -125,12 +125,13 @@ const ShoppingCard = () => {
             <h1 className="text-gray-500">Tax</h1>
             <p className="font-semibold">$61.99</p>
           </div>
+          <hr className="my-2"/>
+
           <div className="flex items-center justify-between">
             Total
             <p className="font-semibold">$357.99 USD</p>
-            <hr />
-
           </div>
+
         <button className="w-full bg-[#0B5D51] uppercase h-[56px] gap-3 text-white rounded-sm flex items-center justify-center">
         Proceed to checkout   <IoIosArrowRoundForward size={35}/>
         </button>
