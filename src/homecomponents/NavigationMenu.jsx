@@ -102,7 +102,7 @@ const NavigationMenu = () => {
         </div>
         <div className="flex items-center gap-2 text-[#5F6C72]">
           <PiMapPinLine size={20} />
-          <Link to="/track-order" className="hover:underline">
+          <Link to="/faq" className="hover:underline">
             <span>Need Help</span>
           </Link>
         </div>
