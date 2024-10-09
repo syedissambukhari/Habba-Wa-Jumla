@@ -14,6 +14,7 @@ import CompareProduct from "./pages/CompareProduct";
 import FAQPage from "./pages/FAQPage.jsx";
 import DashboardBrowsingHistory from "./pages/DashboardBrowsingHistory.jsx";
 import { UserDashboard } from "./pages/Dashboard/UserDashboard.jsx";
+import TrackOrderDetails from "./homecomponents/TrackOrderDetails.jsx";
 function App() {
   return (
     <>
@@ -29,7 +30,9 @@ function App() {
           <Route path="/TrackOrder" element={<TrackOrder/>} />
           <Route path="/CompareProduct" element={<CompareProduct/>} />
           <Route path="/browsing-history" element={<><Breadcrumb/><DashboardBrowsingHistory/></>} />
-       
+          <Route path="/TrackOrderDetails" element={<TrackOrderDetails/>} />
+
+          
         </Routes>
 
         <Routes>

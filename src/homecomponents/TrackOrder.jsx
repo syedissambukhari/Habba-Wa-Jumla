@@ -1,5 +1,6 @@
 import { GoArrowRight } from "react-icons/go";
 import { BsInfoCircle } from "react-icons/bs";
+import { Link } from "react-router-dom";
 import React from 'react'
 
 const TrackOrder = () => {
@@ -44,7 +45,7 @@ const TrackOrder = () => {
          </div>
          
          <div className="col-span-2">
-          <button
+          <Link to="/TrackOrderDetails"
             type="submit"
           
             className=" w-[217px] h-[56px] px-[32px] py-[0px] gap-[12px] rounded-tl-[3px]  bg-[#0B5D51] 
@@ -55,7 +56,7 @@ const TrackOrder = () => {
              
             <GoArrowRight className="w-[24px] h-[24px] text-white"/>
             
-          </button>
+          </Link>
         </div>
 
         </form>
