@@ -7,6 +7,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Shoping from "./pages/Shoping";
 import Footer from "./homecomponents/Footer";
+import ShoppingCard from "./pages/ShoppingCard";
 import Wishlist from "./pages/Wishlist";
 import TrackOrder from "./homecomponents/TrackOrder";
 import CompareProduct from "./pages/CompareProduct";
@@ -41,6 +42,9 @@ function App() {
 
           <Route path="/shop" element={<><Breadcrumb/><ShopPage/></>} />
           <Route path="/faq" element={<FAQPage />} />
+        </Routes>
+        <Routes>
+          <Route path="/shopping-card" element={<><Breadcrumb/><ShoppingCard/></>} />
         </Routes>
         <Footer/>
         </div>
