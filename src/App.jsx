@@ -12,11 +12,8 @@ import Wishlist from "./pages/Wishlist";
 import TrackOrder from "./homecomponents/TrackOrder";
 import CompareProduct from "./pages/CompareProduct";
 import FAQPage from "./pages/FAQPage.jsx";
-<<<<<<< HEAD
 import DashboardBrowsingHistory from "./pages/DashboardBrowsingHistory.jsx";
-=======
 import { UserDashboard } from "./pages/Dashboard/UserDashboard.jsx";
->>>>>>> 64d1cecf98070664e2a73e6c9ab01fbd91b33ea9
 function App() {
   return (
     <>
@@ -31,11 +28,7 @@ function App() {
           <Route path="/Wishlist" element={<Wishlist/>} />
           <Route path="/TrackOrder" element={<TrackOrder/>} />
           <Route path="/CompareProduct" element={<CompareProduct/>} />
-<<<<<<< HEAD
           <Route path="/browsing-history" element={<><Breadcrumb/><DashboardBrowsingHistory/></>} />
-=======
-
->>>>>>> 64d1cecf98070664e2a73e6c9ab01fbd91b33ea9
        
         </Routes>
 
