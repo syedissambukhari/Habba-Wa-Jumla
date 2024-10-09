@@ -10,6 +10,7 @@ import Footer from "./homecomponents/Footer";
 import Wishlist from "./pages/Wishlist";
 import TrackOrder from "./homecomponents/TrackOrder";
 import CompareProduct from "./pages/CompareProduct";
+import FAQPage from "./pages/FAQPage.jsx";
 function App() {
   return (
     <>
