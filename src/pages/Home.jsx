@@ -29,7 +29,6 @@ const Home = () => {
       <Offer />
       <ItemCard />
       <NewsCard />
-      <Footer />
     </div>
   );
 };
