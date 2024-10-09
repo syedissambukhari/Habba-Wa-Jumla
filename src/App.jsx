@@ -12,6 +12,7 @@ import Wishlist from "./pages/Wishlist";
 import TrackOrder from "./homecomponents/TrackOrder";
 import CompareProduct from "./pages/CompareProduct";
 import FAQPage from "./pages/FAQPage.jsx";
+import DashboardBrowsingHistory from "./pages/DashboardBrowsingHistory.jsx";
 function App() {
   return (
     <>
@@ -26,6 +27,7 @@ function App() {
           <Route path="/Wishlist" element={<Wishlist/>} />
           <Route path="/TrackOrder" element={<TrackOrder/>} />
           <Route path="/CompareProduct" element={<CompareProduct/>} />
+          <Route path="/browsing-history" element={<><Breadcrumb/><DashboardBrowsingHistory/></>} />
        
         </Routes>
         <Routes>
