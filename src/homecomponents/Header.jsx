@@ -13,12 +13,20 @@ import { IoCartOutline } from "react-icons/io5";
 import { GrFavorite } from "react-icons/gr";
 import { IoPersonOutline } from "react-icons/io5";
 import NavigationMenu from "./NavigationMenu";
-import Logo from "../assets/Logo.png";
+import Logo from "../assets/logo-2.png";
+// import Logo from "../assets/logo-2.png";
+
 import LoginForm from "./LoginForm";
+import { Link } from "react-router-dom";
+import { Cartpopup } from "./Cartpopup";
+
 const Header = () => {
 
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-
+  const [isCartOpen, setIsCartOpen] = useState(false); // For Shopping Cart
+  const handleCartClick = () => {
+    setIsCartOpen(!isCartOpen);
+  };
   const handleIconClick = () => {
     setIsPopupOpen(!isPopupOpen);
   };
@@ -96,11 +104,16 @@ const Header = () => {
         </div>
         {/* for icons */}
         <div className="flex  items-center gap-4 position: relative">
-          <IoCartOutline color="white" size={20.4} />
+        <IoCartOutline color="white" size={20.4} onClick={handleCartClick} /> {/* Cart Icon */}
+        {/* ShoppingCart Component */}
+          <Link to="/Wishlist" >
           <GrFavorite color="white" size={20.4} />
-          <IoPersonOutline color="white" size={20.4} onClick={handleIconClick} />
-          <LoginForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
-
+  
+    
+      </Link> 
+            <IoPersonOutline color="white" size={20.4} onClick={handleIconClick} />
+            <LoginForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
+            <Cartpopup isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} /> 
           </div>
       </div>
       

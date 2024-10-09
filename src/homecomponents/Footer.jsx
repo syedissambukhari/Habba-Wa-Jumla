@@ -6,7 +6,7 @@ import samsung from "../assets/Samsung.png";
 import toshiba from "../assets/Toshiba.png";
 import philps from "../assets/Philips.png";
 import amazon from "../assets/Amazonn.png";
-import logo from "../assets/Logo1.png";
+import logo from "../assets/logo-2.png";
 
 const Footer = () => {
   return (

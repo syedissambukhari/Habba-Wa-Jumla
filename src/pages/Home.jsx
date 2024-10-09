@@ -5,7 +5,6 @@ import Categories from "../homecomponents/Categories";
 import Deals from "../homecomponents/Deals";
 import FeatureProducts from "../homecomponents/FeatureProducts";
 import Footer from "../homecomponents/Footer";
-import Header from "../homecomponents/Header";
 import HeroSection from "../homecomponents/HeroSection";
 import ItemCard from "../homecomponents/ItemCard";
 import Items from "../homecomponents/Items";
