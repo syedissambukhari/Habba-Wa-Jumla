@@ -63,54 +63,54 @@ const CustomerSupport = () => {
 
             {/* Assistance section */}
             <div className="text-center py-16 h-[408px] ">
-                <h2 className="text-2xl font-semibold mb-8">What can we assist you with today?</h2>
+                <h2 className="text-[32px] font-semibold mb-8">What can we assist you with today?</h2>
                 <div className="flex items-center justify-center ">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {/* Assistance options */}
                         <button
-                            className="border-2 h-[80px] w-[312px] py-4 px-6 rounded-md text-black font-semibold flex items-center justify-start"
+                            className="border-2 h-[80px] text-[16px] w-[312px] py-4 px-6 rounded-md text-black font-semibold flex items-center justify-start"
                             style={{ borderColor: '#0B5D51', paddingLeft: '10%' }}
                         >
                             <span className="mr-2">📦</span> Track Order
                         </button>
                         <button
-                            className="border-2 h-[80px] w-[312px] py-4 px-6 rounded-md text-black font-semibold flex items-center justify-start"
+                            className="border-2 h-[80px] text-[16px] w-[312px] py-4 px-6 rounded-md text-black font-semibold flex items-center justify-start"
                             style={{ borderColor: '#0B5D51', paddingLeft: '10%' }}
                         >
                             <span className="mr-2">🔐</span> Reset Password
                         </button>
                         <button
-                            className="border-2 h-[80px] w-[312px] py-4 px-6 rounded-md text-black font-semibold flex items-center justify-start"
+                            className="border-2 h-[80px] text-[16px] w-[312px] py-4 px-6 rounded-md text-black font-semibold flex items-center justify-start"
                             style={{ borderColor: '#0B5D51', paddingLeft: '10%' }}
                         >
                             <span className="mr-2">💳</span> Payment Option
                         </button>
                         <button
-                            className="border-2 h-[80px] w-[312px] py-4 px-6 rounded-md text-black font-semibold flex items-center justify-start"
+                            className="border-2 h-[80px] text-[16px] w-[312px] py-4 px-6 rounded-md text-black font-semibold flex items-center justify-start"
                             style={{ borderColor: '#0B5D51', paddingLeft: '10%' }}
                         >
                             <span className="mr-2">👤</span> User & Account
                         </button>
                         <button
-                            className="border-2 h-[80px] w-[312px] py-4 px-6 rounded-md text-black font-semibold flex items-center justify-start"
+                            className="border-2 h-[80px] text-[16px] w-[312px] py-4 px-6 rounded-md text-black font-semibold flex items-center justify-start"
                             style={{ borderColor: '#0B5D51', paddingLeft: '10%' }}
                         >
                             <span className="mr-2">📝</span> Wishlist & Compare
                         </button>
                         <button
-                            className="border-2 h-[80px] w-[312px] py-4 px-6 rounded-md text-black font-semibold flex items-center justify-start"
+                            className="border-2 h-[80px] text-[16px] w-[312px] py-4 px-6 rounded-md text-black font-semibold flex items-center justify-start"
                             style={{ borderColor: '#0B5D51', paddingLeft: '10%' }}
                         >
                             <span className="mr-2">🚚</span> Shipping & Billing
                         </button>
                         <button
-                            className="border-2 h-[80px] w-[312px] py-4 px-6 rounded-md text-black font-semibold flex items-center justify-start"
+                            className="border-2 h-[80px] text-[16px] w-[312px] py-4 px-6 rounded-md text-black font-semibold flex items-center justify-start"
                             style={{ borderColor: '#0B5D51', paddingLeft: '10%' }}
                         >
                             <span className="mr-2">🛒</span> Shopping Cart & Wallet
                         </button>
                         <button
-                            className="border-2 h-[80px] w-[312px] py-4 px-6 rounded-md text-black font-semibold flex items-center justify-start"
+                            className="border-2 h-[80px] text-[16px] w-[312px] py-4 px-6 rounded-md text-black font-semibold flex items-center justify-start"
                             style={{ borderColor: '#0B5D51', paddingLeft: '10%' }}
                         >
                             <span className="mr-2">🛍️</span> Sell on Clicon
@@ -121,7 +121,7 @@ const CustomerSupport = () => {
             </div>
             <div className="w-[70%] m-auto py-10">
                 {/* Popular Topics Title */}
-                <h2 className="text-center text-lg font-semibold mb-6">Popular Topics</h2>
+                <h2 className="text-center text-[24px] font-semibold mb-6">Popular Topics</h2>
 
                 {/* Popular Topics Links */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
@@ -130,7 +130,7 @@ const CustomerSupport = () => {
                         <li>
                             <a
                                 href="#"
-                                className="text-black hover:text-[#0B5D51] transition-colors duration-200"
+                                className="text-black hover:text-[#0B5D51] transition-colors duration-200 text-[16px]"
                             >
                                 • How do I return my item?
                             </a>
@@ -138,7 +138,7 @@ const CustomerSupport = () => {
                         <li>
                             <a
                                 href="#"
-                                className="text-black hover:text-[#0B5D51] transition-colors duration-200"
+                                className="text-black hover:text-[#0B5D51] transition-colors duration-200 text-[16px]"
                             >
                                 • What is Clicons Returns Policy?
                             </a>
@@ -146,7 +146,7 @@ const CustomerSupport = () => {
                         <li>
                             <a
                                 href="#"
-                                className="text-black hover:text-[#0B5D51] transition-colors duration-200"
+                                className="text-black hover:text-[#0B5D51] transition-colors duration-200 text-[16px]"
                             >
                                 • How long is the refund process?
                             </a>
@@ -158,7 +158,7 @@ const CustomerSupport = () => {
                         <li>
                             <a
                                 href="#"
-                                className="text-black hover:text-[#0B5D51] transition-colors duration-200"
+                                className="text-black hover:text-[#0B5D51] transition-colors duration-200 text-[16px]"
                             >
                                 • What are the 'Delivery Timelines'?
                             </a>
@@ -166,7 +166,7 @@ const CustomerSupport = () => {
                         <li>
                             <a
                                 href="#"
-                                className="text-black hover:text-[#0B5D51] transition-colors duration-200"
+                                className="text-black hover:text-[#0B5D51] transition-colors duration-200 text-[16px]"
                             >
                                 • What is 'Discover Your Daraz Campaign 2022'?
                             </a>
@@ -174,7 +174,7 @@ const CustomerSupport = () => {
                         <li>
                             <a
                                 href="#"
-                                className="text-black hover:text-[#0B5D51] transition-colors duration-200"
+                                className="text-black hover:text-[#0B5D51] transition-colors duration-200 text-[16px]"
                             >
                                 • What is the Voucher & Gift Offer in this Campaign?
                             </a>
@@ -186,7 +186,7 @@ const CustomerSupport = () => {
                         <li>
                             <a
                                 href="#"
-                                className="text-black hover:text-[#0B5D51] transition-colors duration-200"
+                                className="text-black hover:text-[#0B5D51] transition-colors duration-200 text-[16px]"
                             >
                                 • How to cancel Clicon Order?
                             </a>
@@ -194,7 +194,7 @@ const CustomerSupport = () => {
                         <li>
                             <a
                                 href="#"
-                                className="text-black hover:text-[#0B5D51] transition-colors duration-200"
+                                className="text-black hover:text-[#0B5D51] transition-colors duration-200 text-[16px]"
                             >
                                 • Ask the Digital and Device Community
                             </a>
@@ -202,7 +202,7 @@ const CustomerSupport = () => {
                         <li>
                             <a
                                 href="#"
-                                className="text-black hover:text-[#0B5D51] transition-colors duration-200"
+                                className="text-black hover:text-[#0B5D51] transition-colors duration-200 text-[16px]"
                             >
                                 • How to change my shop name?
                             </a>
@@ -213,7 +213,8 @@ const CustomerSupport = () => {
             </div>
             <div className="w-full py-10 bg-gray-100">
                 <div className="text-center mb-8">
-                    <h2 className="text-xl font-semibold">Don't find your answer. Contact with us</h2>
+                    <button className="bg-blue-500 text-white font-semibold py-2 px-4 mb-4 rounded">CONTACT US</button>
+                    <h2 className="text-[32px] font-semibold">Don't find your answer. <br /> Contact with us</h2>
                 </div>
                 <div className="flex justify-center space-x-8">
                     {/* Call us now */}
@@ -233,6 +234,7 @@ const CustomerSupport = () => {
                     </div>
                 </div>
             </div>
+
         </div>
     );
 };
