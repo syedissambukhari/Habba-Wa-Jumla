@@ -38,7 +38,7 @@ function App() {
 
         <Routes>
         <Route path="/UserDashboard" element={<UserDashboard/>} />
-          <Route path="/UserDashboard/billing" element={<CardsAndAddressesPage/>} />
+          <Route path="/dashboard/billing" element={<CardsAndAddressesPage /> } />
         </Routes>
         <Routes>
           

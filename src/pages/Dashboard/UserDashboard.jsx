@@ -1,6 +1,7 @@
 import React from 'react'
 import Dashboard from './Dashboard'
 import DashboardSider from '../../homecomponents/DashboardSider'
+import {Outlet} from "react-router-dom";
 
 export const UserDashboard = () => {
   return (
@@ -11,7 +12,7 @@ export const UserDashboard = () => {
           <DashboardSider/>
         </div>
         <div className='h-full basis-3/4 '>
-        <Dashboard  />
+        <Dashboard />
         </div>
       </div>
     </div>
