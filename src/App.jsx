@@ -10,6 +10,7 @@ import Footer from "./homecomponents/Footer";
 import ShoppingCard from "./pages/ShoppingCard";
 import Wishlist from "./pages/Wishlist";
 import TrackOrder from "./homecomponents/TrackOrder";
+import CustomerSupport from "./homecomponents/CustomerSupport.jsx";
 import CompareProduct from "./pages/CompareProduct";
 import FAQPage from "./pages/FAQPage.jsx";
 import DashboardBrowsingHistory from "./pages/DashboardBrowsingHistory.jsx";
@@ -29,6 +30,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Wishlist" element={<Wishlist/>} />
           <Route path="/TrackOrder" element={<TrackOrder/>} />
+          <Route path="/CustomerSupport" element={<CustomerSupport />} /> {/* Fixed typo here */}
           <Route path="/CompareProduct" element={<CompareProduct/>} />
           <Route path="/browsing-history" element={<><Breadcrumb/><DashboardBrowsingHistory/></>} />
           <Route path="/TrackOrderDetails" element={<TrackOrderDetails/>} />
