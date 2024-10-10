@@ -47,7 +47,6 @@ function App() {
         </Routes>
         <Routes>
           <Route path="/shopping-card" element={<><Breadcrumb/><ShoppingCard/></>} />
-          <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footer/>
         </div>
