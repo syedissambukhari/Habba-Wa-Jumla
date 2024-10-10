@@ -209,7 +209,7 @@ const Header = () => {
       </div>
       <hr className="border-gray-400" />
       <div className="bg-[#073741] p-2 px-[120px] flex items-center justify-between">
-        <img src={Logo} width={87} height={48} alt="" />
+       <Link to="/"> <img src={Logo} width={87} height={48} alt="" /></Link>
         <div className="relative w-full max-w-lg">
           <input
             type="text"
