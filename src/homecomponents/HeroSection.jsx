@@ -1,6 +1,6 @@
 import React from "react";
 import image from "../assets/Image.png";
-import mobile from "../assets/Mobile.png";
+import mobile from "../assets/TwoMobiles.png";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { BsTrophy } from "react-icons/bs";
 import { CiCreditCard1 } from "react-icons/ci";

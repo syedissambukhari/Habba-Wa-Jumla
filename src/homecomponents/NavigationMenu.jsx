@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'; // Added Link here
 import TrackOrder from './TrackOrder'; 
+import CustomerSupport from "./CustomerSupport";
 import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
 import { PiMapPinLine, PiArrowsCounterClockwise } from "react-icons/pi";
 import { AiOutlineCustomerService } from "react-icons/ai";
@@ -96,7 +97,7 @@ const NavigationMenu = () => {
         </div>
         <div className="flex items-center gap-2 text-[#5F6C72]">
           <PiMapPinLine size={20} />
-          <Link to="/track-order" className="hover:underline">
+          <Link to="/CustomerSupport" className="hover:underline">
             <span>Customer Support</span>
           </Link>
         </div>
