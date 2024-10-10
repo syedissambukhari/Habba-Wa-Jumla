@@ -16,7 +16,6 @@ const Deals = () => {
           </p>
         </div>
         <div className="flex items-center gap-2">
-          
           <Link className="text-[#2DA5F3] text=[14px]" to={"/shop"}>Browse All Product</Link>
           <IoIosArrowRoundForward size={25} color="#2DA5F3" />
         </div>
