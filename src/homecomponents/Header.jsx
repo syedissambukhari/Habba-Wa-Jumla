@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import { FaTwitter, FaFacebook, FaInstagram, FaReddit } from "react-icons/fa";
@@ -11,30 +11,29 @@ import { IoPersonOutline } from "react-icons/io5";
 import NavigationMenu from "./NavigationMenu";
 import Logo from "../assets/logo-2.png";
 import LoginForm from "./LoginForm";
-import {Link, useNavigate} from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Cartpopup } from "./Cartpopup";
 import { FaCheck } from "react-icons/fa6";
 
 // Import country map images
-import usMap from "../assets/usimage.png"; // Replace with actual paths
-import saMap from "../assets/saudiflag.png"; // Replace with actual paths
+import usMap from "../assets/usimage.png";
+import saMap from "../assets/saudiflag.png";
 
 const Header = () => {
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [isCartOpen, setIsCartOpen] = useState(false);
+  const [activePopup, setActivePopup] = useState(null); // State to track which popup is open
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const [isCurrencyOpen, setIsCurrencyOpen] = useState(false);
   const [language, setLanguage] = useState("ENG");
   const [currency, setCurrency] = useState("SR");
 
   const navigate = useNavigate();
+  const location = useLocation();
 
-  const handleCartClick = () => {
-    setIsCartOpen(!isCartOpen);
+  // Function to handle opening and closing popups
+  const togglePopup = (popupName) => {
+    setActivePopup(activePopup === popupName ? null : popupName); // Close if already open, else open the new one
   };
-  const handleIconClick = () => {
-    setIsPopupOpen(!isPopupOpen);
-  };
+
   const toggleLanguageDropdown = () => {
     setIsLanguageOpen(!isLanguageOpen);
   };
@@ -52,6 +51,30 @@ const Header = () => {
     setCurrency(curr);
     setIsCurrencyOpen(false);
   };
+
+  // Hide popups when clicking outside or when navigating
+  useEffect(() => {
+    // Close popups on navigation
+    setActivePopup(null);
+  }, [location]);
+
+  // Close popups on click outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      // Close if clicked outside any popup
+      if (!event.target.closest(".popup")) {
+        setActivePopup(null);
+      }
+    };
+
+    // Add event listener for clicks
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // Cleanup the event listener when component unmounts
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <div className="flex flex-col">
@@ -82,6 +105,7 @@ const Header = () => {
           <RxCross2 color="white" size={18} />
         </div>
       </div>
+
       {/* social media links */}
       <div className="flex justify-between bg-[#073741] p-2 px-[120px] w-full">
         <div>
@@ -119,19 +143,19 @@ const Header = () => {
                   height: "88px",
                   top: "46px",
                   left: "-136px",
-                  padding: "8px 0", // Apply top and bottom padding
-                  border: "1px solid #E4E7E9", // Border properties
-                  boxShadow: "0px 8px 40px rgba(0, 0, 0, 0.12)", // Apply box-shadow
-                  borderRadius: "3px 0px 0px 0px", // Border radius
-                  opacity: "1", // Set opacity to 1
+                  padding: "8px 0",
+                  border: "1px solid #E4E7E9",
+                  boxShadow: "0px 8px 40px rgba(0, 0, 0, 0.12)",
+                  borderRadius: "3px 0px 0px 0px",
+                  opacity: "1",
                 }}
               >
                 {/* English Option */}
                 <div className="flex items-center gap-2 p-2 hover:bg-gray-200 cursor-pointer">
                   <img
-                    src={usMap} // Change this according to the selected language map
+                    src={usMap}
                     alt="US Map"
-                    className="w-5 h-5 border border-[#E4E7E9] rounded-full" // Circular border
+                    className="w-5 h-5 border border-[#E4E7E9] rounded-full"
                   />
                   <p
                     className="text-[14px] flex-1"
@@ -140,14 +164,14 @@ const Header = () => {
                     English
                   </p>
                   <FaCheck />
-
                 </div>
+
                 {/* Arabic Option */}
                 <div className="flex items-center gap-2 p-2 hover:bg-gray-200 cursor-pointer">
                   <img
-                    src={saMap} // Change this according to the selected language map
+                    src={saMap}
                     alt="Saudi Arabia Map"
-                    className="w-5 h-5 border border-[#E4E7E9] rounded-full" // Circular border
+                    className="w-5 h-5 border border-[#E4E7E9] rounded-full"
                   />
                   <p
                     className="text-[14px] flex-1"
@@ -155,11 +179,10 @@ const Header = () => {
                   >
                     Arabic
                   </p>
-                  
                 </div>
               </div>
             )}
-          </div> 
+          </div>
 
           {/* DropDown For the currency selection */}
           <div className="relative ml-4">
@@ -194,6 +217,7 @@ const Header = () => {
                   <p className="text-[14px] flex-1">SAUDI RIYAL (SR)</p>
                   <FaCheck />
                 </div>
+
                 {/* UAE Dirham Option */}
                 <div
                   className="flex items-center gap-2 p-2 hover:bg-gray-200 cursor-pointer"
@@ -204,39 +228,51 @@ const Header = () => {
               </div>
             )}
           </div>
-
         </div>
       </div>
       <hr className="border-gray-400" />
+
       <div className="bg-[#073741] p-2 px-[120px] flex items-center justify-between">
-       <Link to="/"> <img src={Logo} width={87} height={48} alt="" /></Link>
+        <Link to="/">
+          <img src={Logo} width={87} height={48} alt="" />
+        </Link>
         <div className="relative w-full max-w-lg">
           <input
             type="text"
             placeholder="Search for any thing....."
             className="border border-gray-300 py-2 pl-4 pr-10 w-full focus:outline-none focus:ring focus:ring-blue-500"
           />
-          <div onClick={() => {
-            navigate('/not-found');
-          }} className="absolute right-3 top-1/2 transform -translate-y-1/2">
+          <div
+            onClick={() => {
+              navigate("/not-found");
+            }}
+            className="absolute right-3 top-1/2 transform -translate-y-1/2"
+          >
             <FaSearch className="text-black" />
           </div>
         </div>
         <div className="flex items-center gap-4 position: relative">
-          <IoCartOutline color="white" size={20.4} onClick={handleCartClick} />
+          <IoCartOutline
+            color="white"
+            size={20.4}
+            onClick={() => togglePopup("cart")}
+          />
           <Link to="/Wishlist">
             <GrFavorite color="white" size={20.4} />
           </Link>
           <IoPersonOutline
             color="white"
             size={20.4}
-            onClick={handleIconClick}
+            onClick={() => togglePopup("login")}
           />
           <LoginForm
-            isOpen={isPopupOpen}
-            onClose={() => setIsPopupOpen(false)}
+            isOpen={activePopup === "login"}
+            onClose={() => setActivePopup(null)}
           />
-          <Cartpopup isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
+          <Cartpopup
+            isOpen={activePopup === "cart"}
+            onClose={() => setActivePopup(null)}
+          />
         </div>
       </div>
 
