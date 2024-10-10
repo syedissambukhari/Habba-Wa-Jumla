@@ -2,6 +2,7 @@ import React from 'react'
 import HomePageSider from '../homecomponents/HomePageSider'
 import ShopProducts from '../homecomponents/ShopProducts'
 import DashboardSider from '../homecomponents/DashboardSider'
+import BrowsingHistory from './BrowsingHistory'
 
 const DashboardBrowsingHistory = () => {
   return (
@@ -11,7 +12,7 @@ const DashboardBrowsingHistory = () => {
           <DashboardSider/>
         </div>
         <div className='h-full basis-3/4 '>
-        <ShopProducts/>
+        <BrowsingHistory/>
         </div>
       </div>
     </div>

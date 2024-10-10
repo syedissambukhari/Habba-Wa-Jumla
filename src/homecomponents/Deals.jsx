@@ -1,6 +1,8 @@
 import React from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import DealItems from "./DealItems";
+import { Link } from "react-router-dom";
+
 const Deals = () => {
   return (
     <div className="mt-[50px]  flex flex-col justify-between gap-5  px-[40px]">
@@ -14,7 +16,8 @@ const Deals = () => {
           </p>
         </div>
         <div className="flex items-center gap-2">
-          <p className="text-[#2DA5F3] text=[14px]">Browse All Product</p>
+          
+          <Link className="text-[#2DA5F3] text=[14px]" to={"/shop"}>Browse All Product</Link>
           <IoIosArrowRoundForward size={25} color="#2DA5F3" />
         </div>
       </div>
