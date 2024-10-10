@@ -15,6 +15,7 @@ import FAQPage from "./pages/FAQPage.jsx";
 import DashboardBrowsingHistory from "./pages/DashboardBrowsingHistory.jsx";
 import { UserDashboard } from "./pages/Dashboard/UserDashboard.jsx";
 import TrackOrderDetails from "./homecomponents/TrackOrderDetails.jsx";
+import CardsAndAddressesPage from "./pages/Dashboard/CardsAndAddressesPage.jsx";
 function App() {
   return (
     <>
@@ -37,9 +38,7 @@ function App() {
 
         <Routes>
         <Route path="/UserDashboard" element={<UserDashboard/>} />
-
-
-
+          <Route path="/UserDashboard/billing" element={<CardsAndAddressesPage/>} />
         </Routes>
         <Routes>
           
