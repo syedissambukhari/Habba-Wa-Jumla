@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import { FaTwitter, FaFacebook, FaInstagram, FaReddit } from "react-icons/fa";
@@ -11,27 +11,33 @@ import { IoPersonOutline } from "react-icons/io5";
 import NavigationMenu from "./NavigationMenu";
 import Logo from "../assets/logo-2.png";
 import LoginForm from "./LoginForm";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Cartpopup } from "./Cartpopup";
 import { FaCheck } from "react-icons/fa6";
 
 // Import country map images
-import usMap from "../assets/usimage.png";
-import saMap from "../assets/saudiflag.png";
+import usMap from "../assets/usimage.png"; // Replace with actual paths
+import saMap from "../assets/saudiflag.png"; // Replace with actual paths
 
 const Header = () => {
-  const [activePopup, setActivePopup] = useState(null); // State to track which popup is open
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const [isCurrencyOpen, setIsCurrencyOpen] = useState(false);
   const [language, setLanguage] = useState("ENG");
   const [currency, setCurrency] = useState("SR");
 
-  const navigate = useNavigate();
-  const location = useLocation();
+  const popupRef = useRef(null); // Reference for the login popup
+  const cartRef = useRef(null); // Reference for the cart popup
 
-  // Function to handle opening and closing popups
-  const togglePopup = (popupName) => {
-    setActivePopup(activePopup === popupName ? null : popupName); // Close if already open, else open the new one
+  // const navigate = useNavigate();
+
+  const handleCartClick = () => {
+    setIsCartOpen(!isCartOpen);
+  };
+
+  const handleIconClick = () => {
+    setIsPopupOpen(!isPopupOpen);
   };
 
   const toggleLanguageDropdown = () => {
@@ -52,25 +58,21 @@ const Header = () => {
     setIsCurrencyOpen(false);
   };
 
-  // Hide popups when clicking outside or when navigating
+  // Close popups when clicking outside
   useEffect(() => {
-    // Close popups on navigation
-    setActivePopup(null);
-  }, [location]);
-
-  // Close popups on click outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      // Close if clicked outside any popup
-      if (!event.target.closest(".popup")) {
-        setActivePopup(null);
+    function handleClickOutside(event) {
+      if (popupRef.current && !popupRef.current.contains(event.target)) {
+        setIsPopupOpen(false);
       }
-    };
+      if (cartRef.current && !cartRef.current.contains(event.target)) {
+        setIsCartOpen(false);
+      }
+    }
 
-    // Add event listener for clicks
+    // Add event listener
     document.addEventListener("mousedown", handleClickOutside);
 
-    // Cleanup the event listener when component unmounts
+    // Clean up the event listener on unmount
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
@@ -81,7 +83,7 @@ const Header = () => {
       <div className="bg-black flex justify-between items-center p-2">
         <div className="flex gap-2 items-center px-[100px]">
           <p
-            className="bg-[#F3DE6D] text-[18px] px-4 py-2 "
+            className="bg-[#F3DE6D] text-[18px] px-4 py-2"
             style={{ transform: "rotate(-2deg)" }}
           >
             Black
@@ -106,7 +108,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* social media links */}
+      {/* Social Media Links */}
       <div className="flex justify-between bg-[#073741] p-2 px-[120px] w-full">
         <div>
           <p className="font-public-sans text-[14px] text-white">
@@ -125,7 +127,7 @@ const Header = () => {
           </div>
           <div className="h-[20px] w-[1px] bg-[#FFFFFF] mx-4"></div>
 
-          {/* Drop Down Menu For the language section */}
+          {/* Language Dropdown */}
           <div className="relative">
             <div
               className="flex items-center gap-2 cursor-pointer"
@@ -150,41 +152,34 @@ const Header = () => {
                   opacity: "1",
                 }}
               >
-                {/* English Option */}
-                <div className="flex items-center gap-2 p-2 hover:bg-gray-200 cursor-pointer">
+                <div
+                  className="flex items-center gap-2 p-2 hover:bg-gray-200 cursor-pointer"
+                  onClick={() => selectLanguage("ENG")}
+                >
                   <img
                     src={usMap}
                     alt="US Map"
                     className="w-5 h-5 border border-[#E4E7E9] rounded-full"
                   />
-                  <p
-                    className="text-[14px] flex-1"
-                    onClick={() => selectLanguage("ENG")}
-                  >
-                    English
-                  </p>
+                  <p className="text-[14px] flex-1">English</p>
                   <FaCheck />
                 </div>
-
-                {/* Arabic Option */}
-                <div className="flex items-center gap-2 p-2 hover:bg-gray-200 cursor-pointer">
+                <div
+                  className="flex items-center gap-2 p-2 hover:bg-gray-200 cursor-pointer"
+                  onClick={() => selectLanguage("ARB")}
+                >
                   <img
                     src={saMap}
                     alt="Saudi Arabia Map"
                     className="w-5 h-5 border border-[#E4E7E9] rounded-full"
                   />
-                  <p
-                    className="text-[14px] flex-1"
-                    onClick={() => selectLanguage("ARB")}
-                  >
-                    Arabic
-                  </p>
+                  <p className="text-[14px] flex-1">Arabic</p>
                 </div>
               </div>
             )}
           </div>
 
-          {/* DropDown For the currency selection */}
+          {/* Currency Dropdown */}
           <div className="relative ml-4">
             <div
               className="flex items-center gap-2 cursor-pointer"
@@ -209,7 +204,6 @@ const Header = () => {
                   opacity: "1",
                 }}
               >
-                {/* Saudi Riyal Option */}
                 <div
                   className="flex items-center gap-2 p-2 hover:bg-gray-200 cursor-pointer"
                   onClick={() => selectCurrency("SR")}
@@ -217,8 +211,6 @@ const Header = () => {
                   <p className="text-[14px] flex-1">SAUDI RIYAL (SR)</p>
                   <FaCheck />
                 </div>
-
-                {/* UAE Dirham Option */}
                 <div
                   className="flex items-center gap-2 p-2 hover:bg-gray-200 cursor-pointer"
                   onClick={() => selectCurrency("AED")}
@@ -230,49 +222,53 @@ const Header = () => {
           </div>
         </div>
       </div>
+
       <hr className="border-gray-400" />
 
-      <div className="bg-[#073741] p-2 px-[120px] flex items-center justify-between">
-        <Link to="/">
-          <img src={Logo} width={87} height={48} alt="" />
-        </Link>
-        <div className="relative w-full max-w-lg">
-          <input
-            type="text"
-            placeholder="Search for any thing....."
-            className="border border-gray-300 py-2 pl-4 pr-10 w-full focus:outline-none focus:ring focus:ring-blue-500"
-          />
-          <div
-            onClick={() => {
-              navigate("/not-found");
-            }}
-            className="absolute right-3 top-1/2 transform -translate-y-1/2"
-          >
-            <FaSearch className="text-black" />
-          </div>
-        </div>
-        <div className="flex items-center gap-4 position: relative">
-          <IoCartOutline
-            color="white"
-            size={20.4}
-            onClick={() => togglePopup("cart")}
-          />
-          <Link to="/Wishlist">
-            <GrFavorite color="white" size={20.4} />
+      <div className="bg-[#073741] h-20 px-[100px]">
+        <div className="flex justify-between items-center">
+          <Link to="/">
+            <img src={Logo} alt="Logo" className="h-16 w-auto" />
           </Link>
-          <IoPersonOutline
-            color="white"
-            size={20.4}
-            onClick={() => togglePopup("login")}
-          />
-          <LoginForm
-            isOpen={activePopup === "login"}
-            onClose={() => setActivePopup(null)}
-          />
-          <Cartpopup
-            isOpen={activePopup === "cart"}
-            onClose={() => setActivePopup(null)}
-          />
+
+          {/* Search Bar */}
+          <div className="relative">
+            <input
+              type="text"
+              className="pl-4 pr-10 py-2 border border-gray-300 rounded w-[300px] h-[40px] focus:outline-none"
+              placeholder="Search for products"
+            />
+            <FaSearch
+              size={20}
+              color="#999999"
+              className="absolute top-2 right-2"
+            />
+          </div>
+
+          {/* Cart, Wishlist, and Login Icons */}
+          <div className="flex items-center gap-4 position: relative">
+            <IoCartOutline color="white" size={20.4} onClick={handleCartClick} />
+            <Link to="/Wishlist">
+              <GrFavorite color="white" size={20.4} />
+            </Link>
+            <IoPersonOutline color="white" size={20.4} onClick={handleIconClick} />
+
+            {/* Popup for LoginForm */}
+            <div ref={popupRef}>
+              <LoginForm
+                isOpen={isPopupOpen}
+                onClose={() => setIsPopupOpen(false)}
+              />
+            </div>
+
+            {/* Popup for Cart */}
+            <div ref={cartRef}>
+              <Cartpopup
+                isOpen={isCartOpen}
+                onClose={() => setIsCartOpen(false)}
+              />
+            </div>
+          </div>
         </div>
       </div>
 
