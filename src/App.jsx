@@ -16,6 +16,7 @@ import DashboardBrowsingHistory from "./pages/DashboardBrowsingHistory.jsx";
 import { UserDashboard } from "./pages/Dashboard/UserDashboard.jsx";
 import TrackOrderDetails from "./homecomponents/TrackOrderDetails.jsx";
 import CardsAndAddressesPage from "./pages/Dashboard/CardsAndAddressesPage.jsx";
+import NotFoundPage from "./pages/NotFoundPage.jsx";
 function App() {
   return (
     <>
@@ -32,7 +33,6 @@ function App() {
           <Route path="/browsing-history" element={<><Breadcrumb/><DashboardBrowsingHistory/></>} />
           <Route path="/TrackOrderDetails" element={<TrackOrderDetails/>} />
 
-          
         </Routes>
 
         <Routes>
@@ -43,9 +43,11 @@ function App() {
           
           <Route path="/shop" element={<><Breadcrumb/><ShopPage/></>} />
           <Route path="/faq" element={<FAQPage />} />
+          <Route path="/not-found" element={<NotFoundPage />} />
         </Routes>
         <Routes>
           <Route path="/shopping-card" element={<><Breadcrumb/><ShoppingCard/></>} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footer/>
         </div>
