@@ -13,38 +13,42 @@ const CustomerSupport = () => {
                             HELP CENTER
                         </button>
                     </div>
-                    <div className="text-3xl font-semibold text-gray-800">
+                    <div className="text-[32px] font-semibold text-black-600">
                         How we can help you!
                     </div>
                     <div className="flex space-x-2 items-center">
-                        <div className="relative w-full max-w-md">
-                            <input
-                                type="text"
-                                placeholder="Enter your question or keyword"
-                                className="w-full py-3 pl-10 pr-3 border rounded-md border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500"
-                            />
-                            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                <svg
-                                    className="h-5 w-5 text-gray-500"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                    aria-hidden="true"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M10 10a5 5 0 100-10 5 5 0 000 10zm2 10l6 6"
-                                    />
-                                </svg>
+                        <div className="flex w-full max-w-md">
+                            <div className="relative flex-grow">
+                                <input
+                                    type="text"
+                                    placeholder="Enter your question or keyword"
+                                    className="w-full py-3 pl-10 pr-3 border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                                />
+                                <div className="absolute inset-y-0 left-0 pl-3 flex items-center">
+                                    <svg
+                                        className="h-5 w-5 text-gray-500"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth="2"
+                                            d="M10 10a5 5 0 100-10 5 5 0 000 10zm2 10l6 6"
+                                        />
+                                    </svg>
+                                </div>
                             </div>
+                            <button className="bg-green-600 text-white font-semibold py-3 px-6">SEARCH</button>
                         </div>
-                        <button className="bg-green-600 text-white font-semibold py-3 px-6 rounded">
-                            SEARCH
-                        </button>
+
+
+                        {/* <button className="bg-green-600 text-white font-semibold py-2 px-6">SEARCH</button> */}
                     </div>
+
                 </div>
 
                 {/* Right side - Image */}
@@ -121,91 +125,113 @@ const CustomerSupport = () => {
 
                 {/* Popular Topics Links */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-    {/* Column 1 */}
-    <ul className="space-y-2 w-[424px]">
-        <li>
-            <a
-                href="#"
-                className="text-black hover:text-[#0B5D51] transition-colors duration-200"
-            >
-                • How do I return my item?
-            </a>
-        </li>
-        <li>
-            <a
-                href="#"
-                className="text-black hover:text-[#0B5D51] transition-colors duration-200"
-            >
-                • What is Clicons Returns Policy?
-            </a>
-        </li>
-        <li>
-            <a
-                href="#"
-                className="text-black hover:text-[#0B5D51] transition-colors duration-200"
-            >
-                • How long is the refund process?
-            </a>
-        </li>
-    </ul>
+                    {/* Column 1 */}
+                    <ul className="space-y-2 w-[424px]">
+                        <li>
+                            <a
+                                href="#"
+                                className="text-black hover:text-[#0B5D51] transition-colors duration-200"
+                            >
+                                • How do I return my item?
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="#"
+                                className="text-black hover:text-[#0B5D51] transition-colors duration-200"
+                            >
+                                • What is Clicons Returns Policy?
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="#"
+                                className="text-black hover:text-[#0B5D51] transition-colors duration-200"
+                            >
+                                • How long is the refund process?
+                            </a>
+                        </li>
+                    </ul>
 
-    {/* Column 2 */}
-    <ul className="space-y-2 w-[424px]">
-        <li>
-            <a
-                href="#"
-                className="text-black hover:text-[#0B5D51] transition-colors duration-200"
-            >
-                • What are the 'Delivery Timelines'?
-            </a>
-        </li>
-        <li>
-            <a
-                href="#"
-                className="text-black hover:text-[#0B5D51] transition-colors duration-200"
-            >
-                • What is 'Discover Your Daraz Campaign 2022'?
-            </a>
-        </li>
-        <li>
-            <a
-                href="#"
-                className="text-black hover:text-[#0B5D51] transition-colors duration-200"
-            >
-                • What is the Voucher & Gift Offer in this Campaign?
-            </a>
-        </li>
-    </ul>
+                    {/* Column 2 */}
+                    <ul className="space-y-2 w-[424px]">
+                        <li>
+                            <a
+                                href="#"
+                                className="text-black hover:text-[#0B5D51] transition-colors duration-200"
+                            >
+                                • What are the 'Delivery Timelines'?
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="#"
+                                className="text-black hover:text-[#0B5D51] transition-colors duration-200"
+                            >
+                                • What is 'Discover Your Daraz Campaign 2022'?
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="#"
+                                className="text-black hover:text-[#0B5D51] transition-colors duration-200"
+                            >
+                                • What is the Voucher & Gift Offer in this Campaign?
+                            </a>
+                        </li>
+                    </ul>
 
-    {/* Column 3 */}
-    <ul className="space-y-2 w-[424px]">
-        <li>
-            <a
-                href="#"
-                className="text-black hover:text-[#0B5D51] transition-colors duration-200"
-            >
-                • How to cancel Clicon Order?
-            </a>
-        </li>
-        <li>
-            <a
-                href="#"
-                className="text-black hover:text-[#0B5D51] transition-colors duration-200"
-            >
-                • Ask the Digital and Device Community
-            </a>
-        </li>
-        <li>
-            <a
-                href="#"
-                className="text-black hover:text-[#0B5D51] transition-colors duration-200"
-            >
-                • How to change my shop name?
-            </a>
-        </li>
-    </ul>
-</div>
+                    {/* Column 3 */}
+                    <ul className="space-y-2 w-[424px]">
+                        <li>
+                            <a
+                                href="#"
+                                className="text-black hover:text-[#0B5D51] transition-colors duration-200"
+                            >
+                                • How to cancel Clicon Order?
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="#"
+                                className="text-black hover:text-[#0B5D51] transition-colors duration-200"
+                            >
+                                • Ask the Digital and Device Community
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="#"
+                                className="text-black hover:text-[#0B5D51] transition-colors duration-200"
+                            >
+                                • How to change my shop name?
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
+            </div>
+            <div className="w-full py-10 bg-gray-100">
+                <div className="text-center mb-8">
+                    <h2 className="text-xl font-semibold">Don't find your answer. Contact with us</h2>
+                </div>
+                <div className="flex justify-center space-x-8">
+                    {/* Call us now */}
+                    <div className="border border-gray-300 rounded-md p-6 w-[320px]">
+                        <h3 className="text-lg font-semibold mb-2">Call us now</h3>
+                        <p className="text-sm mb-4">We are available online from 9:00 AM to 5:00 PM (GMT+5:45). Talk with us now</p>
+                        <p className="text-lg font-semibold mb-4">+1-202-555-0126</p>
+                        <button className="bg-blue-500 text-white font-semibold py-2 px-4 rounded">CALL NOW</button>
+                    </div>
+
+                    {/* Chat with us */}
+                    <div className="border border-gray-300 rounded-md p-6 w-[320px]">
+                        <h3 className="text-lg font-semibold mb-2">Chat with us</h3>
+                        <p className="text-sm mb-4">We are available online from 9:00 AM to 5:00 PM (GMT+5:45). Talk with us now</p>
+                        <p className="text-lg font-semibold mb-4">Support@clicon.com</p>
+                        <button className="bg-green-500 text-white font-semibold py-2 px-4 rounded">CONTACT US</button>
+                    </div>
+                </div>
             </div>
         </div>
     );
