@@ -4,7 +4,6 @@ import Header from "./homecomponents/Header";
 import ShopPage from "./pages/ShopPage";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import Shoping from "./pages/Shoping";
 import Footer from "./homecomponents/Footer";
 import ShoppingCard from "./pages/ShoppingCard";
 import Wishlist from "./pages/Wishlist";
@@ -17,6 +16,7 @@ import { UserDashboard } from "./pages/Dashboard/UserDashboard.jsx";
 import TrackOrderDetails from "./homecomponents/TrackOrderDetails.jsx";
 import CardsAndAddressesPage from "./pages/Dashboard/CardsAndAddressesPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
+import OrderCheckout from "./pages/Checkoutpage.jsx";
 
 function App() {
   return (
@@ -64,6 +64,7 @@ function App() {
               </>
             }
           />
+          <Route path="/ordercheckout" element={<OrderCheckout />}></Route>
         </Routes>
         <Footer />
       </div>

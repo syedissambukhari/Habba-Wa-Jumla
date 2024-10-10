@@ -8,7 +8,7 @@ import camara from "../assets/Camara.png";
 import computer from "../assets/Computer.png";
 import drone from "../assets/Drone.png";
 import mobile from "../assets/Mobile2.png";
-import headphones from "../assets/Headphones.png";
+import headphones from "../assets/Headphone.png";
 import remote from "../assets/Remote.png";
 import mobile2 from "../assets/Mobile3.png";
 import drone1 from "../assets/Drone2.png";
