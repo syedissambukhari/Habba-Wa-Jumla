@@ -32,9 +32,9 @@ function CardsAndAddressesPage() {
     ]);
 
     return (
-        <div className="mt-10 flex gap-8 ">
+        <div className="max-w-[1320px] m-auto mt-10 flex gap-8 ">
             <div className="basis w-1/3">
-            <DashboardSider />
+            <DashboardSider active={"Cards"}/>
             </div>
             <div className="w-full p-6">
                 <div className="mb-6 flex justify-between">
