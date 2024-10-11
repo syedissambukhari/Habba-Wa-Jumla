@@ -7,53 +7,103 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { LuLayers } from "react-icons/lu";
 import { MdLogout, MdOutlineLocationOn } from "react-icons/md";
 import { TbGitCompare } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
-
-const DashboardSider = () => {
+const DashboardSider = ({ active }) => {
   return (
-   <div className="flex flex-col h-[432px] border-2 rounded-md shadow-xl border-gray-200 py-[16px] text-[14px] font-medium text-gray-600">
-    <div className="h-[40px] flex gap-3 items-center px-8">
-      <LuLayers size={20}/>
-      Dashboard
-    </div>
-    <div className="h-[40px] flex gap-3 items-center px-8">
-      <AiTwotoneShop size={20}/>
-      Order History
-    </div>
-    <div className="h-[40px] flex gap-3 items-center px-8">
-      <MdOutlineLocationOn size={20}/>
-      Track Order
-    </div>
-    <div className="h-[40px] flex gap-3 items-center px-8">
-      <FiShoppingCart size={20}/>
-      Shopping Cart
-    </div>
-    <div className="h-[40px] flex gap-3 items-center px-8">
-      <FaRegHeart size={20}/>
-      Wish List
-    </div>
-    <div className="h-[40px] flex gap-3 items-center px-8">
-      <TbGitCompare size={20}/>
-      Compare
-    </div>
-    <div className="h-[40px] flex gap-3 items-center px-8">
-      <CiCreditCard1 size={20}/>
-      Cards And Adresses
-    </div>
-    <div className="h-[40px] flex gap-3 items-center px-8">
-      <AiOutlineHistory size={20}/>
-      Browsing History
-    </div>
-    <div className="h-[40px] flex gap-3 items-center px-8">
-      <IoSettingsOutline size={20}/>
-      Settings
-    </div>
-      <div className="h-[40px] flex gap-3 items-center px-8">
-        <MdLogout size={20}/>
+    <div className="flex flex-col h-[432px] border-2 rounded-md shadow-xl border-gray-200 py-[16px] text-[14px] font-medium text-gray-600">
+      <Link
+        to={"/UserDashboard"}
+        className={`h-[40px] flex gap-3 items-center px-8 ${
+          active == "Dashboard" ? "bg-[#073741] text-white" : ""
+        }`}
+      >
+        <LuLayers size={20} />
+        Dashboard
+      </Link>
+      <Link
+        to={"/order-history"}
+        className={`h-[40px] flex gap-3 items-center px-8 ${
+          active == "Order" ? "bg-[#073741] text-white" : ""
+        }`}
+      >
+        <AiTwotoneShop size={20} />
+        Order History
+      </Link>
+      <Link
+        to={"/TrackOrder"}
+        className={`h-[40px] flex gap-3 items-center px-8 ${
+          active == "Track" ? "bg-[#073741] text-white" : ""
+        }`}
+      >
+        <MdOutlineLocationOn size={20} />
+        Track Order
+      </Link>
+      <Link
+        to={"/shopping-card"}
+        className={`h-[40px] flex gap-3 items-center px-8 ${
+          active == "Cart" ? "bg-[#073741] text-white" : ""
+        }`}
+      >
+        <FiShoppingCart size={20} />
+        Shopping Cart
+      </Link>
+      <Link
+        to={"/Wishlist"}
+        className={`h-[40px] flex gap-3 items-center px-8 ${
+          active == "WishList" ? "bg-[#073741] text-white" : ""
+        }`}
+      >
+        <FaRegHeart size={20} />
+        Wish List
+      </Link>
+      <Link
+        to={"/CompareProduct"}
+        className={`h-[40px] flex gap-3 items-center px-8 ${
+          active == "Compare" ? "bg-[#073741] text-white" : ""
+        }`}
+      >
+        <TbGitCompare size={20} />
+        Compare
+      </Link>
+      <Link
+        to={"/dashboard/billing"}
+        className={`h-[40px] flex gap-3 items-center px-8 ${
+          active == "Cards" ? "bg-[#073741] text-white" : ""
+        }`}
+      >
+        <CiCreditCard1 size={20} />
+        Cards And Adresses
+      </Link>
+      <Link
+        to={"/browsing-history"}
+        onClick={() => window.scrollTo({ top: 5, behavior: "smooth" })}
+        className={`h-[40px] flex gap-3 items-center px-8 ${
+          active == "History" ? "bg-[#073741] text-white" : ""
+        }`}
+      >
+        <AiOutlineHistory size={20} />
+        Browsing History
+      </Link>
+      <Link
+        className={`h-[40px] flex gap-3 items-center px-8 ${
+          active == "Settings" ? "bg-[#073741] text-white" : ""
+        }`}
+        to={"/dashboard-settings"}
+      >
+        <IoSettingsOutline size={20} />
+        Settings
+      </Link>
+      <Link
+      to={"/"}
+        className={`h-[40px] flex gap-3 items-center px-8 ${
+          active == "Logout" ? "bg-[#073741] text-white" : ""
+        }`}
+      >
+        <MdLogout size={20} />
         Log-out
-      </div>
-   
-   </div>
+      </Link>
+    </div>
   );
 };
 
