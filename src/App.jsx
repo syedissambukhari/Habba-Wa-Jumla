@@ -19,6 +19,7 @@ import NotFoundPage from "./pages/NotFoundPage.jsx";
 import OrderCheckout from "./pages/Checkoutpage.jsx";
 import OrderSuccess from "./pages/OrderSuccessful.jsx";
 import BlogList from "./homecomponents/BlogList.jsx";
+import BlogDetailsPage from "./pages/BlogDetailsPage.jsx";
 
 function App() {
   return (
@@ -69,6 +70,7 @@ function App() {
           <Route path="/ordercheckout" element={<OrderCheckout />}></Route>
           <Route path="/ordersuccess" element={<OrderSuccess />}></Route>
           <Route path="/bloglist" element={<BlogList />}></Route>
+          <Route path="/blogdetails" element={<BlogDetailsPage />}></Route>
         </Routes>
         <Footer />
       </div>

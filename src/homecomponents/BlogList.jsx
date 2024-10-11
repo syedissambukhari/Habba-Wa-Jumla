@@ -6,6 +6,7 @@ import { VscAccount } from "react-icons/vsc";
 import { FaRegCalendar } from "react-icons/fa";
 import { AiOutlineMessage } from "react-icons/ai";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import news from "../assets/News.png";
 import imagee from "../assets/News.png";
 import { AiOutlineSearch } from "react-icons/ai";
@@ -13,8 +14,14 @@ import { IoIosArrowDown } from "react-icons/io";
 import news1 from "../assets/news.png";
 import news2 from "../assets/news2.png";
 import news3 from "../assets/news3.png";
+import { useNavigate } from "react-router-dom";
 
 const BlogList = () => {
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  const handleButtonClick = () => {
+    navigate("/blogdetails"); // Navigate to the desired route
+  };
   const [isOpen, setIsOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const blogsPerPage = 8;
@@ -141,11 +148,7 @@ const BlogList = () => {
   const indexOfLastBlog = currentPage * blogsPerPage;
   const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
   const currentBlogs = newsData.slice(indexOfFirstBlog, indexOfLastBlog);
-
-  // Calculate the total number of pages
   const totalPages = Math.ceil(newsData.length / blogsPerPage);
-
-  // Create an array of pages to display
   const pagesToShow = Array.from(
     { length: Math.min(totalPages, 6) },
     (_, index) => index + 1
@@ -163,16 +166,15 @@ const BlogList = () => {
     }
   };
   const products = [
-    "Product A",
-    "Product B",
-    "Product C",
-    "Product D",
-    "Product E",
-    "Product F",
-    "Product G",
-    "Product H",
-    "Product I",
-    "Product J",
+    "All",
+    "Electronics Devices",
+    "Computer & Laptop",
+    "Computer Accessories",
+    "SmartPhone",
+    "Headphone",
+    "Mobile Accessories",
+    "Gaming Console",
+    "Camera & Photo",
   ];
 
   return (
@@ -188,7 +190,7 @@ const BlogList = () => {
         </div>
         <div className="flex gap-3 items-center">
           <FaAngleRight color="#5F6C72" />
-          <p className="text-[#5F6C72]">Blog</p>
+          <p className="text-[#0B5D51]">Blog</p>
         </div>
       </div>
 
@@ -413,7 +415,10 @@ const BlogList = () => {
 
                 <p className="text-gray-600 mb-4">{news.description}</p>
 
-                <button className="w-[162px] h-[48px] flex items-center gap-3 border border-[#0B5D51] text-[#0B5D51] px-2 py-2 rounded">
+                <button
+                  onClick={handleButtonClick}
+                  className="w-[162px] h-[48px] flex items-center gap-3 border border-[#0B5D51] text-[#0B5D51] px-2 py-2 rounded"
+                >
                   Read More
                   <span>
                     <FaArrowRightLong />
@@ -428,7 +433,7 @@ const BlogList = () => {
               className="mx-1 px-3 py-1 rounded-full border bg-white text-black disabled:opacity-50"
               disabled={currentPage === 1}
             >
-              &lt; {/* Left Arrow */}
+              <FaArrowLeft />
             </button>
             {pagesToShow.map((page) => (
               <button
@@ -448,7 +453,7 @@ const BlogList = () => {
               className="mx-1 px-3 py-1 rounded-full border bg-white text-black disabled:opacity-50"
               disabled={currentPage === totalPages}
             >
-              &gt; {/* Right Arrow */}
+              <FaArrowRight />
             </button>
           </div>
         </div>
