@@ -71,6 +71,7 @@ function App() {
           <Route path="/ordersuccess" element={<OrderSuccess />}></Route>
           <Route path="/bloglist" element={<BlogList />}></Route>
           <Route path="/blogdetails" element={<BlogDetailsPage />}></Route>
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footer />
       </div>
