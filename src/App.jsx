@@ -17,6 +17,8 @@ import TrackOrderDetails from "./homecomponents/TrackOrderDetails.jsx";
 import CardsAndAddressesPage from "./pages/Dashboard/CardsAndAddressesPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 import OrderCheckout from "./pages/Checkoutpage.jsx";
+import OrderSuccess from "./pages/OrderSuccessful.jsx";
+import BlogList from "./homecomponents/BlogList.jsx";
 
 function App() {
   return (
@@ -65,6 +67,8 @@ function App() {
             }
           />
           <Route path="/ordercheckout" element={<OrderCheckout />}></Route>
+          <Route path="/ordersuccess" element={<OrderSuccess />}></Route>
+          <Route path="/bloglist" element={<BlogList />}></Route>
         </Routes>
         <Footer />
       </div>
