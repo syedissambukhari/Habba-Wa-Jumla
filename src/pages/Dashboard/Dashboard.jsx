@@ -1,7 +1,10 @@
 import { AccountInfo } from "./component/AccountInfo";
+import AddressCard from "./component/AddressCard";
+
 import { BillingAddress } from "./component/BillingAddress";
-import PaymentOption from "./component/PaymentOption";
+import PaymentCard from "./component/PaymentCard";
 import RecentOrder from "./component/RecentOrder";
+
 
 
 const Dashboard = () => {
@@ -17,9 +20,9 @@ const Dashboard = () => {
         <AccountInfo />
         <BillingAddress />
       </div>
-      <PaymentOption/>
-      <RecentOrder/>
-      
+      <PaymentCard/>
+    <RecentOrder/>
+   
     </div>
       </div>
     );

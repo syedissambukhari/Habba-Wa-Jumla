@@ -1,33 +1,51 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'; // Added Link here
-import TrackOrder from './TrackOrder'; 
-import CustomerSupport from "./CustomerSupport";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
 import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
 import { PiMapPinLine, PiArrowsCounterClockwise } from "react-icons/pi";
-import { AiOutlineCustomerService } from "react-icons/ai";
-import { CiCircleInfo } from "react-icons/ci";
 import { BiPhoneCall } from "react-icons/bi";
-import { Dropdownpopup } from "./Dropdownpopup"; // Assuming this is your custom popup component
-  
+import { Dropdownpopup } from "./Dropdownpopup";
+
 const NavigationMenu = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isSmartphoneDropdownOpen, setIsSmartphoneDropdownOpen] =
-    useState(false);
+  const [isSmartphoneDropdownOpen, setIsSmartphoneDropdownOpen] = useState(false);
+
+  const location = useLocation(); // Detects route changes
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
-    setIsSmartphoneDropdownOpen(false);
+    setIsSmartphoneDropdownOpen(false); // Ensure only one dropdown is open at a time
   };
 
   const toggleSmartphoneDropdown = () => {
     setIsSmartphoneDropdownOpen(!isSmartphoneDropdownOpen);
   };
 
+  // Hide dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!event.target.closest(".dropdown-menu")) {
+        setIsDropdownOpen(false);
+        setIsSmartphoneDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  // Hide dropdowns when navigating to another page
+  useEffect(() => {
+    setIsDropdownOpen(false);
+    setIsSmartphoneDropdownOpen(false);
+  }, [location]);
+
   return (
     <div className="p-3 px-[120px] flex items-center justify-between">
       <div className="flex gap-8">
         {/* All Categories with Dropdown */}
-        <div className="relative">
+        <div className="relative dropdown-menu">
           <div
             className="flex items-center gap-2 text-[#5F6C72] cursor-pointer"
             onClick={toggleDropdown}
@@ -71,7 +89,7 @@ const NavigationMenu = () => {
                   TV & Homes Appliances
                 </li>
                 <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                  Watchs & Accessories
+                  Watches & Accessories
                 </li>
                 <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                   GPS & Navigation
@@ -84,10 +102,10 @@ const NavigationMenu = () => {
           )}
         </div>
 
-      
+        {/* Other Navigation Links */}
         <div className="flex items-center gap-2 text-[#5F6C72]">
           <PiMapPinLine size={20} />
-         <Link to="/TrackOrder"> <span>Track Order</span></Link>
+          <Link to="/TrackOrder"> <span>Track Order</span></Link>
         </div>
         <div className="flex items-center gap-2 text-[#5F6C72]">
           <PiMapPinLine size={20} />
@@ -107,7 +125,6 @@ const NavigationMenu = () => {
             <span>Need Help</span>
           </Link>
         </div>
-
       </div>
 
       {/* Phone Number */}
