@@ -113,7 +113,7 @@ const BlogDetail = () => {
                   </div>
                 </div>
                 <div className="flex items-center gap-1">
-                  <div className="bg-[#1DA1F2] p-3 rounded-full">
+                  <div className="bg-[#0077B5] p-3 rounded-full">
                     {" "}
                     <FaLinkedinIn size={20} color="white" />
                   </div>
