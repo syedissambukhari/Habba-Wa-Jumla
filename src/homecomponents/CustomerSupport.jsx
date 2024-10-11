@@ -1,7 +1,9 @@
-import React from 'react';
 import customerImage from '../assets/customer-laddy.jpeg';
+import { useNavigate } from "react-router-dom";
 
 const CustomerSupport = () => {
+    const navigate = useNavigate();
+
     return (
         <div>
             {/* Help Center section */}
@@ -17,7 +19,7 @@ const CustomerSupport = () => {
                         How we can help you!
                     </div>
                     <div className="flex space-x-2 items-center">
-                        <div className="flex w-full max-w-md">
+                        <div className="flex gap-2 w-full max-w-md">
                             <div className="relative flex-grow">
                                 <input
                                     type="text"
@@ -42,7 +44,7 @@ const CustomerSupport = () => {
                                     </svg>
                                 </div>
                             </div>
-                            <button className="bg-green-600 text-white font-semibold py-3 px-6">SEARCH</button>
+                            <button onClick={() => navigate('/not-found')} className="bg-[#0B5D51] text-white font-semibold py-3 px-6">SEARCH</button>
                         </div>
 
 
