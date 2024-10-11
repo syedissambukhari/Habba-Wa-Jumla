@@ -68,7 +68,7 @@ export const BrowsingHistory  = () => {
             <img src={product.image} alt={product.title} className="w-full h-40 object-cover mb-2" />
             <h3 className="text-sm font-semibold mb-1">{product.title}</h3>
             <div className="flex items-center mb-2">
-              <div className="flex text-green-500">
+              <div className="flex text-[#0B5D51]">
                 {[...Array(product.rating)].map((_, index) => (
                   <svg key={index} xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-4 h-4" viewBox="0 0 24 24">
                     <path d="M12 17.27L18.18 21 16.54 13.97 22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
@@ -77,21 +77,21 @@ export const BrowsingHistory  = () => {
               </div>
               <span className="ml-2 text-gray-600 text-xs">({product.reviews})</span>
             </div>
-            <p className="text-green-700 font-semibold">{product.price}</p>
+            <p className="text-[#0B5D51] font-semibold">{product.price}</p>
           </div>
         ))}
       </div>
 
       <div className="flex justify-center items-center space-x-2 mt-4 pb-2">
-        <button onClick={handlePrevious} className="text-green-700 px-4  p-2 border border-green-700 rounded-full">
+        <button onClick={handlePrevious} className="text-[#0B5D51] px-4  p-2 border border-green-700 rounded-full">
           &lt;
         </button>
         <div className="flex space-x-2">
           {[...Array(products.length)].map((_, index) => (
-            <span key={index} className={`w-2 h-2 rounded-full ${index === currentPage ? 'bg-green-700' : 'bg-gray-300'}`}></span>
+            <span key={index} className={`w-2 h-2 rounded-full ${index === currentPage ? 'bg-[#0B5D51]' : 'bg-gray-300'}`}></span>
           ))}
         </div>
-        <button onClick={handleNext} className="text-green-700 p-2  px-4 border border-green-700 rounded-full">
+        <button onClick={handleNext} className="text-[#0B5D51] p-2  px-4 border border-green-700 rounded-full">
           &gt;
         </button>
       </div>

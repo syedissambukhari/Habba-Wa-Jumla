@@ -1,3 +1,6 @@
+import { FaArrowRight } from "react-icons/fa";
+
+
 const RecentOrder = () => {
     const orders = [
       { id: '#96459761', status: 'IN PROGRESS', date: 'Dec 30, 2019 05:18', total: '$1,500 (5 Products)', color: 'text-blue-500' },
@@ -50,7 +53,8 @@ const RecentOrder = () => {
                 <td className=" px-4 py-2">{order.date}</td>
                 <td className=" px-4 py-2">{order.total}</td>
                 <td className=" px-4 py-2">
-                  <button className="text-blue-500">View Details</button>
+                  <button className="text-[#0B5D51] flex items-center gap-6">View Details <FaArrowRight />
+                  </button>
                 </td>
               </tr>
             ))}
