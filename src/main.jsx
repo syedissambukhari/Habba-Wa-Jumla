@@ -23,6 +23,8 @@ import BlogList from "./homecomponents/BlogList.jsx";
 import BlogDetailsPage from "./pages/BlogDetailsPage.jsx";
 import { VendorDashboard } from "./pages/vendorDashboard/VendorDashboard.jsx";
 import StoreAnalytics from "./pages/vendorDashboard/StoreAnalytics.jsx";
+import { OrderList } from "./pages/vendorDashboard/Orders/OrderList.jsx";
+import { OrderFilter } from "./pages/vendorDashboard/Orders/OrderFilter.jsx";
 
 
 const router = createBrowserRouter([
@@ -126,6 +128,15 @@ const router = createBrowserRouter([
             {
                 path: "store-analytics",
                 element: <StoreAnalytics />
+            },
+            {
+                path: "OrderList",
+                element: <OrderList />
+            }
+            ,
+            {
+                path: "OrderFilter",
+                element: <OrderFilter />
             }
         ],
     }
