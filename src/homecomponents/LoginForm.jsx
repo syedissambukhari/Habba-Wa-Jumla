@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { IoEyeOutline } from "react-icons/io5";
 import { Link, Router } from 'react-router-dom';
 import Breadcrumb from "./BreadCrumbs";
-import Signin from "../components/signin";
+import Signin from "../components/Forms/Signin";
 
 const LoginForm = ({ isOpen, onClose }) => {
   if (!isOpen) return null;

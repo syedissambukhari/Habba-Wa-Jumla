@@ -1,9 +1,9 @@
 import "./App.css";
 import Header from "./homecomponents/Header.jsx";
 import HeroSection from "./homecomponents/HeroSection";
-import Reset from "./components/reset/Reset";  
-import Forget from "./components/Forget"; 
-import EmailVerification from "./components/EmailVerification"; 
+import Reset from "./components/Forms/Reset";
+import Forget from "./components/Forms/Forget";
+import EmailVerification from "./components/Forms/EmailVerification";
 import Breadcrumb from "./homecomponents/BreadCrumbs";
 import BreadCrumb from "./homecomponents/BreadCrumb";
 
@@ -12,7 +12,7 @@ import ShopPage from "./pages/ShopPage";
 import { Route, Router, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Footer from "./homecomponents/Footer";
-import Signin from "./components/Signin.jsx";
+import Signin from "./components/Forms/Signin.jsx";
 import ShoppingCard from "./pages/ShoppingCard";
 import Wishlist from "./pages/Wishlist";
 import TrackOrder from "./homecomponents/TrackOrder";
@@ -27,21 +27,11 @@ import NotFoundPage from "./pages/NotFoundPage.jsx";
 import OrderCheckout from "./pages/Checkoutpage.jsx";
 import OrderSuccess from "./pages/OrderSuccessful.jsx";
 import BlogList from "./homecomponents/BlogList.jsx";
-// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
   return (
     <>
-   
       <div>
         <Header />
-        {/* <Breadcrumb/> */}
-        {/* <HeroSection /> */}
-        {/* <ShopPage/> */}
-        {/* <Signin/> */}
-        {/* <Reset/> */}
-        {/* <Forget/> */}
-        {/* <EmailVerification/> */}
-        
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Wishlist" element={<Wishlist />} />
@@ -86,44 +76,38 @@ function App() {
           <Route path="/ordercheckout" element={<OrderCheckout />}></Route>
           <Route path="/ordersuccess" element={<OrderSuccess />}></Route>
           <Route path="/bloglist" element={<BlogList />}></Route>
-          <Route path="/User Account/sign In" element={
-          <>
-             {/* <Breadcrumb/> */}
-            {/* <BreadCrumb />  */}
-            <Signin/>
-          </>
-          }></Route>
-          <Route path="/User Account/sign Up" element={
-              <Signin/>
-            }></Route>
-          <Route path="/User Account/Sign In/Forget Password" element={
-            <>
-            <Breadcrumb/>
-            <Forget/>
-            </>
-            }></Route>
-          <Route path="/User Account/Sign Up/Email Verification" element=
-          {
-            <>
-            <Breadcrumb/>
-            <EmailVerification/>
-            </>
-          }
-          >
-          </Route>
-          <Route path="/User Account/Sign In/Forget Password/Reset Password" element=
-          {
-            <>
-            <Breadcrumb/>
-            <Reset/>
-            </>
-          }
-          >
-          </Route>
+          <Route path="/User Account/sign In" element={<Signin />}></Route>
+          <Route path="/User Account/sign Up" element={<Signin />}></Route>
+          <Route
+            path="/User Account/Sign In/Forget Password"
+            element={
+              <>
+                <Breadcrumb />
+                <Forget />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/User Account/Sign Up/Email Verification"
+            element={
+              <>
+                <Breadcrumb />
+                <EmailVerification />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/User Account/Sign In/Forget Password/Reset Password"
+            element={
+              <>
+                <Breadcrumb />
+                <Reset />
+              </>
+            }
+          ></Route>
         </Routes>
         <Footer />
       </div>
-    
     </>
   );
 }
