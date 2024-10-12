@@ -19,6 +19,7 @@ import { HiOutlineChartSquareBar } from "react-icons/hi";
 import { PiShoppingCartDuotone } from "react-icons/pi";
 import { IoMdArrowDropright } from "react-icons/io";
 import vendorLogo from "../../../../public/logoo.svg";
+import { Link } from "react-router-dom";
 
 // import Logo from './assets/logo-2.png';
 const Sidebar = () => {
@@ -53,7 +54,9 @@ w-[247.2px] h-[36px] mt-6 left-[16px] p-[6px_16px] gap-0 rounded-lg
 
       {/* Menu Items */}
       <nav className="flex-grow space-y-4 ml-2 mt-10">
-        <SidebarItem imgSrc="/accountSVG.svg" text="Account" className="" />
+        <Link to="/vendor/account/general">
+          <SidebarItem imgSrc="/accountSVG.svg" text="Account" className="" />
+        </Link>
         <SidebarItem imgSrc="/customer.svg" text="Customers" badge="New" />
         <SidebarItem imgSrc="/product.svg" text="Products" />
         <SidebarItem imgSrc="/orders.svg" text="Orders" />
