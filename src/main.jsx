@@ -21,7 +21,8 @@ import ShoppingCard from "./pages/ShoppingCard.jsx";
 import OrderSuccess from "./homecomponents/OrderSuccess.jsx";
 import BlogList from "./homecomponents/BlogList.jsx";
 import BlogDetailsPage from "./pages/BlogDetailsPage.jsx";
-import VendorDashboard from "./pages/Vendor/VendorDashboard.jsx";
+import { VendorDashboard } from "./pages/vendorDashboard/VendorDashboard.jsx";
+import StoreAnalytics from "./pages/vendorDashboard/StoreAnalytics.jsx";
 
 
 const router = createBrowserRouter([
@@ -122,6 +123,10 @@ const router = createBrowserRouter([
                 path: "productlists",
                 element: <VendorDashboard />,
             },
+            {
+                path: "store-analytics",
+                element: <StoreAnalytics />
+            }
         ],
     }
 ]);

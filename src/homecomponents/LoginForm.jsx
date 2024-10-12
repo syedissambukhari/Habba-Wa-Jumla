@@ -77,9 +77,9 @@ const LoginForm = ({ isOpen, onClose }) => {
           </label>
           {/* Create Account */}
           <div className="flex  justify-center items-center py-2  border border-solid-[3px] border-[#0B5D51]">
-            <a href="#" className="ml-2 ">
+            <Link to="/VendorDashboard" href="#" className="ml-2 ">
               CREATE ACCOUNT
-            </a>
+            </Link>
           </div>
         </form>
       </div>

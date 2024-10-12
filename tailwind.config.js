@@ -3,7 +3,12 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+        plusjakartasans: [ "Plus Jakarta Sans", 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 };
