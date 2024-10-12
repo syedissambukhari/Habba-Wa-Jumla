@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './forget.css';
 import { FaArrowRight} from 'react-icons/fa6';
+import { Link } from 'react-router-dom';
 
 const Forget = () => {
   const [email, setEmail] = useState('');
@@ -31,8 +32,8 @@ const Forget = () => {
               required
             />
           </div>
-          <button type="submit" className="send-code-btn">
-            SEND CODE
+          <button type='submit' className="send-code-btn">
+            <Link to="/User Account/Sign In/Forget Password/Reset Password">SEND CODE</Link>
             <FaArrowRight className="arrow-icon2"/>
           </button>
         </form>
