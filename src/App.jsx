@@ -27,6 +27,7 @@ import NotFoundPage from "./pages/NotFoundPage.jsx";
 import OrderCheckout from "./pages/Checkoutpage.jsx";
 import OrderSuccess from "./pages/OrderSuccessful.jsx";
 import BlogList from "./homecomponents/BlogList.jsx";
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
   return (
     <>
@@ -87,18 +88,21 @@ function App() {
           <Route path="/bloglist" element={<BlogList />}></Route>
           <Route path="/User Account/sign In" element={
           <>
-            <Breadcrumb/>
-            {/* <BreadCrumb /> */}
+             {/* <Breadcrumb/> */}
+            {/* <BreadCrumb />  */}
             <Signin/>
           </>
           }></Route>
+          <Route path="/User Account/sign Up" element={
+              <Signin/>
+            }></Route>
           <Route path="/User Account/Sign In/Forget Password" element={
             <>
             <Breadcrumb/>
             <Forget/>
             </>
             }></Route>
-          <Route path="/Sign In/Email Verification" element=
+          <Route path="/User Account/Sign Up/Email Verification" element=
           {
             <>
             <Breadcrumb/>
