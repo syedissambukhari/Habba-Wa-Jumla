@@ -21,6 +21,7 @@ import ShoppingCard from "./pages/ShoppingCard.jsx";
 import OrderSuccess from "./homecomponents/OrderSuccess.jsx";
 import BlogList from "./homecomponents/BlogList.jsx";
 import BlogDetailsPage from "./pages/BlogDetailsPage.jsx";
+import VendorDashboard from "./pages/Vendor/VendorDashboard.jsx";
 
 
 const router = createBrowserRouter([
@@ -113,6 +114,16 @@ const router = createBrowserRouter([
             }
         ],
     },
+    {
+        path: "vendor",
+        element: <VendorDashboard />,
+        children: [
+            {
+                path: "productlists",
+                element: <VendorDashboard />,
+            },
+        ],
+    }
 ]);
 
 
