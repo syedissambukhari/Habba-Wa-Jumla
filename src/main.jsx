@@ -23,6 +23,11 @@ import BlogList from "./homecomponents/BlogList.jsx";
 import BlogDetailsPage from "./pages/BlogDetailsPage.jsx";
 import { VendorDashboard } from "./pages/vendorDashboard/VendorDashboard.jsx";
 import StoreAnalytics from "./pages/vendorDashboard/StoreAnalytics.jsx";
+import Account from "./pages/vendorDashboard/Account/Account.jsx";
+import General from "./pages/vendorDashboard/Account/General.jsx";
+import Notifications from "./pages/vendorDashboard/Account/Notifications.jsx";
+import Security from "./pages/vendorDashboard/Account/Security.jsx";
+import Team from "./pages/vendorDashboard/Account/Team.jsx";
 
 
 const router = createBrowserRouter([
@@ -126,6 +131,28 @@ const router = createBrowserRouter([
             {
                 path: "store-analytics",
                 element: <StoreAnalytics />
+            },
+            {
+                path: "account",
+                element: <Account />,
+                children: [
+                    {
+                        path: "general",
+                        element: <General />
+                    },
+                    {
+                        path: "notifications",
+                        element: <Notifications />
+                    },
+                    {
+                        path: "security",
+                        element: <Security />
+                    },
+                    {
+                        path: "team",
+                        element: <Team />
+                    }
+                ]
             }
         ],
     }
