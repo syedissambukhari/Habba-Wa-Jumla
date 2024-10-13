@@ -1,4 +1,5 @@
 import "./App.css";
+<<<<<<< HEAD
 import Breadcrumb from "./homecomponents/BreadCrumbs";
 import Header from "./homecomponents/Header";
 import ShopPage from "./pages/ShopPage";
@@ -19,11 +20,20 @@ import DashboardSettings from "./pages/DashboardSettings.jsx";
 import TrackOrderDetails from "./homecomponents/TrackOrderDetails.jsx";
 import BulkProducts from "./pages/BulkProducts.jsx";
 
+=======
+import Header from "./components/Header";
+import HeroSection from "./components/HeroSection";
+import Signin from "./components/Signin";  
+import Reset from "./components/reset/Reset";  
+import Forget from "./components/Forget"; 
+import EmailVerification from "./components/EmailVerification"; 
+>>>>>>> 3e12ea98d4a58a5e1da78728f3a692bf21f85f1e
 function App() {
   return (
     <>
       <div>
         <Header />
+<<<<<<< HEAD
 
         {/* Consolidated all routes into a single block */}
         <Routes>
@@ -45,6 +55,13 @@ function App() {
         </Routes>
 
         <Footer />
+=======
+        <HeroSection />
+        <Signin/>
+        <Reset/>
+        <Forget/>
+        <EmailVerification/>
+>>>>>>> 3e12ea98d4a58a5e1da78728f3a692bf21f85f1e
       </div>
     </>
   );
