@@ -232,7 +232,7 @@ const AccountSettings = () => {
                 Region/State
                 <div className="relative cursor-pointer">
                   <select
-                    name=""
+                    name="" 
                     id=""
                     defaultValue="Select"
                     className="appearance-none w-full h-10 border mt-3 px-3 rounded-sm pr-10"
