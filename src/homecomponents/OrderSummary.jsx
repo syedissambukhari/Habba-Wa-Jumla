@@ -62,8 +62,8 @@ const OrderSummary = () => {
         <p className="text-[14px]">$357.99 USD</p>
       </div>
       <div className="mt-auto">
-        <button className="bg-[#0B5D51] text-white font-[700] w-[248px] h-[48px] py-2 flex items-center justify-center">
-          <span>Shop Now</span>
+        <button className="bg-[#0B5D51] text-white font-[700] w-full  h-[48px] py-2 flex items-center justify-center">
+          <span>Place Order</span>
           <IoIosArrowRoundForward size={25} />
         </button>
       </div>
