@@ -12,7 +12,7 @@ import CompareProduct from "./pages/CompareProduct.jsx";
 import Breadcrumb from "./homecomponents/BreadCrumbs.jsx";
 import DashboardBrowsingHistory from "./pages/DashboardBrowsingHistory.jsx";
 import TrackOrderDetails from "./homecomponents/TrackOrderDetails.jsx";
-import {UserDashboard} from "./pages/Dashboard/UserDashboard.jsx";
+import { UserDashboard } from "./pages/Dashboard/UserDashboard.jsx";
 import CardsAndAddressesPage from "./pages/Dashboard/CardsAndAddressesPage.jsx";
 import ShopPage from "./pages/ShopPage.jsx";
 import FAQPage from "./pages/FAQPage.jsx";
@@ -23,6 +23,13 @@ import BlogList from "./homecomponents/BlogList.jsx";
 import BlogDetailsPage from "./pages/BlogDetailsPage.jsx";
 import { VendorDashboard } from "./pages/vendorDashboard/VendorDashboard.jsx";
 import StoreAnalytics from "./pages/vendorDashboard/StoreAnalytics.jsx";
+
+import { OrderList } from "./pages/vendorDashboard/Orders/OrderList.jsx";
+import { OrderFilter } from "./pages/vendorDashboard/Orders/OrderFilter.jsx";
+
+import ProductLists from "./pages/vendorDashboard/ProductLists.jsx";
+import ProductCreation from "./pages/vendorDashboard/ProductCreation.jsx";
+
 import Account from "./pages/vendorDashboard/Account/Account.jsx";
 import General from "./pages/vendorDashboard/Account/General.jsx";
 import Notifications from "./pages/vendorDashboard/Account/Notifications.jsx";
@@ -32,8 +39,8 @@ import Billing from "./pages/vendorDashboard/Account/Billing.jsx";
 
 
 const router = createBrowserRouter([
-    {
-        path: "/",
+  {
+    path: "/",
         element: <App />,
         children: [
             {
@@ -157,12 +164,20 @@ const router = createBrowserRouter([
                         path: "billing",
                         element: <Billing />
                     }
-                ]
+                ],
+            },
+        {
+            path: "OrderList",
+            element: <OrderList />
+        },
+            {
+                path: "OrderFilter",
+                element: <OrderFilter />
             }
         ],
     }
-]);
 
+]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
