@@ -1,4 +1,5 @@
 import { FaArrowRight } from "react-icons/fa6";
+import {LuSettings2} from "react-icons/lu";
 
 
 
@@ -56,7 +57,10 @@ function Security() {
                 </div>
             </div>
 
-            <div className="mb-8 p-8 rounded-lg shadow-[0px_2px_10px_3px_#0B5D5180]">
+            <div className="relative mb-8 p-8 rounded-lg shadow-[0px_2px_10px_3px_#0B5D5180]">
+                <div className="bg-[#0B5D51] p-3 rounded-3xl absolute top-[45px] right-0 mt-2 mr-2">
+                    <LuSettings2 size={28} color="white"/>
+                </div>
                 <p className="text-[#111927] text-[16px] font-bold">Login history</p>
                 <p className="text-[#111927] text-[16px] text-sm">Your recent login activity</p>
                 <div className="flex mb-4 mt-4">

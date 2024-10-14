@@ -1,11 +1,15 @@
 import stack1 from "./stack1.png"
 import stack2 from "./stack2.png"
 import stack3 from "./stack3.png"
+import {LuSettings2} from "react-icons/lu";
 
 function Billing() {
     return (
         <>
-            <div className="mb-8 p-8 rounded-lg shadow-[0px_2px_10px_3px_#0B5D5180]">
+            <div className="relative mb-8 p-8 rounded-lg shadow-[0px_2px_10px_3px_#0B5D5180]">
+                <div className="bg-[#0B5D51] p-3 rounded-3xl absolute bottom-[80px] right-0 mt-2 mr-2">
+                    <LuSettings2 size={28} color="white"/>
+                </div>
                 <p className="text-[#111927] text-[16px] font-bold">Change Plan</p>
                 <p className="text-[#111927] text-[16px] text-sm">You can upgrade and downgrade whenever you want</p>
 
