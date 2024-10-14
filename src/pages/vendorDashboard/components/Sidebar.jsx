@@ -35,6 +35,9 @@ const Sidebar = () => {
 
       {/* Menu Items */}
       <nav className="flex-grow space-y-4 ml-2 mt-10">
+          <Link to="/vendor/account/general"><SidebarItem imgSrc='/accountSVG.svg' text="Account" /></Link>
+        <SidebarItem imgSrc='/customer.svg' text="Customers" badge="New" />
+        <SidebarItem imgSrc='/product.svg' text="Products" />
         <SidebarItem imgSrc="/accountSVG.svg" text="Account" />
         <SidebarItem imgSrc="/customer.svg" text="Customers" badge="New" />
         {/* Products dropdown */}
