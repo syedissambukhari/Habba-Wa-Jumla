@@ -141,35 +141,10 @@ const router = createBrowserRouter([
                 element: <StoreAnalytics />
             },
             {
-                path: "account",
-                element: <Account />,
-                children: [
-                    {
-                        path: "general",
-                        element: <General />
-                    },
-                    {
-                        path: "notifications",
-                        element: <Notifications />
-                    },
-                    {
-                        path: "security",
-                        element: <Security />
-                    },
-                    {
-                        path: "team",
-                        element: <Team />
-                    },
-                    {
-                        path: "billing",
-                        element: <Billing />
-                    }
-                ],
-            },
-        {
-            path: "OrderList",
-            element: <OrderList />
-        },
+                path: "OrderList",
+                element: <OrderList />
+            }
+            ,
             {
                 path: "OrderFilter",
                 element: <OrderFilter />
