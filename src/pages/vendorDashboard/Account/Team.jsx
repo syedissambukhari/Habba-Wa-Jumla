@@ -4,12 +4,16 @@ import profilePic from "../../../assets/profile.png";
 import { BiDotsHorizontalRounded } from "react-icons/bi";
 import image1 from "../../../assets/image1.png"
 import image2 from "../../../assets/image2.png"
+import {LuSettings2} from "react-icons/lu";
 
 
 
 function Team() {
     return (
-        <div className="mb-8 p-8 rounded-lg shadow-[0px_2px_10px_3px_#0B5D5180]">
+        <div className="relative mb-8 p-8 rounded-lg shadow-[0px_2px_10px_3px_#0B5D5180]">
+            <div className="bg-[#0B5D51] p-3 rounded-3xl absolute bottom-[-80px] right-0 mt-2 mr-2">
+                <LuSettings2 size={28} color="white"/>
+            </div>
             <div className="flex">
                 <div className="basis-1/2">
                     <p className="text-[#111927] text-[16px] font-bold">Invite Members</p>
