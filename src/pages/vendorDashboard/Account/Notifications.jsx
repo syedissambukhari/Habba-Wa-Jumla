@@ -11,7 +11,7 @@ function Notifications() {
             <div className="flex">
                 <div className="w-full flex flex-col justify-between basis-1/3">
                     <p className="text-[#111927] text-[16px] font-bold">Email</p>
-                    <p className="text-[#111927] text-[16px] font-bold">Phone Notifications</p>
+                    <p className="text-[#111927] text-[16px] font-bold pb-6">Phone Notifications</p>
                 </div>
                 <div className="w-full">
                     <div className="mb-8 flex justify-between">

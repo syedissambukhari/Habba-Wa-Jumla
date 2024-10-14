@@ -4,25 +4,25 @@ import stack3 from "./stack3.png"
 
 function Billing() {
     return (
-        <div>
+        <>
             <div className="mb-8 p-8 rounded-lg shadow-[0px_2px_10px_3px_#0B5D5180]">
                 <p className="text-[#111927] text-[16px] font-bold">Change Plan</p>
                 <p className="text-[#111927] text-[16px] text-sm">You can upgrade and downgrade whenever you want</p>
 
                 <div className="mt-8 flex gap-4 justify-between">
-                    <div className="basis-1/2 mb-8 p-8 rounded-lg shadow-[0px_2px_10px_3px_#0B5D5180]">
+                    <div className="basis-1/2 mb-8 p-8 rounded-lg shadow-[0px_1px_5px_1px_#0B5D5180]">
                         <img className="mb-8" src={stack1}/>
                         <p className="mb-2 font-bold text-2xl">$0.00<span
                             className="text-[#6C737F] text-sm font-[400px]">/mo</span></p>
                         <p className="text-sm font-semibold">STARTUP</p>
                     </div>
-                    <div className="basis-1/2 mb-8 p-8 rounded-lg shadow-[0px_2px_10px_3px_#0B5D5180]">
+                    <div className="basis-1/2 mb-8 p-8 rounded-lg shadow-[0px_1px_5px_1px_#0B5D5180]">
                         <img className="mb-8" src={stack2}/>
                         <p className="mb-2 font-bold text-2xl">$0.00<span
                             className="text-[#6C737F] text-sm font-[400px]">/mo</span></p>
                         <p className="text-sm font-semibold">STANDARD</p>
                     </div>
-                    <div className="basis-1/2 mb-8 p-8 rounded-lg shadow-[0px_2px_10px_3px_#0B5D5180]">
+                    <div className="basis-1/2 mb-8 p-8 rounded-lg shadow-[0px_1px_5px_1px_#0B5D5180]">
                         <img className="mb-8" src={stack3}/>
                         <p className="mb-2 font-bold text-2xl">$0.00<span
                             className="text-[#6C737F] text-sm font-[400px]">/mo</span></p>
@@ -67,7 +67,12 @@ function Billing() {
                         </div>
                     </div>
                     <p className="mt-8 text-[#6C737F] text-sm">We cannot refund once you purchased a subscription, but
-                        you can always<span className="text-[#0B5D51]">Cancel</span></p>
+                        you can always <span className="text-[#0B5D51]">Cancel</span></p>
+                    <div className="flex justify-end">
+                        <button className="px-4 py-2 rounded-lg bg-[#0B5D51]">
+                            <p className="text-sm font-bold text-white">Upgrade Plan</p>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -76,24 +81,59 @@ function Billing() {
                 <p className="text-[#111927] text-[16px] text-sm">You can view and download all your previous invoices
                     here. If you’ve just made a payment, it may take a few hours for it to appear in the table
                     below.</p>
-                <table className="border-2 border-red-600 w-full">
-                    <thead className="w-full">
-                        <tr className="left-0">
-                            <th>DATE</th>
-                            <th>INVOICE (INCL. TAX)</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody className="w-full border-2 border-pink-600">
-                        <tr>
-                            <td>2022-01-01</td>
-                            <td>$0.00</td>
-                            <td><a href="#" className="text-[#0B5D51]">View Invoice</a></td>
-                        </tr>
-                    </tbody>
-                </table>
+
+                <div className="mt-8">
+
+                    <div className="flex mb-4">
+                        <div className="basis-1/2">
+                            <p className="text-[#2F3746] text-sm font-semibold">DATE</p>
+                        </div>
+                        <div className="basis-1/2">
+                            <p className="text-[#2F3746] text-sm font-semibold">TOTAL (INCL. TAX)</p>
+                        </div>
+                        <div className="basis-1/2">
+                            <p className="text-[#2F3746] text-sm font-medium"></p>
+                        </div>
+                    </div>
+
+                    <div className="mt-2 flex">
+                        <div className="basis-1/2">
+                            <p className="text-black text-sm">January 1, 2020</p>
+                        </div>
+                        <div className="basis-1/2">
+                            <p className="text-black text-sm font-medium">$0.00</p>
+                        </div>
+                        <div className="basis-1/2">
+                            <p className="underline text-sm font-medium">View Invoice</p>
+                        </div>
+                    </div>
+
+                    <div className="mt-2 flex">
+                        <div className="basis-1/2">
+                            <p className="text-black text-sm">January 1, 2020</p>
+                        </div>
+                        <div className="basis-1/2">
+                            <p className="text-black text-sm font-medium">$0.00</p>
+                        </div>
+                        <div className="basis-1/2">
+                            <p className="underline text-sm font-medium">View Invoice</p>
+                        </div>
+                    </div>
+
+                    <div className="mt-2 flex">
+                        <div className="basis-1/2">
+                            <p className="text-black text-sm">January 1, 2020</p>
+                        </div>
+                        <div className="basis-1/2">
+                            <p className="text-black text-sm font-medium">$0.00</p>
+                        </div>
+                        <div className="basis-1/2">
+                            <p className="text-sm font-medium underline">View Invoice</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </>
     );
 }
 
