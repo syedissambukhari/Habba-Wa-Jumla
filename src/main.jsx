@@ -37,148 +37,148 @@ import Security from "./pages/vendorDashboard/Account/Security.jsx";
 import Team from "./pages/vendorDashboard/Account/Team.jsx";
 import Billing from "./pages/vendorDashboard/Account/Billing.jsx";
 
-
 const router = createBrowserRouter([
   {
     path: "/",
-        element: <App />,
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/Wishlist",
+        element: <Wishlist />,
+      },
+      {
+        path: "/TrackOrder",
+        element: <TrackOrder />,
+      },
+      {
+        path: "/CustomerSupport",
+        element: <CustomerSupport />,
+      },
+      {
+        path: "/CompareProduct",
+        element: <CompareProduct />,
+      },
+      {
+        path: "/browsing-history",
+        element: (
+          <>
+            <Breadcrumb />
+            <DashboardBrowsingHistory />
+          </>
+        ),
+      },
+      {
+        path: "/TrackOrderDetails",
+        element: <TrackOrderDetails />,
+      },
+      {
+        path: "/UserDashboard",
+        element: <UserDashboard />,
+      },
+      {
+        path: "/dashboard/billing",
+        element: <CardsAndAddressesPage />,
+      },
+      {
+        path: "/shop",
+        element: (
+          <>
+            <Breadcrumb />
+            <ShopPage />
+          </>
+        ),
+      },
+      {
+        path: "/faq",
+        element: <FAQPage />,
+      },
+      {
+        path: "/not-found",
+        element: <NotFoundPage />,
+      },
+      {
+        path: "/shopping-card",
+        element: (
+          <>
+            <Breadcrumb />
+            <ShoppingCard />
+          </>
+        ),
+      },
+      {
+        path: "/ordercheckout",
+        element: <OrderCheckout />,
+      },
+      {
+        path: "/ordersuccess",
+        element: <OrderSuccess />,
+      },
+      {
+        path: "/bloglist",
+        element: <BlogList />,
+      },
+      {
+        path: "/blogdetails",
+        element: <BlogDetailsPage />,
+      },
+    ],
+  },
+  {
+    path: "vendor",
+    element: <VendorDashboard />,
+    children: [
+      {
+        path: "account",
+        element: <Account />,
         children: [
-            {
-                path: "/",
-                element: <Home />,
-            },
-            {
-                path: "/Wishlist",
-                element: <Wishlist />,
-            },
-            {
-                path: "/TrackOrder",
-                element: <TrackOrder />,
-            },
-            {
-                path: "/CustomerSupport",
-                element: <CustomerSupport />,
-            },
-            {
-                path: "/CompareProduct",
-                element: <CompareProduct />,
-            },
-            {
-                path: "/browsing-history",
-                element: (
-                    <>
-                        <Breadcrumb />
-                        <DashboardBrowsingHistory />
-                    </>
-                ),
-            },
-            {
-                path: "/TrackOrderDetails",
-                element: <TrackOrderDetails />,
-            },
-            {
-                path: "/UserDashboard",
-                element: <UserDashboard />,
-            },
-            {
-                path: "/dashboard/billing",
-                element: <CardsAndAddressesPage />,
-            },
-            {
-                path: "/shop",
-                element: (
-                    <>
-                        <Breadcrumb />
-                        <ShopPage />
-                    </>
-                ),
-            },
-            {
-                path: "/faq",
-                element: <FAQPage />,
-            },
-            {
-                path: "/not-found",
-                element: <NotFoundPage />,
-            },
-            {
-                path: "/shopping-card",
-                element: (
-                    <>
-                        <Breadcrumb />
-                        <ShoppingCard />
-                    </>
-                ),
-            },
-            {
-                path: "/ordercheckout",
-                element: <OrderCheckout />,
-            },
-            {
-                path: "/ordersuccess",
-                element: <OrderSuccess />,
-            },
-            {
-                path: "/bloglist",
-                element: <BlogList />,
-            },
-            {
-                path: "/blogdetails",
-                element: <BlogDetailsPage />,
-            }
+          {
+            path: "general",
+            element: <General />,
+          },
+          {
+            path: "notifications",
+            element: <Notifications />,
+          },
+          {
+            path: "security",
+            element: <Security />,
+          },
+          {
+            path: "team",
+            element: <Team />,
+          },
+          {
+            path: "billing",
+            element: <Billing />,
+          },
         ],
-    },
-    {
-        path: "vendor",
-        element: <VendorDashboard />,
-        children: [
-            {
-
-                path: "account",
-                element: <Account />,
-                children: [
-                    {
-                        path: "general",
-                        element: <General />
-                    },
-                    {
-                        path: "notifications",
-                        element: <Notifications />
-                    },
-                    {
-                        path: "security",
-                        element: <Security />
-                    },
-                    {
-                        path: "team",
-                        element: <Team />
-                    },
-                    {
-                        path: "billing",
-                        element: <Billing />
-                    }
-                ]
-            },
-            {
-                path: "productlists",
-                element: <VendorDashboard />,
-            },
-            {
-                path: "store-analytics",
-                element: <StoreAnalytics />
-            },
-            {
-                path: "OrderList",
-                element: <OrderList />
-            }
-            ,
-            {
-                path: "OrderFilter",
-                element: <OrderFilter />
-            }
-        ],
-    }
-
+      },
+      {
+        path: "productlists",
+        element: <ProductLists />,
+      },
+      {
+        path: "productcreates",
+        element: <ProductCreation />,
+      },
+      {
+        path: "store-analytics",
+        element: <StoreAnalytics />,
+      },
+      {
+        path: "OrderList",
+        element: <OrderList />,
+      },
+      {
+        path: "OrderFilter",
+        element: <OrderFilter />,
+      },
+    ],
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
