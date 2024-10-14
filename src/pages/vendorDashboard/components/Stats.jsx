@@ -1,5 +1,5 @@
 import React from 'react'
-import { div } from 'three/webgpu'
+
 
 export const Stats = () => {
   return (
