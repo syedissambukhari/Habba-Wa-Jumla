@@ -76,6 +76,22 @@ function Billing() {
                 <p className="text-[#111927] text-[16px] text-sm">You can view and download all your previous invoices
                     here. If you’ve just made a payment, it may take a few hours for it to appear in the table
                     below.</p>
+                <table className="border-2 border-red-600 w-full">
+                    <thead className="w-full">
+                        <tr className="left-0">
+                            <th>DATE</th>
+                            <th>INVOICE (INCL. TAX)</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody className="w-full border-2 border-pink-600">
+                        <tr>
+                            <td>2022-01-01</td>
+                            <td>$0.00</td>
+                            <td><a href="#" className="text-[#0B5D51]">View Invoice</a></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     );
