@@ -35,6 +35,7 @@ import General from "./pages/vendorDashboard/Account/General.jsx";
 import Notifications from "./pages/vendorDashboard/Account/Notifications.jsx";
 import Security from "./pages/vendorDashboard/Account/Security.jsx";
 import Team from "./pages/vendorDashboard/Account/Team.jsx";
+import Billing from "./pages/vendorDashboard/Account/Billing.jsx";
 
 
 const router = createBrowserRouter([
