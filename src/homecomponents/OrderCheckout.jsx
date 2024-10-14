@@ -14,7 +14,7 @@ const Checkout = () => {
     { id: 2, name: "Venmo", icon: venomo },
     { id: 3, name: "Paypal", icon: paypal },
     { id: 4, name: "Amazon Pay", icon: amazon },
-    { id: 5, name: "Debid/Credit Card", icon: card },
+    { id: 5, name: "Debit/Credit Card", icon: card },
   ];
   const [selectedMethod, setSelectedMethod] = useState(null);
 
@@ -34,8 +34,12 @@ const Checkout = () => {
           <p className="text-[#5F6C72]">Checkout</p>
         </div>
       </div>
-      <div className="flex items-center px-[120px]">
-        <div className="flex flex-col">
+      <div className="flex items-start px-[120px]">
+        {" "}
+        {/* Change items-center to items-start */}
+        <div className="flex flex-col w-[800px]">
+          {" "}
+          {/* Added width to the billing section */}
           <h1 className="text-[18px] font-[500]">Billing Information</h1>
           <form action="" className="mt-[50px]">
             {/* Billing form fields */}
@@ -64,7 +68,7 @@ const Checkout = () => {
                   <input
                     type="text"
                     id="lastName"
-                    className="w-full h-10 px-3 border  text-sm text-gray-900"
+                    className="w-full h-10 px-3 border text-sm text-gray-900"
                   />
                 </div>
               </div>
@@ -79,7 +83,7 @@ const Checkout = () => {
                 <input
                   type="text"
                   id="companyName"
-                  className="w-full h-10 px-3 border  text-sm text-gray-900"
+                  className="w-full h-10 px-3 border text-sm text-gray-900"
                 />
               </div>
             </div>
@@ -95,7 +99,7 @@ const Checkout = () => {
                 <input
                   type="email"
                   id="email"
-                  className="w-full h-10 px-3 border  text-sm text-gray-900"
+                  className="w-full h-10 px-3 border text-sm text-gray-900"
                 />
               </div>
 
@@ -109,7 +113,7 @@ const Checkout = () => {
                 <input
                   type="tel"
                   id="phone"
-                  className="w-full h-10 px-3 border  text-sm text-gray-900"
+                  className="w-full h-10 px-3 border text-sm text-gray-900"
                 />
               </div>
             </div>
@@ -124,7 +128,7 @@ const Checkout = () => {
               <input
                 type="text"
                 id="address"
-                className="w-full h-10 px-3 border  text-sm text-gray-900"
+                className="w-full h-10 px-3 border text-sm text-gray-900"
               />
             </div>
 
@@ -138,7 +142,7 @@ const Checkout = () => {
                 </label>
                 <select
                   id="country"
-                  className="w-full h-10 px-3 border  text-sm text-gray-900"
+                  className="w-full h-10 px-3 border text-sm text-gray-900"
                 >
                   <option value="">Country....</option>
                   <option value="US">United States</option>
@@ -155,7 +159,7 @@ const Checkout = () => {
                 </label>
                 <select
                   id="region"
-                  className="w-full h-10 px-3 border  text-sm text-gray-900"
+                  className="w-full h-10 px-3 border text-sm text-gray-900"
                 >
                   <option value="">Region.....</option>
                   <option value="CA">California</option>
@@ -172,7 +176,7 @@ const Checkout = () => {
                 </label>
                 <select
                   id="city"
-                  className="w-full h-10 px-3 border  text-sm text-gray-900"
+                  className="w-full h-10 px-3 border text-sm text-gray-900"
                 >
                   <option value="">City....</option>
                   <option value="CA">California</option>
@@ -190,7 +194,7 @@ const Checkout = () => {
                 <input
                   type="text"
                   id="zipCode"
-                  className="w-full h-10 px-3 border  text-sm text-gray-900"
+                  className="w-full h-10 px-3 border text-sm text-gray-900"
                 />
               </div>
             </div>
@@ -200,7 +204,7 @@ const Checkout = () => {
               <input
                 type="checkbox"
                 id="differentAddress"
-                className="h-4 w-4 text-blue-600 border-gray-300  focus:ring-blue-500"
+                className="h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500"
               />
               <label
                 htmlFor="differentAddress"
@@ -210,7 +214,8 @@ const Checkout = () => {
               </label>
             </div>
           </form>
-          <div className="mt-[40px] border border-gray-300  flex flex-col">
+          {/* Payment Option Section */}
+          <div className="mt-[40px] border border-gray-300 flex flex-col">
             <h1 className="p-4 text-[18px] font-[500]">Payment Option </h1>
             <hr className="border border-gray-200" />
             <div className="flex justify-around items-center p-3">
@@ -224,8 +229,7 @@ const Checkout = () => {
                       src={method.icon}
                       alt={method.name}
                       className="w-6 h-6 mr-2"
-                    />{" "}
-                    {/* Adjust the size as needed */}
+                    />
                     <p>{method.name}</p>
                     <div
                       className={`w-6 h-6 rounded-full transition ${
@@ -256,7 +260,7 @@ const Checkout = () => {
               <input
                 type="text"
                 id="nameOnCard"
-                className="w-full h-10 px-3 border  text-sm text-gray-900 mb-3"
+                className="w-full h-10 px-3 border text-sm text-gray-900 mb-3"
               />
               <label
                 className="block text-sm font-medium text-gray-700 mb-1"
@@ -280,7 +284,7 @@ const Checkout = () => {
                   <input
                     type="text"
                     id="expiryDate"
-                    className="w-full h-10 px-3 border  text-sm text-gray-900"
+                    className="w-full h-10 px-3 border text-sm text-gray-900"
                     placeholder="MM/YY"
                   />
                 </div>
@@ -294,12 +298,13 @@ const Checkout = () => {
                   <input
                     type="text"
                     id="cvc"
-                    className="w-full h-10 px-3 border  text-sm text-gray-900"
+                    className="w-full h-10 px-3 border text-sm text-gray-900"
                   />
                 </div>
               </div>
             </div>
           </div>
+          {/* Additional Information Section */}
           <div className="flex flex-col gap-4 mt-6">
             <h1>Additional Information </h1>
             <h6>
@@ -307,12 +312,16 @@ const Checkout = () => {
               <span className="text-[11px] text-[gray]">(Optional)</span>
             </h6>
             <textarea
-              className="w-full min-h-[124px] px-3 border  text-sm text-gray-900 resize-none"
+              className="w-full min-h-[124px] px-3 border text-sm text-gray-900 resize-none"
               rows={1}
             />
           </div>
         </div>
-        <OrderSummary />
+        <div className="w-[304px]">
+          {" "}
+          {/* Using Tailwind CSS custom width */}
+          <OrderSummary />
+        </div>
       </div>
     </div>
   );

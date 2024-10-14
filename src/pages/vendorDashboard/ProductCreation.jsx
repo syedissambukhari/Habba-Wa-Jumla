@@ -44,7 +44,7 @@ const ProductCreation = () => {
 
   const decrementPrice = () => {
     setPrice((prevPrice) => {
-      const newPrice = Number(prevPrice) - 0.5; // Ensure prevPrice is treated as a number
+      const newPrice = Number(prevPrice) - 1; // Ensure prevPrice is treated as a number
       return newPrice >= 0 ? newPrice.toFixed(2) : "0.00"; // Prevent negative values
     });
   };
@@ -172,7 +172,7 @@ const ProductCreation = () => {
               }`}
             >
               <span
-                className={`absolute left-0 w-3 h-3 rounded-full transition-transform duration-200 ${
+                className={`absolute left-0 w-4 h-4  rounded-full transition-transform duration-200 ${
                   featureProduct
                     ? "transform translate-x-9 bg-white"
                     : "bg-white"
@@ -207,7 +207,7 @@ const ProductCreation = () => {
               }`}
             >
               <span
-                className={`absolute left-0 w-3 h-3 rounded-full transition-transform duration-200 ${
+                className={`absolute left-0 w-4 h-4 rounded-full transition-transform duration-200 ${
                   bestDeals ? "transform translate-x-9 bg-white" : "bg-white" // Circle color is white for both states
                 }`}
               />
@@ -281,7 +281,7 @@ const ProductCreation = () => {
 
               <input
                 type="text"
-                value={price}
+                value={bulkPrice}
                 readOnly
                 className="border-none outline-none text-center w-full"
               />
@@ -320,7 +320,7 @@ const ProductCreation = () => {
             }`}
           >
             <span
-              className={`absolute left-0 w-3 h-3 rounded-full transition-transform duration-200 ${
+              className={`absolute left-0 w-4 h-4 rounded-full transition-transform duration-200 ${
                 isFeatureEnabled
                   ? "transform translate-x-9 bg-white"
                   : "bg-white"
