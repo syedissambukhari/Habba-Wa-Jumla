@@ -1,10 +1,9 @@
 import { MdOutlineEmail } from "react-icons/md";
-import { BsFillSendCheckFill } from "react-icons/bs";
-import profilePic from "../../../assets/profile.png";
 import { BiDotsHorizontalRounded } from "react-icons/bi";
 import image1 from "../../../assets/image1.png"
 import image2 from "../../../assets/image2.png"
 import {LuSettings2} from "react-icons/lu";
+import {IoMdMail} from "react-icons/io";
 
 
 
@@ -27,9 +26,9 @@ function Team() {
                                 <MdOutlineEmail color="#6C737F"/>
                             </div>
                             <input className="focus:outline-0 w-full" type="text"/>
-                            <BsFillSendCheckFill/>
+                                <IoMdMail size={28} color="#0B5D51" />
                         </div>
-                        <button className="rounded-lg bg-[#0B5D51] p-3">
+                        <button className="ml-4 rounded-lg bg-[#0B5D51] p-3">
                             <p className="font-semibold text-sm text-white">Send Invite</p>
                         </button>
                     </div>
