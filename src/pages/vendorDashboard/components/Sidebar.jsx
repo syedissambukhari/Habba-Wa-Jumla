@@ -36,10 +36,30 @@ const Sidebar = () => {
       {/* Menu Items */}
       <nav className="flex-grow space-y-4 ml-2 mt-10">
           <Link to="/vendor/account/general"><SidebarItem imgSrc='/accountSVG.svg' text="Account" /></Link>
-        <SidebarItem imgSrc='/customer.svg' text="Customers" badge="New" />
+        <SidebarItem
+          imgSrc="/customer.svg"
+          text="Customers"
+          onClick={toggleOrdersDropdown}
+        >
+          {isOrdersDropdownOpen && (
+            <div className="ml-8 mt-2 space-y-2">
+              <Link to="/vendor/CustomerList">
+                <DropdownItem
+                  text="List"
+                  isActive={location.pathname === "/vendor/CustomerList"}
+                />
+              </Link>
+              <Link to="/vendor/CustomerDetails">
+                <DropdownItem
+                  text="Details"
+                  isActive={location.pathname === "/vendor/CustomerDetails"}
+                />
+              </Link>
+            </div>
+          )}
+        </SidebarItem>
         <SidebarItem imgSrc='/product.svg' text="Products" />
         <SidebarItem imgSrc="/accountSVG.svg" text="Account" />
-        <SidebarItem imgSrc="/customer.svg" text="Customers" badge="New" />
         {/* Products dropdown */}
         <SidebarItem
           imgSrc="/product.svg"

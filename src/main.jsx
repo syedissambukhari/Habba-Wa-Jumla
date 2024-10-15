@@ -36,6 +36,8 @@ import Notifications from "./pages/vendorDashboard/Account/Notifications.jsx";
 import Security from "./pages/vendorDashboard/Account/Security.jsx";
 import Team from "./pages/vendorDashboard/Account/Team.jsx";
 import Billing from "./pages/vendorDashboard/Account/Billing.jsx";
+import CustomerList from "./pages/vendorDashboard/Customer/CustomerList.jsx";
+import CustomerDetails from "./pages/vendorDashboard/Customer/CustomerDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -172,6 +174,14 @@ const router = createBrowserRouter([
       {
         path: "OrderList",
         element: <OrderList />,
+      },
+      {
+        path: "CustomerList",
+        element: <CustomerList />,
+      },
+      {
+        path: "CustomerDetails",
+        element: <CustomerDetails />,
       },
       {
         path: "OrderFilter",
