@@ -80,7 +80,7 @@ const LoginForm = ({ isOpen, onClose }) => {
           </label>
           {/* Create Account */}
           <div className="flex  justify-center items-center py-2  border border-solid-[3px] border-[#0B5D51]">
-            <Link to="/User Account/sign In" className="ml-2 ">
+            <Link to="/User Account/sign In" className="ml-2 "/>
 //             <Link to="/VendorDashboard" href="#" className="ml-2 ">
               CREATE ACCOUNT
             </Link>

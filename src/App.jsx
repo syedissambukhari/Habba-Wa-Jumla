@@ -6,8 +6,6 @@ import Forget from "./components/Forms/Forget";
 import EmailVerification from "./components/Forms/EmailVerification";
 import Breadcrumb from "./homecomponents/BreadCrumbs";
 import BreadCrumb from "./homecomponents/BreadCrumb";
-
-// import Header from "./homecomponents/Header";
 import ShopPage from "./pages/ShopPage";
 import { Route, Router, Routes } from "react-router-dom";
 import Home from "./pages/Home";
@@ -27,9 +25,8 @@ import NotFoundPage from "./pages/NotFoundPage.jsx";
 import OrderCheckout from "./pages/Checkoutpage.jsx";
 import OrderSuccess from "./pages/OrderSuccessful.jsx";
 import BlogList from "./homecomponents/BlogList.jsx";
-import Header from "./homecomponents/Header";
 import {Outlet} from "react-router-dom";
-import Footer from "./homecomponents/Footer";
+
 function App() {
   return (
     <>

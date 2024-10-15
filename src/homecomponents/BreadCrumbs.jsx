@@ -8,8 +8,10 @@ const Breadcrumb = () => {
   
   // Split the pathname into segments for breadcrumb links
   const pathnames = location.pathname.split("/").filter((x) => x);
-// Include logic to handle sign-up route
-const isSignup = pathnames.includes("Sign%20Up"); // Check if 'Sign Up' is part of the current path
+
+  // Include logic to handle sign-up route
+  const isSignup = pathnames.includes("Sign%20Up"); // Check if 'Sign Up' is part of the current path
+  
   return (
     <nav className="flex h-[72px] py-3 text-gray-700 bg-[#F2F4F5] rounded-lg w-full px-[120px]" aria-label="Breadcrumb">
       <ol className="inline-flex items-center space-x-1 md:space-x-3">
@@ -27,7 +29,7 @@ const isSignup = pathnames.includes("Sign%20Up"); // Check if 'Sign Up' is part 
           const decodedValue = decodeURIComponent(value);
           const to = `/${pathnames.slice(0, index + 1).join("/")}`;
           const isLast = index === pathnames.length - 1;
-          
+
           return (
             <li key={to}>
               <div className="flex items-center">
@@ -45,6 +47,10 @@ const isSignup = pathnames.includes("Sign%20Up"); // Check if 'Sign Up' is part 
             </li>
           );
         })}
+      </ol>
+    </nav>
+  );
+};
 
 // const Breadcrumb = () => {
 //   return (

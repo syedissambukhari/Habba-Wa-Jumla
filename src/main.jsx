@@ -4,11 +4,6 @@ import App from "./App.jsx";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import OrderCheckout from "./homecomponents/OrderCheckout.jsx";
 import Home from "./pages/Home.jsx";
