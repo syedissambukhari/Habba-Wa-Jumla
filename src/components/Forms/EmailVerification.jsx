@@ -46,13 +46,21 @@ const EmailVerification = () => {
               required
             />
           </div>
+         
           <button
-            type="submit"
-            className="w-full h-12 bg-[#0B5D51] text-white font-[Public_Sans] font-[700] text-[14px]  rounded-[2px] flex justify-center items-center cursor-pointer relative tracking-[0.012em] "
-          >
-            VERIFY ME
-            <FaArrowRight className="absolute right-[111px] h-[20px] w-[20px] text-white" />
-          </button>
+      type="submit"
+      className="w-full h-[48px] bg-[#0B5D51] text-white rounded-[2px] font-public-sans text-[14px] font-bold flex justify-center items-center relative"
+           >
+     
+      <div className="flex justify-center items-center  w-full">
+        <div className="flex justify-center ml-[-25px] items-center w-full">
+        VERIFY ME
+        </div>
+        <div className="absolute right-[121px]">
+          <FaArrowRight className="text-white w-[20px] h-[20px]" />
+        </div>
+      </div>
+    </button>
         </form>
       </div>
     </div>

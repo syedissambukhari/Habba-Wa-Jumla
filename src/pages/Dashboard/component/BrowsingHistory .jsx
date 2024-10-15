@@ -1,3 +1,10 @@
+// <<<<<<< tasks
+// import React from 'react'
+
+// export const BrowsingHistory  = () => {
+//   return (
+//     <div>BrowsingHistory </div>
+// =======
 import React, { useState } from 'react'
 
 export const BrowsingHistory  = () => {

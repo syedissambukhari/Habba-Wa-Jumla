@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaApple } from "react-icons/fa";
 import { FiEye } from "react-icons/fi";
-import googleLogo from "../assets/google-logo.png";
+import googleLogo from "../../assets/google-logo.png";
 import { Link } from "react-router-dom";
-import BreadCrumb from "../homecomponents/BreadCrumb"; // Adjust the path as necessary
+import BreadCrumb from "../../homecomponents/BreadCrumb"; // Adjust the path as necessary
 
 const Signin = () => {
   const [isSignIn, setIsSignIn] = useState(false); // Toggle between sign-in and sign-up
@@ -31,20 +31,20 @@ const Signin = () => {
         >
           <div className="flex mb-[20px] h-[60px] border-b border-[#E4E7E9] text-center">
             <span
-              className={`w-[212px] font-public-sans text-[20px] py-[20px] cursor-pointer text-[#77878F] ${
+              className={`w-[212px] font-public-sans font-[600] text-[20px] py-[20px] cursor-pointer ${
                 isSignIn
-                  ? "text-[#191C1F] border-b-2 border-[#FA8232] font-bold"
-                  : ""
+                  ? "text-[#191C1F] font-[600] border-b-2 border-[#FA8232] font-bold"
+                  : "text-[#77878F]"
               }`}
               onClick={() => setIsSignIn(true)}
             >
               Sign In
             </span>
             <span
-              className={`w-[212px] font-public-sans text-[20px] py-[20px] cursor-pointer text-[#77878F] ${
+              className={`w-[212px] font-public-sans font-[600] text-[20px] py-[20px] cursor-pointer ${
                 !isSignIn
-                  ? "text-[#191C1F] border-b-2 border-[#FA8232] font-bold"
-                  : ""
+                  ? "text-[#191C1F]  border-b-2 border-[#FA8232] font-bold"
+                  : "text-[#77878F]"
               }`}
               onClick={() => setIsSignIn(false)}
             >
@@ -95,12 +95,19 @@ const Signin = () => {
                   Forget Password
                 </Link>
               </div>
+
               <button
                 type="submit"
                 className="w-[362px] h-[48px] mx-[30px] mt-[16px] mb-[10px] bg-[#0B5D51] text-white rounded-[2px] text-[14px] font-bold flex justify-center items-center relative"
               >
-                SIGN IN{" "}
-                <FaArrowRight className="absolute right-[125px] text-white w-[20px] h-[20px]" />
+                <div className="flex justify-center ml-[-32px] items-center w-full">
+                  <div className="flex justify-center items-center">
+                    SIGN IN
+                  </div>
+                  <div className="absolute right-[140px]">
+                    <FaArrowRight className="text-white w-[20px] h-[20px]" />
+                  </div>
+                </div>
               </button>
             </form>
           ) : (
@@ -205,7 +212,9 @@ const Signin = () => {
                   id="checkboxBox"
                   className="w-[23px] h-[19px] border border-[#0B5D51] rounded-[2px] bg-white cursor-pointer transition-colors duration-200 flex justify-center items-center"
                 >
-                  <span className="text-white text-[14px]" id="checkmark">✔</span>
+                  <span className="text-white text-[14px]" id="checkmark">
+                    ✔
+                  </span>
                 </label>
                 <label className="ml-[10px] mt-[-2px] text-[14px] text-[#475156]">
                   Are you agree to Clicon{" "}
@@ -219,17 +228,24 @@ const Signin = () => {
                   .
                 </label>
               </div>
+
               <button
                 type="submit"
                 className="w-[362px] h-[48px] mx-[30px] mt-[16px] mb-[10px] bg-[#0B5D51] text-white rounded-[2px] text-[14px] font-bold flex justify-center items-center relative"
               >
-                <Link
-                  to="/User Account/Sign Up/Email Verification"
-                  className="flex justify-center items-center w-full h-full"
-                >
-                  SIGN UP{" "}
-                  <FaArrowRight className="absolute right-[123px] text-white w-[20px] h-[20px]" />
-                </Link>
+                <div className="flex justify-center ml-[-30px] items-center w-full">
+                  <div className="flex justify-center items-center">
+                    <Link
+                      to="/User Account/Sign Up/Email Verification"
+                      className="flex justify-center items-center w-full h-full"
+                    >
+                      SIGN UP{" "}
+                    </Link>
+                  </div>
+                  <div className="absolute right-[138px]">
+                    <FaArrowRight className=" text-white w-[20px] h-[20px]" />
+                  </div>
+                </div>
               </button>
             </form>
           )}

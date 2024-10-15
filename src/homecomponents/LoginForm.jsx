@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import { IoEyeOutline } from "react-icons/io5";
-import { Link } from 'react-router-dom';
+import { Link, Router } from 'react-router-dom';
+import Breadcrumb from "./BreadCrumbs";
+import Signin from "../components/Forms/Signin";
 
 const LoginForm = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
   const [passwordVisible, setPasswordVisible] = useState(false);
 
   return (
+    <>
     <div className="absolute z-40 top-[70px] right-[-75px] ">
       <div className="w-[424px] bg-white p-[32px] shadow-md rounded-lg  ">
         <h2 className="text-2xl font-[20px] text-center mb-6">
@@ -77,13 +80,18 @@ const LoginForm = ({ isOpen, onClose }) => {
           </label>
           {/* Create Account */}
           <div className="flex  justify-center items-center py-2  border border-solid-[3px] border-[#0B5D51]">
-            <Link to="/VendorDashboard" href="#" className="ml-2 ">
+            <Link to="/User Account/sign In" className="ml-2 ">
+//             <Link to="/VendorDashboard" href="#" className="ml-2 ">
               CREATE ACCOUNT
             </Link>
           </div>
         </form>
       </div>
     </div>
+    {/* <Routes>
+      <Route path="/signin" element={<Signin/>}></Route>
+    </Routes> */}
+    </>
   );
 };
 

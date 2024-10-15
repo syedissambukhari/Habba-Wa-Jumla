@@ -1,8 +1,10 @@
 import { AccountInfo } from "./component/AccountInfo";
+import AddressCard from "./component/AddressCard";
+import { BillingAddress } from "./component/BillingAddress";
+import PaymentCard from "./component/PaymentCard";
+import RecentOrder from "./component/RecentOrder";
 import { BrowsingHistory } from "./component/BrowsingHistory ";
 import PaymentOption from "./component/PaymentOption";
-
-
 import RecentOrder from "./component/RecentOrder";
 import UserProfile from "./component/UserProfile";
 
@@ -18,6 +20,12 @@ const Dashboard = () => {
         manage your Shipping and Billing Addresses and edit your Password and Account Details.
       </p>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+//         <AccountInfo />
+//         <BillingAddress />
+//       </div>
+//       <PaymentCard/>
+//     <RecentOrder/>
+   
        
         
       </div>

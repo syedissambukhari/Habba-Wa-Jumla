@@ -1,4 +1,8 @@
 import React from 'react'
+
+// export const AccountInfo = () => {
+//   return (
+//     <div>AccountInfo</div>
 import { MdOutlineRocket } from "react-icons/md";
 import { FaReceipt } from "react-icons/fa6";
 import { LuPackage } from "react-icons/lu";
@@ -87,7 +91,5 @@ export const AccountInfo = () => {
 
 
       </div>
-     
-    
   )
 }

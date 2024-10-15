@@ -39,7 +39,7 @@ const Checkout = () => {
         {/* Change items-center to items-start */}
         <div className="flex flex-col w-[800px]">
           {" "}
-          {/* Added width to the billing section */}
+          {/* Added width to the billing section */
           <h1 className="text-[18px] font-[500]">Billing Information</h1>
           <form action="" className="mt-[50px]">
             {/* Billing form fields */}
