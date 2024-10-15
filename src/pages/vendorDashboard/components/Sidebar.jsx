@@ -2,34 +2,36 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 import { PiShoppingCartDuotone } from "react-icons/pi";
-
 import { IoMdArrowDropright } from "react-icons/io";
 
 // Sidebar component
 const Sidebar = () => {
   const location = useLocation(); // Get current location
   const [isOrdersDropdownOpen, setIsOrdersDropdownOpen] = useState(false);
+  const [isOrdersDropdownOpen2, setIsOrdersDropdownOpen2] = useState(false);
   const [isProductOpen, setProductOpen] = useState(false);
 
   const toggleProductOpen = () => {
     setProductOpen(!isProductOpen);
   };
 
+  const toggleOrdersDropdown2 = () => {
+    setIsOrdersDropdownOpen2(!isOrdersDropdownOpen2);
+  };
+
   const toggleOrdersDropdown = () => {
     setIsOrdersDropdownOpen(!isOrdersDropdownOpen);
   };
 
-
-// const Sidebar = () => {
   return (
     <div className="h-[1610px] w-[280px] bg-[#0B5D51] text-white flex flex-col items-start p-4">
       {/* Logo Section */}
       <div className="mt-[9px] ml-[35px] w-[95px] h-[86px]">
-        <img src='/logoo.svg' alt="Logo" />
+        <img src="/logoo.svg" alt="Logo" />
       </div>
 
       {/* Store Analytics */}
-      <div className="flex items-center bg-[#073741] w-[247.2px] h-[36px] mt-6 left-[16px] p-[6px_16px] gap-0 rounded-lg ">
+      <div className="flex items-center bg-[#073741] w-[247.2px] h-[36px] mt-6 left-[16px] p-[6px_16px] gap-0 rounded-lg">
         <img src="/store.svg" className="w-5 h-5 top-2 mr-4" />
         <span className="font-inter font-semibold text-[14px] leading-6">
           Store Analytics
@@ -38,13 +40,17 @@ const Sidebar = () => {
 
       {/* Menu Items */}
       <nav className="flex-grow space-y-4 ml-2 mt-10">
-          <Link to="/vendor/account/general"><SidebarItem imgSrc='/accountSVG.svg' text="Account" /></Link>
+        <Link to="/vendor/account/general">
+          <SidebarItem imgSrc="/accountSVG.svg" text="Account" />
+        </Link>
+
+        {/* Customers Dropdown */}
         <SidebarItem
           imgSrc="/customer.svg"
           text="Customers"
-          onClick={toggleOrdersDropdown}
+          onClick={toggleOrdersDropdown2}
         >
-          {isOrdersDropdownOpen && (
+          {isOrdersDropdownOpen2 && (
             <div className="ml-8 mt-2 space-y-2">
               <Link to="/vendor/CustomerList">
                 <DropdownItem
@@ -61,9 +67,8 @@ const Sidebar = () => {
             </div>
           )}
         </SidebarItem>
-        <SidebarItem imgSrc='/product.svg' text="Products" />
-        <SidebarItem imgSrc="/accountSVG.svg" text="Account" />
-        {/* Products dropdown */}
+
+        {/* Products Dropdown */}
         <SidebarItem
           imgSrc="/product.svg"
           text="Products"
@@ -72,7 +77,6 @@ const Sidebar = () => {
         />
         {isProductOpen && (
           <div className="ml-8 mt-2 space-y-3">
-            {" "}
             <Link to="/vendor/productlists">
               <DropdownItem
                 text="Product List"
@@ -88,7 +92,7 @@ const Sidebar = () => {
           </div>
         )}
 
-        {/* Orders Item with Dropdown */}
+        {/* Orders Dropdown */}
         <SidebarItem
           imgSrc="/orders.svg"
           text="Orders"
@@ -108,9 +112,10 @@ const Sidebar = () => {
             </div>
           )}
         </SidebarItem>
+
         <SidebarItem imgSrc="/invoices.svg" text="Invoices" arrow />
-        <SidebarItem imgSrc="/logistics.svg" text="Logistics" arrow/>
-        <SidebarItem imgSrc="/blog.svg" text="Blog" arrow/>
+        <SidebarItem imgSrc="/logistics.svg" text="Logistics" arrow />
+        <SidebarItem imgSrc="/blog.svg" text="Blog" arrow />
         <SidebarItem imgSrc="/calender.svg" text="Calendar" />
         <SidebarItem imgSrc="/fileManager.svg" text="File Manager" />
         <SidebarItem imgSrc="/Auth.svg" text="Auth" />
@@ -124,7 +129,7 @@ const Sidebar = () => {
 };
 
 // Sidebar Item Component
-const SidebarItem = ({ imgSrc, icon, text, badge, children, onClick,arrow }) => (
+const SidebarItem = ({ imgSrc, icon, text, badge, children, onClick, arrow }) => (
   <div className="flex flex-col">
     <div
       className="flex items-center space-x-4 p-2 font-inter font-semibold text-[14px] leading-5 hover:bg-[#073741] rounded-lg w-[247px] cursor-pointer"
@@ -138,8 +143,7 @@ const SidebarItem = ({ imgSrc, icon, text, badge, children, onClick,arrow }) => 
           {badge}
         </span>
       )}
-        {arrow && <IoMdArrowDropright className="w-5 h-5 text-white" />}
-      {children}
+      {arrow && <IoMdArrowDropright className="w-5 h-5 text-white" />}
     </div>
     {/* Render dropdown content if there are children */}
     {children}
