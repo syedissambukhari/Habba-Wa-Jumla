@@ -69,6 +69,7 @@ const Sidebar = () => {
         </SidebarItem>
 
         {/* Products Dropdown */}
+        {/* Products dropdown */}
         <SidebarItem
           imgSrc="/product.svg"
           text="Products"
