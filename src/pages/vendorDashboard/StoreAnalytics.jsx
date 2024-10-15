@@ -17,7 +17,7 @@ const StoreAnalytics = () => {
             <p className='font-inter font-semibold text-[14px] text-white leading-6'>Sync Data </p>
           </button>
         </div>
-        <div className='flex  justify-center '>
+        <div className='flex justify-center '>
            <div>
             <Stats/>
             <SalesRevenue/>
