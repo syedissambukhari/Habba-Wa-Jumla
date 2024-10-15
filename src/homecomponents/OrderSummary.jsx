@@ -1,11 +1,11 @@
 import React from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import headphones from "../assets/Headphone.png";
-import portable from "../assets/LCD.png";
+import headphones from "../assets/Orderhandfree.png";
+import portable from "../assets/OrderScreen.png";
 
 const OrderSummary = () => {
   return (
-    <div className="w-[440px] h-[500px] border border-gray-400 flex flex-col p-4 gap-4 ml-10 mt-5">
+    <div className="w-[380px] h-[500px] border border-gray-400 flex flex-col p-4 gap-4 ml-10 mt-5">
       <h1 className="text-[18px] font-[500]">Order Summary</h1>
 
       {/* Item 1 */}
@@ -62,8 +62,8 @@ const OrderSummary = () => {
         <p className="text-[14px]">$357.99 USD</p>
       </div>
       <div className="mt-auto">
-        <button className="bg-[#0B5D51] text-white font-[700] w-[248px] h-[48px] py-2 flex items-center justify-center">
-          <span>Shop Now</span>
+        <button className="bg-[#0B5D51] text-white font-[700] w-full  h-[48px] py-2 flex items-center justify-center">
+          <span>Place Order</span>
           <IoIosArrowRoundForward size={25} />
         </button>
       </div>

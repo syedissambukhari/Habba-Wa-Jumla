@@ -27,6 +27,9 @@ import NotFoundPage from "./pages/NotFoundPage.jsx";
 import OrderCheckout from "./pages/Checkoutpage.jsx";
 import OrderSuccess from "./pages/OrderSuccessful.jsx";
 import BlogList from "./homecomponents/BlogList.jsx";
+import Header from "./homecomponents/Header";
+import {Outlet} from "react-router-dom";
+import Footer from "./homecomponents/Footer";
 function App() {
   return (
     <>
@@ -106,6 +109,7 @@ function App() {
             }
           ></Route>
         </Routes>
+          <Outlet />
         <Footer />
       </div>
     </>

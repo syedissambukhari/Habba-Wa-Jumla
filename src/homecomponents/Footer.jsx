@@ -7,6 +7,7 @@ import toshiba from "../assets/Toshiba.png";
 import philps from "../assets/Philips.png";
 import amazon from "../assets/Amazonn.png";
 import logo from "../assets/logo-2.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -67,10 +68,13 @@ const Footer = () => {
           <p className="text-[#929FA5] text-[14px]">Accessories</p>
           <p className="text-[#929FA5] text-[14px]">Camera & Phot</p>
           <p className="text-[#929FA5] text-[14px]">TV & Homes</p>
-          <button className="flex gap-3 bg-black text-[#EBC80C] items-center px-3 py-2 mt-2">
+          <Link to={"/shop"} className="flex gap-3 bg-black text-[#EBC80C] items-center px-3 py-2 mt-2"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+
+          >
             Browse All Product
             <IoIosArrowRoundForward size={25} />
-          </button>
+          </Link>
         </div>
 
         {/* Column 3 */}
