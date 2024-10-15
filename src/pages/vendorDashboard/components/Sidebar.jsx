@@ -61,8 +61,6 @@ const Sidebar = () => {
             </div>
           )}
         </SidebarItem>
-        <SidebarItem imgSrc='/product.svg' text="Products" />
-        <SidebarItem imgSrc="/accountSVG.svg" text="Account" />
         {/* Products dropdown */}
         <SidebarItem
           imgSrc="/product.svg"
