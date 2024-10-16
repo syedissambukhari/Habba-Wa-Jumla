@@ -53,7 +53,7 @@ const VendorApprovalLoading = () => {
           </p>
         </div>
 
-        <button className=" mt-10 w-[400px] h-[48px] bg-[#0B5D51] text-[15px] font-[600] text-[#FFFFFF] p-2 rounded-md">
+        <button className=" mt-10 w-[400    px] h-[48px] bg-[#0B5D51] text-[15px] font-[600] text-[#FFFFFF] p-2 rounded-md">
           Back
         </button>
       </div>

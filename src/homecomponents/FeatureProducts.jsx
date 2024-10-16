@@ -23,7 +23,7 @@ const renderStars = (rating) => {
       {[...Array(5)].map((_, index) => (
         <FaStar
           key={index}
-          color={index < rating ? "green" : "lightgray"}
+          color={index < rating ? "#0B5D51" : "lightgray"}
           size={20}
         />
       ))}
