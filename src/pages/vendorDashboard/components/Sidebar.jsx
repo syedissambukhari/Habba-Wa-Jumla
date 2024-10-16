@@ -118,7 +118,9 @@ const Sidebar = () => {
         <SidebarItem imgSrc="/blog.svg" text="Blog" arrow />
         <SidebarItem imgSrc="/calender.svg" text="Calendar" />
         <SidebarItem imgSrc="/fileManager.svg" text="File Manager" />
-        <SidebarItem imgSrc="/Auth.svg" text="Auth" />
+        <Link to="/vendor/vendorsignup">
+          <SidebarItem imgSrc="/Auth.svg" text="Auth" />
+        </Link>
         <SidebarItem
           icon={<PiShoppingCartDuotone className="w-5 h-[18px]" />}
           text="Checkout"
@@ -130,7 +132,15 @@ const Sidebar = () => {
 
 // Sidebar Item Component
 // eslint-disable-next-line react/prop-types
-const SidebarItem = ({ imgSrc, icon, text, badge, children, onClick, arrow }) => (
+const SidebarItem = ({
+  imgSrc,
+  icon,
+  text,
+  badge,
+  children,
+  onClick,
+  arrow,
+}) => (
   <div className="flex flex-col">
     <div
       className="flex items-center space-x-4 p-2 font-inter font-semibold text-[14px] leading-5 hover:bg-[#073741] rounded-lg w-[247px] cursor-pointer"

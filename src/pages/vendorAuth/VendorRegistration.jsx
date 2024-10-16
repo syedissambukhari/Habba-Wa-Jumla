@@ -9,6 +9,7 @@ import logo from "../../assets/MP-Logo.png";
 import background from "../../assets/GradientBackground.png";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 const VendorRegistration = () => {
   const navigate = useNavigate();
   const [Name, setName] = useState("");
@@ -86,7 +87,9 @@ const VendorRegistration = () => {
           <h1 className="font-[700] text-[23.3px]">Register </h1>
           <p className="text-[14px] text-[#6C737F]">
             Already have an account?{" "}
-            <span className="text-[#0B5D51] font-[600]">Login</span>
+            <Link to="/vendor/vendorlogin">
+              <span className="text-[#0B5D51] font-[600]">Login</span>
+            </Link>
           </p>
         </div>
         <form
