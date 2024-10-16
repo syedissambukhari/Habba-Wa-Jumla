@@ -45,13 +45,14 @@ import VendorApprovalLoading from "./pages/vendorAuth/VendorApproval.jsx";
 import ForgetPassword from "./pages/vendorAuth/ForgetPassword.jsx";
 import ResetPassword from "./pages/vendorAuth/ResetPassword.jsx";
 import Verification from "./pages/vendorAuth/Verification.jsx";
-import {AdminDashboard} from "./pages/AdminDashboard/AdminDashboard.jsx";
+import { AdminDashboard } from "./pages/AdminDashboard/AdminDashboard.jsx";
 import AdminAccount from "./pages/AdminDashboard/Account/AdminAccount.jsx";
 import AdminGeneral from "./pages/AdminDashboard/Account/AdminGeneral.jsx";
 import AdminTeam from "./pages/AdminDashboard/Account/AdminTeam.jsx";
 import AdminNotifications from "./pages/AdminDashboard/Account/AdminNotifications.jsx";
 import AdminSecurity from "./pages/AdminDashboard/Account/AdminSecurity.jsx";
 import AdminBilling from "./pages/AdminDashboard/Account/AdminBilling.jsx";
+import Signin from "./components/Signin.jsx";
 
 const router = createBrowserRouter([
   {
@@ -140,6 +141,10 @@ const router = createBrowserRouter([
       {
         path: "/blogdetails",
         element: <BlogDetailsPage />,
+      },
+      {
+        path: "usersignup",
+        element: <Signin />,
       },
     ],
   },
@@ -254,11 +259,11 @@ const router = createBrowserRouter([
           {
             path: "billing",
             element: <AdminBilling />,
-          }
+          },
         ],
       },
     ],
-  }
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

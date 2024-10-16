@@ -205,7 +205,9 @@ const Signin = () => {
                   id="checkboxBox"
                   className="w-[23px] h-[19px] border border-[#0B5D51] rounded-[2px] bg-white cursor-pointer transition-colors duration-200 flex justify-center items-center"
                 >
-                  <span className="text-white text-[14px]" id="checkmark">✔</span>
+                  <span className="text-white text-[14px]" id="checkmark">
+                    ✔
+                  </span>
                 </label>
                 <label className="ml-[10px] mt-[-2px] text-[14px] text-[#475156]">
                   Are you agree to Clicon{" "}

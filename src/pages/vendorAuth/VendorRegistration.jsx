@@ -8,7 +8,9 @@ import att from "../../assets/ATT.png";
 import logo from "../../assets/MP-Logo.png";
 import background from "../../assets/GradientBackground.png";
 import { FaArrowLeftLong } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 const VendorRegistration = () => {
+  const navigate = useNavigate();
   const [Name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -30,10 +32,13 @@ const VendorRegistration = () => {
       console.log("Login in ", { email, password });
     }
   };
+  const handleDashboardClick = () => {
+    navigate("/vendor"); // Navigate to the vendor path
+  };
   return (
     <div className="grid grid-cols-12 h-screen w-screen">
       <div
-        className="col-span-7 bg-[#0A1A17] flex flex-col space-y-6 justify-center"
+        className="col-span-8 bg-[#0A1A17] flex flex-col space-y-2 justify-center"
         style={{
           backgroundImage: `url(${background})`, // Use the imported image here
           backgroundSize: "cover",
@@ -64,10 +69,13 @@ const VendorRegistration = () => {
           </div>
         </div>
       </div>
-      <div className="col-span-5 flex flex-col space-y-8  items-start px-8 mt-6 ">
+      <div className="col-span-4 flex flex-col space-y-8  items-start px-8 mt-6 ">
         <img src={logo} width={104} height={82} alt="" />
 
-        <div className="flex gap-3 ">
+        <div
+          className="flex gap-3 items-center cursor-pointer"
+          onClick={handleDashboardClick}
+        >
           <span>
             <FaArrowLeftLong />
           </span>
@@ -91,7 +99,7 @@ const VendorRegistration = () => {
             placeholder="Name"
             value={Name}
             onChange={(e) => setName(e.target.value)}
-            className={`w-[472px] h-[50px] border-2 rounded-md p-1 outline-none ${
+            className={`w-[400px] h-[50px] border-2 rounded-md p-1 outline-none ${
               error.Name ? "border-red-500" : "border-gray-300"
             }`}
           />
@@ -101,7 +109,7 @@ const VendorRegistration = () => {
             placeholder="Email Address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className={`w-[472px] h-[50px] border-2 rounded-md p-1 outline-none ${
+            className={`w-[400px] h-[50px] border-2 rounded-md p-1 outline-none ${
               error.email ? "border-red-500" : "border-gray-300"
             }`}
           />
@@ -111,7 +119,7 @@ const VendorRegistration = () => {
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className={`w-[472px] h-[50px] border-2 rounded-md p-1 outline-none ${
+            className={`w-[400px] h-[50px] border-2 rounded-md p-1 outline-none ${
               error.password ? "border-red-500" : "border-gray-300"
             }`}
           />
@@ -128,7 +136,7 @@ const VendorRegistration = () => {
               <span className="text-[#0B5D51] ">Terms and Conditions</span>
             </label>
           </div>
-          <button className=" w-[472px] h-[48px] bg-[#0B5D51] text-[15px] font-[600] text-[#FFFFFF] p-2 rounded-md">
+          <button className=" w-[400px] h-[48px] bg-[#0B5D51] text-[15px] font-[600] text-[#FFFFFF] p-2 rounded-md">
             Register
           </button>
         </form>

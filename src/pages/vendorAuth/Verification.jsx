@@ -8,11 +8,16 @@ import att from "../../assets/ATT.png";
 import logo from "../../assets/MP-Logo.png";
 import background from "../../assets/GradientBackground.png";
 import { FaArrowLeftLong } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 const Verification = () => {
+  const navigate = useNavigate();
+  const handleDashboardClick = () => {
+    navigate("/vendor"); // Navigate to the vendor path
+  };
   return (
     <div className="grid grid-cols-12 h-screen w-screen">
       <div
-        className="col-span-7 bg-[#0A1A17] flex flex-col space-y-6 justify-center"
+        className="col-span-8 bg-[#0A1A17] flex flex-col space-y-6 justify-center"
         style={{
           backgroundImage: `url(${background})`, // Use the imported image here
           backgroundSize: "cover",
@@ -43,10 +48,13 @@ const Verification = () => {
           </div>
         </div>
       </div>
-      <div className="col-span-5 flex flex-col px-8 mt-16 space-y-10">
+      <div className="col-span-4 flex flex-col px-8 mt-16 space-y-10">
         <img src={logo} width={104} height={82} alt="" />
 
-        <div className="flex gap-3 items-center ">
+        <div
+          className="flex gap-3 items-center cursor-pointer"
+          onClick={handleDashboardClick}
+        >
           <span>
             <FaArrowLeftLong />
           </span>
@@ -57,7 +65,7 @@ const Verification = () => {
           <h1 className="font-[700] text-[23.3px]">Verify Code </h1>
         </div>
         <h3 className="text-[14px] text-[#6C737F]">Code</h3>
-        <div className="flex items-center justify-center space-x-8">
+        <div className="px-2 flex items-center justify-center space-x-4">
           {[...Array(6)].map((_, index) => (
             <input
               key={index}
@@ -67,7 +75,7 @@ const Verification = () => {
             />
           ))}
         </div>
-        <button className=" w-[472px] h-[48px] bg-[#0B5D51] text-[15px] font-[600] text-[#FFFFFF] p-2 rounded-md">
+        <button className=" w-[400px] h-[48px] bg-[#0B5D51] text-[15px] font-[600] text-[#FFFFFF] p-2 rounded-md">
           Verify
         </button>
       </div>
