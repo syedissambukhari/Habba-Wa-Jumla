@@ -8,11 +8,16 @@ import att from "../../assets/ATT.png";
 import logo from "../../assets/MP-Logo.png";
 import background from "../../assets/GradientBackground.png";
 import { FaArrowLeftLong } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 const Verification = () => {
+  const navigate = useNavigate();
+  const handleDashboardClick = () => {
+    navigate("/vendor"); // Navigate to the vendor path
+  };
   return (
     <div className="grid grid-cols-12 h-screen w-screen">
       <div
-        className="col-span-7 bg-[#0A1A17] flex flex-col space-y-6 justify-center"
+        className="col-span-8 bg-[#0A1A17] flex flex-col space-y-6 justify-center"
         style={{
           backgroundImage: `url(${background})`, // Use the imported image here
           backgroundSize: "cover",
@@ -43,10 +48,13 @@ const Verification = () => {
           </div>
         </div>
       </div>
-      <div className="col-span-5 flex flex-col px-8 mt-16 space-y-10">
+      <div className="col-span-4 flex flex-col px-8 mt-16 space-y-10">
         <img src={logo} width={104} height={82} alt="" />
 
-        <div className="flex gap-3 items-center ">
+        <div
+          className="flex gap-3 items-center cursor-pointer"
+          onClick={handleDashboardClick}
+        >
           <span>
             <FaArrowLeftLong />
           </span>
