@@ -1,4 +1,3 @@
-import React from "react";
 import Sidebar from "./components/Sidebar";
 import VendorHeader from "./components/VendorHeader";
 import { Outlet, useLocation } from "react-router-dom";
