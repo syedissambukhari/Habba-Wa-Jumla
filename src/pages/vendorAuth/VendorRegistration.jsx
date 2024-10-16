@@ -9,10 +9,10 @@ import logo from "../../assets/MP-Logo.png";
 import background from "../../assets/GradientBackground.png";
 import { FaArrowLeftLong } from "react-icons/fa6";
 const VendorRegistration = () => {
-  const { Name, setName } = useState("");
+  const [Name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState({ email: "", password: "" });
+  const [error, setError] = useState({ Name: "", email: "", password: "" });
   const handleSignup = (e) => {
     e.preventDefault();
     let formErrors = {};
