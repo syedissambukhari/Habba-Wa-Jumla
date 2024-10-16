@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import samsung from "../../assets/Samsungg.png";
 import accenture from "../../assets/Accenture.png";
 import aws from "../../assets/Aws.png";
@@ -9,6 +9,18 @@ import logo from "../../assets/MP-Logo.png";
 import background from "../../assets/GradientBackground.png";
 import { FaArrowLeftLong } from "react-icons/fa6";
 const ForgetPassword = () => {
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState({ email: "" });
+  const handleForget = (e) => {
+    let formErrors = {};
+    if (!email) {
+      formErrors.email = "Email is required";
+    }
+    setError(formErrors);
+    if (Object.keys(formErrors).length === 0) {
+      console.log("Forget Password ", { email });
+    }
+  };
   return (
     <div className="grid grid-cols-12 h-screen w-screen">
       <div
@@ -56,14 +68,25 @@ const ForgetPassword = () => {
           {" "}
           <h1 className="font-[700] text-[23.3px]">Forget Password </h1>
         </div>
-        <form action="" className="flex flex-col space-y-4">
+        <form
+          onSubmit={handleForget}
+          action=""
+          className="flex flex-col space-y-4"
+        >
           <input
             type="text"
             placeholder="Email Address"
-            className="w-[472px] h-[50px] border-2 rounded-md p-1 outline-none "
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className={`w-[472px] h-[50px] border-2 rounded-md p-1 outline-none ${
+              error.email ? "border-red-500" : "border-gray-300"
+            }`}
           />
-
-          <button className=" w-[472px] h-[48px] bg-[#0B5D51] text-[15px] font-[600] text-[#FFFFFF] p-2 rounded-md">
+          {error.email && <p className="text-red-500 text-sm">{error.email}</p>}
+          <button
+            type="onsubmit"
+            className=" w-[472px] h-[48px] bg-[#0B5D51] text-[15px] font-[600] text-[#FFFFFF] p-2 rounded-md"
+          >
             Send reset link
           </button>
         </form>
