@@ -1,4 +1,3 @@
-import React from 'react';
 import { RxCrossCircled } from "react-icons/rx";
 import { FiShoppingCart } from "react-icons/fi";
 
