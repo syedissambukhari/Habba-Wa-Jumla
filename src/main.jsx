@@ -53,6 +53,7 @@ import AdminNotifications from "./pages/AdminDashboard/Account/AdminNotification
 import AdminSecurity from "./pages/AdminDashboard/Account/AdminSecurity.jsx";
 import AdminBilling from "./pages/AdminDashboard/Account/AdminBilling.jsx";
 import Signin from "./components/Signin.jsx";
+import AdminStoreAnalytics from "./pages/AdminDashboard/AdminStoreAnalytics.jsx";
 
 const router = createBrowserRouter([
   {
@@ -261,6 +262,11 @@ const router = createBrowserRouter([
             element: <AdminBilling />,
           },
         ],
+        
+      },
+      {
+        path: "Adminstore-analytics",
+        element: <AdminStoreAnalytics />,
       },
     ],
   },
