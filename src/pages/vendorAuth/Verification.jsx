@@ -65,7 +65,7 @@ const Verification = () => {
           <h1 className="font-[700] text-[23.3px]">Verify Code </h1>
         </div>
         <h3 className="text-[14px] text-[#6C737F]">Code</h3>
-        <div className="flex items-center justify-center space-x-8">
+        <div className="px-2 flex items-center justify-center space-x-4">
           {[...Array(6)].map((_, index) => (
             <input
               key={index}
@@ -75,7 +75,7 @@ const Verification = () => {
             />
           ))}
         </div>
-        <button className=" w-[472px] h-[48px] bg-[#0B5D51] text-[15px] font-[600] text-[#FFFFFF] p-2 rounded-md">
+        <button className=" w-[400px] h-[48px] bg-[#0B5D51] text-[15px] font-[600] text-[#FFFFFF] p-2 rounded-md">
           Verify
         </button>
       </div>

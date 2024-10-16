@@ -247,11 +247,19 @@ const Header = () => {
 
           {/* Cart, Wishlist, and Login Icons */}
           <div className="flex items-center gap-4 position: relative">
-            <IoCartOutline color="white" size={20.4} onClick={handleCartClick} />
+            <IoCartOutline
+              color="white"
+              size={20.4}
+              onClick={handleCartClick}
+            />
             <Link to="/Wishlist">
               <GrFavorite color="white" size={20.4} />
             </Link>
-            <IoPersonOutline color="white" size={20.4} onClick={handleIconClick} />
+            <IoPersonOutline
+              color="white"
+              size={20.4}
+              onClick={handleIconClick}
+            />
 
             {/* Popup for LoginForm */}
             <div ref={popupRef}>
