@@ -1,6 +1,5 @@
-import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-
+import { useState } from "react";
 import { PiShoppingCartDuotone } from "react-icons/pi";
 import { IoMdArrowDropright } from "react-icons/io";
 
@@ -130,6 +129,7 @@ const Sidebar = () => {
 };
 
 // Sidebar Item Component
+// eslint-disable-next-line react/prop-types
 const SidebarItem = ({ imgSrc, icon, text, badge, children, onClick, arrow }) => (
   <div className="flex flex-col">
     <div
@@ -152,6 +152,7 @@ const SidebarItem = ({ imgSrc, icon, text, badge, children, onClick, arrow }) =>
 );
 
 // Dropdown Item Component
+// eslint-disable-next-line react/prop-types
 const DropdownItem = ({ text, isActive }) => (
   <div className="flex items-center text-sm text-white hover:text-gray-300 cursor-pointer">
     {isActive && <div className="w-2 h-2 bg-blue-500 rounded-full mr-2" />}
