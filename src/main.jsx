@@ -40,6 +40,12 @@ import Team from "./pages/vendorDashboard/Account/Team.jsx";
 import Billing from "./pages/vendorDashboard/Account/Billing.jsx";
 import CustomerList from "./pages/vendorDashboard/Customer/CustomerList.jsx";
 import CustomerDetails from "./pages/vendorDashboard/Customer/CustomerDetails.jsx";
+import VendorLogin from "./pages/vendorAuth/VendorLogin.jsx";
+import VendorRegistration from "./pages/vendorAuth/VendorRegistration.jsx";
+import VendorApprovalLoading from "./pages/vendorAuth/VendorApproval.jsx";
+import ForgetPassword from "./pages/vendorAuth/ForgetPassword.jsx";
+import ResetPassword from "./pages/vendorAuth/ResetPassword.jsx";
+import Verification from "./pages/vendorAuth/Verification.jsx";
 
 const router = createBrowserRouter([
   {
@@ -188,6 +194,30 @@ const router = createBrowserRouter([
       {
         path: "OrderFilter",
         element: <OrderFilter />,
+      },
+      {
+        path: "vendorlogin",
+        element: <VendorLogin />,
+      },
+      {
+        path: "vendorsignup",
+        element: <VendorRegistration />,
+      },
+      {
+        path: "vendorapproval",
+        element: <VendorApprovalLoading />,
+      },
+      {
+        path: "forgetpassword",
+        element: <ForgetPassword />,
+      },
+      {
+        path: "resetpassword",
+        element: <ResetPassword />,
+      },
+      {
+        path: "verify",
+        element: <Verification />,
       },
     ],
   },
