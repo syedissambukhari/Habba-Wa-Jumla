@@ -38,6 +38,8 @@ import Team from "./pages/vendorDashboard/Account/Team.jsx";
 import Billing from "./pages/vendorDashboard/Account/Billing.jsx";
 import CustomerList from "./pages/vendorDashboard/Customer/CustomerList.jsx";
 import CustomerDetails from "./pages/vendorDashboard/Customer/CustomerDetails.jsx";
+import PostList from "./pages/vendorDashboard/Blog/PostList.jsx";
+import PostDetails from "./pages/vendorDashboard/Blog/PostDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -185,6 +187,18 @@ const router = createBrowserRouter([
       },
       {
         path: "OrderFilter",
+        element: <OrderFilter />,
+      },
+      {
+        path: "PostList",
+        element: <PostList />,
+      },
+      {
+        path: "PostDetails",
+        element: <PostDetails />,
+      },
+      {
+        path: "PostCreate",
         element: <OrderFilter />,
       },
     ],
