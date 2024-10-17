@@ -39,26 +39,10 @@ import Team from "./pages/vendorDashboard/Account/Team.jsx";
 import Billing from "./pages/vendorDashboard/Account/Billing.jsx";
 import CustomerList from "./pages/vendorDashboard/Customer/CustomerList.jsx";
 import CustomerDetails from "./pages/vendorDashboard/Customer/CustomerDetails.jsx";
-<<<<<<< HEAD
 import PostList from "./pages/vendorDashboard/Blog/PostList.jsx";
 import PostDetails from "./pages/vendorDashboard/Blog/PostDetails.jsx";
-=======
-import VendorLogin from "./pages/vendorAuth/VendorLogin.jsx";
-import VendorRegistration from "./pages/vendorAuth/VendorRegistration.jsx";
-import VendorApprovalLoading from "./pages/vendorAuth/VendorApproval.jsx";
-import ForgetPassword from "./pages/vendorAuth/ForgetPassword.jsx";
-import ResetPassword from "./pages/vendorAuth/ResetPassword.jsx";
-import Verification from "./pages/vendorAuth/Verification.jsx";
-import { AdminDashboard } from "./pages/AdminDashboard/AdminDashboard.jsx";
-import AdminAccount from "./pages/AdminDashboard/Account/AdminAccount.jsx";
-import AdminGeneral from "./pages/AdminDashboard/Account/AdminGeneral.jsx";
-import AdminTeam from "./pages/AdminDashboard/Account/AdminTeam.jsx";
-import AdminNotifications from "./pages/AdminDashboard/Account/AdminNotifications.jsx";
-import AdminSecurity from "./pages/AdminDashboard/Account/AdminSecurity.jsx";
-import AdminBilling from "./pages/AdminDashboard/Account/AdminBilling.jsx";
-import Signin from "./components/Signin.jsx";
-import AdminStoreAnalytics from "./pages/AdminDashboard/AdminStoreAnalytics.jsx";
->>>>>>> a06eda8ec76110fa3f71d5ff7c10f3b73bd1146b
+import Signin from "./components/Forms/Signin.jsx";
+import PostCreate from "./pages/vendorDashboard/Blog/PostCreate.jsx";
 
 const router = createBrowserRouter([
   {
@@ -213,7 +197,6 @@ const router = createBrowserRouter([
         element: <OrderFilter />,
       },
       {
-<<<<<<< HEAD
         path: "PostList",
         element: <PostList />,
       },
@@ -223,68 +206,7 @@ const router = createBrowserRouter([
       },
       {
         path: "PostCreate",
-        element: <OrderFilter />,
-=======
-        path: "vendorlogin",
-        element: <VendorLogin />,
-      },
-      {
-        path: "vendorsignup",
-        element: <VendorRegistration />,
-      },
-      {
-        path: "vendorapproval",
-        element: <VendorApprovalLoading />,
-      },
-      {
-        path: "forgetpassword",
-        element: <ForgetPassword />,
-      },
-      {
-        path: "resetpassword",
-        element: <ResetPassword />,
-      },
-      {
-        path: "verify",
-        element: <Verification />,
-      },
-    ],
-  },
-  {
-    path: "admin",
-    element: <AdminDashboard />,
-    children: [
-      {
-        path: "account",
-        element: <AdminAccount />,
-        children: [
-          {
-            path: "general",
-            element: <AdminGeneral />,
-          },
-          {
-            path: "notifications",
-            element: <AdminNotifications />,
-          },
-          {
-            path: "security",
-            element: <AdminSecurity />,
-          },
-          {
-            path: "team",
-            element: <AdminTeam />,
-          },
-          {
-            path: "billing",
-            element: <AdminBilling />,
-          },
-        ],
-        
-      },
-      {
-        path: "Adminstore-analytics",
-        element: <AdminStoreAnalytics />,
->>>>>>> a06eda8ec76110fa3f71d5ff7c10f3b73bd1146b
+        element: <PostCreate />,
       },
     ],
   },
