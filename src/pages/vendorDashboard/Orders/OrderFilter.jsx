@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
 import { CiSearch } from 'react-icons/ci';
+import { BsBookmarkCheck } from "react-icons/bs";
 
 export const OrderFilter = () => {
   const [featureProduct, setFeatureProduct] = useState(false);
-
+  const [featureProduct2, setFeatureProduct2] = useState(false);
   const handleFeatureProductToggle = () => {
     setFeatureProduct(!featureProduct);
-  };
 
+  };
+  const handleFeatureProductToggle2 = () => {
+    setFeatureProduct2(!featureProduct2);
+
+  };
   return (
     <div className="flex p-10 space-x-10">
       {/* Sidebar */}
@@ -75,8 +80,35 @@ export const OrderFilter = () => {
         </div>
 
         <div className="mb-4">
-          <div className="flex items-center space-x-2">
-            <input type="checkbox" className="form-checkbox text-green-500" />
+        <div className="flex items-center space-x-2 mt-4">
+            <button
+              onClick={handleFeatureProductToggle2}
+              className={`relative inline-flex items-center w-14 h-6 rounded-full transition-colors duration-200 focus:outline-none ${
+                featureProduct2 ? 'bg-[#0B5D51]' : 'bg-[#939393]'
+              }`}
+            >
+              <span
+                className={`absolute left-0 w-3 h-3 rounded-full transition-transform duration-200 ${
+                  featureProduct2 ? 'transform translate-x-9 bg-white' : 'bg-white'
+                }`}
+              />
+              <span
+                className={`px-1 absolute text-xs text-white transition-opacity duration-200 ${
+                  featureProduct2 ? 'opacity-100' : 'opacity-0'
+                }`}
+                style={{ marginLeft: '10px' }}
+              >
+                ON
+              </span>
+              <span
+                className={`px-1 absolute text-xs text-white transition-opacity duration-200 ${
+                  featureProduct2 ? 'opacity-0' : 'opacity-100'
+                }`}
+                style={{ marginLeft: '10px' }}
+              >
+                OFF
+              </span>
+            </button>
             <span className="text-gray-700">Paid only</span>
           </div>
           <div className="flex items-center space-x-2 mt-4">
@@ -115,148 +147,308 @@ export const OrderFilter = () => {
 
       {/* Orders Section */}
       <div className="w-full">
-        <div className="p-6 bg-white min-h-screen">
+        <div className="p-6 bg-white ">
           {/* Stats */}
           <div className="grid grid-cols-3 gap-4 mb-6">
-            <div className="bg-gray-100 p-4 rounded-lg">
+           
+            <div className="bg-white shadow-xl p-4 items-center space-x-3 flex rounded-lg  ">
+              <div className=' flex items-center text-[20px] w-[40px] justify-center rounded-3xl text-white   h-[40px] bg-[#0B5D51] '>
+              <BsBookmarkCheck />
+              </div>
+            
+           <div className="flex-col" >
+            <span>Total</span>
               <p className="text-xl font-semibold">$5,300.00</p>
               <p className="text-sm text-gray-500">from 12 invoices</p>
             </div>
-            <div className="bg-gray-100 p-4 rounded-lg">
-              <p className="text-xl font-semibold">$1,439.60</p>
-              <p className="text-sm text-gray-500">from 3 invoices</p>
             </div>
-            <div className="bg-gray-100 p-4 rounded-lg">
-              <p className="text-xl font-semibold">$276.87</p>
-              <p className="text-sm text-gray-500">from 2 invoices</p>
+            <div className="bg-white shadow-xl p-4 items-center space-x-3 flex rounded-lg">
+              <div className=' flex items-center text-[20px] w-[40px] justify-center rounded-3xl  text-white  h-[40px] bg-[#0B5D51] '>
+              <BsBookmarkCheck />
+              </div>
+            
+           <div className="flex-col" >
+            <span>Total</span>
+              <p className="text-xl font-semibold">$5,300.00</p>
+              <p className="text-sm text-gray-500">from 12 invoices</p>
+            </div>
+            </div>
+            <div className="bg-white shadow-xl p-4 items-center space-x-3 flex rounded-lg">
+              <div className=' flex items-center text-[20px] w-[40px] justify-center rounded-3xl  text-white   h-[40px] bg-[#0B5D51] '>
+              <BsBookmarkCheck />
+              </div>
+            
+           <div className="flex-col" >
+            <span>Total</span>
+              <p className="text-xl font-semibold">$5,300.00</p>
+              <p className="text-sm text-gray-500">from 12 invoices</p>
+            </div>
             </div>
           </div>
-
+          </div>
           {/* Paid Orders */}
-          <div className="mb-6">
-            <h2 className="text-lg font-semibold mb-2">Paid (3)</h2>
-            <div className="space-y-4">
-              {/* Order Row */}
-              <div className="flex justify-between bg-gray-100 p-4 rounded-lg items-center">
-                <div className="flex space-x-4">
-                  <div className="bg-green-500 text-white p-2 rounded-full">AS</div>
-                  <div>
-                    <p className="font-semibold">INV-0019</p>
-                    <p className="text-sm text-gray-500">ACME SRL</p>
-                    <p className="text-sm text-gray-400">Issued 01/02/2024 · Due 06/02/2024</p>
+          <div class="w-full bg-white rounded-xl shadow-md overflow-hidden  ">
+   
+    <div class="p-4">
+        <h3 class="text-lg font-semibold">Paid (3)</h3>
+        <div className='shadow-xl rounded-xl'>
+        <div class=" space-y-4 ">
+       
+            <div class="flex items-center justify-between bg-white p-4 ">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center justify-center w-10 h-10 bg-green-600 text-white font-bold rounded-full">
+                        AS
+                    </div>
+                    <div>
+                        <div class="text-sm font-medium">INV-0019</div>
+                        <div class="text-gray-600 text-sm">ACME SRL</div>
+                    </div>
+                </div>
+                <div class="text-sm font-semibold">$55.50</div>
+                <div class="text-gray-500 text-sm flex flex-col">
+                  <span> Issued:</span>
+                  <span> 01/02/2024</span>
+                 
                   </div>
+                <div class="">
+                    
+                 
+                    <div class="text-gray-500 text-sm flex flex-col">
+                      
+                    <span>Due:</span>
+                    <span> 06/02/2024</span>
+                    </div>
                 </div>
-                <div className="flex items-center space-x-4">
-                  <p className="font-semibold">$55.50</p>
-                  <span className="bg-green-100 text-green-600 text-xs px-2 py-1 rounded">PAID</span>
+                <div class="ml-4">
+                    <span class="bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full">PAID</span>
                 </div>
-              </div>
-              {/* Order Row */}
-              <div className="flex justify-between bg-gray-100 p-4 rounded-lg items-center">
-                <div className="flex space-x-4">
-                  <div className="bg-blue-500 text-white p-2 rounded-full">BS</div>
-                  <div>
-                    <p className="font-semibold">INV-0018</p>
-                    <p className="text-sm text-gray-500">Blind Spots Inc.</p>
-                    <p className="text-sm text-gray-400">Issued 01/02/2024 · Due 07/02/2024</p>
-                  </div>
+                <div class="ml-2">
+                    <button>
+                        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
                 </div>
-                <div className="flex items-center space-x-4">
-                  <p className="font-semibold">$688.90</p>
-                  <span className="bg-green-100 text-green-600 text-xs px-2 py-1 rounded">PAID</span>
-                </div>
-              </div>
-              {/* Order Row */}
-              <div className="flex justify-between bg-gray-100 p-4 rounded-lg items-center">
-                <div className="flex space-x-4">
-                  <div className="bg-pink-500 text-white p-2 rounded-full">BC</div>
-                  <div>
-                    <p className="font-semibold">INV-0017</p>
-                    <p className="text-sm text-gray-500">Beauty Clinic SRL</p>
-                    <p className="text-sm text-gray-400">Issued 01/02/2024 · Due 10/02/2024</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <p className="font-semibold">$695.20</p>
-                  <span className="bg-green-100 text-green-600 text-xs px-2 py-1 rounded">PAID</span>
-                </div>
-              </div>
             </div>
-          </div>
 
-          {/* Unpaid Orders */}
-          <div className="mb-6">
-            <h2 className="text-lg font-semibold mb-2">Unpaid (2)</h2>
-            <div className="space-y-4">
-              {/* Order Row */}
-              <div className="flex justify-between bg-gray-100 p-4 rounded-lg items-center">
-                <div className="flex space-x-4">
-                  <div className="bg-yellow-500 text-white p-2 rounded-full">NI</div>
-                  <div>
-                    <p className="font-semibold">INV-0016</p>
-                    <p className="text-sm text-gray-500">Novelty I.S</p>
-                    <p className="text-sm text-gray-400">Issued 01/02/2024 · Due 12/02/2024</p>
+       
+        </div>
+        <div class="space-y-4">
+       
+            <div class="flex items-center justify-between bg-white p-4 ">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center justify-center w-10 h-10 bg-green-600 text-white font-bold rounded-full">
+                        AS
+                    </div>
+                    <div>
+                        <div class="text-sm font-medium">INV-0019</div>
+                        <div class="text-gray-600 text-sm">ACME SRL</div>
+                    </div>
+                </div>
+                <div class="text-sm font-semibold">$55.50</div>
+                <div class="text-gray-500 text-sm flex flex-col">
+                  <span> Issued:</span>
+                  <span> 01/02/2024</span>
+                 
                   </div>
+                <div class="">
+                    
+                 
+                    <div class="text-gray-500 text-sm flex flex-col">
+                      
+                    <span>Due:</span>
+                    <span> 06/02/2024</span>
+                    </div>
                 </div>
-                <div className="flex items-center space-x-4">
-                  <p className="font-semibold">$228.55</p>
-                  <span className="bg-yellow-100 text-yellow-600 text-xs px-2 py-1 rounded">UNPAID</span>
+                <div class="ml-4">
+                    <span class="bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full">PAID</span>
                 </div>
-              </div>
-              {/* Order Row */}
-              <div className="flex justify-between bg-gray-100 p-4 rounded-lg items-center">
-                <div className="flex space-x-4">
-                  <div className="bg-red-500 text-white p-2 rounded-full">DI</div>
-                  <div>
-                    <p className="font-semibold">INV-0015</p>
-                    <p className="text-sm text-gray-500">Dispatcher Inc.</p>
-                    <p className="text-sm text-gray-400">Issued 01/02/2024 · Due 11/02/2024</p>
-                  </div>
+                <div class="ml-2">
+                    <button>
+                        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
                 </div>
-                <div className="flex items-center space-x-4">
-                  <p className="font-semibold">$179.55</p>
-                  <span className="bg-yellow-100 text-yellow-600 text-xs px-2 py-1 rounded">UNPAID</span>
-                </div>
-              </div>
             </div>
-          </div>
 
-          {/* Overdue Orders */}
-          <div>
-            <h2 className="text-lg font-semibold mb-2">Overdue (2)</h2>
-            <div className="space-y-4">
-              {/* Order Row */}
-              <div className="flex justify-between bg-gray-100 p-4 rounded-lg items-center">
-                <div className="flex space-x-4">
-                  <div className="bg-orange-500 text-white p-2 rounded-full">DI</div>
-                  <div>
-                    <p className="font-semibold">INV-0014</p>
-                    <p className="text-sm text-gray-500">Dispatcher Inc.</p>
-                    <p className="text-sm text-gray-400">Issued 01/02/2024 · Due 09/02/2024</p>
+       
+        </div>
+        <div class=" space-y-4">
+       
+            <div class="flex items-center justify-between bg- p-white p-4 ">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center justify-center w-10 h-10 bg-green-600 text-white font-bold rounded-full">
+                        AS
+                    </div>
+                    <div>
+                        <div class="text-sm font-medium">INV-0019</div>
+                        <div class="text-gray-600 text-sm">ACME SRL</div>
+                    </div>
+                </div>
+                <div class="text-sm font-semibold">$55.50</div>
+                <div class="text-gray-500 text-sm flex flex-col">
+                  <span> Issued:</span>
+                  <span> 01/02/2024</span>
+                 
                   </div>
+                <div class="">
+                    
+                 
+                    <div class="text-gray-500 text-sm flex flex-col">
+                      
+                    <span>Due:</span>
+                    <span> 06/02/2024</span>
+                    </div>
                 </div>
-                <div className="flex items-center space-x-4">
-                  <p className="font-semibold">$227.55</p>
-                  <span className="bg-red-100 text-red-600 text-xs px-2 py-1 rounded">OVERDUE</span>
+                <div class="ml-4">
+                    <span class="bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full">PAID</span>
                 </div>
-              </div>
-              {/* Order Row */}
-              <div className="flex justify-between bg-gray-100 p-4 rounded-lg items-center">
-                <div className="flex space-x-4">
-                  <div className="bg-purple-500 text-white p-2 rounded-full">BC</div>
-                  <div>
-                    <p className="font-semibold">INV-0013</p>
-                    <p className="text-sm text-gray-500">Beauty Clinic SRL</p>
-                    <p className="text-sm text-gray-400">Issued 01/02/2024 · Due 08/02/2024</p>
-                  </div>
+                <div class="ml-2">
+                    <button>
+                        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
                 </div>
-                <div className="flex items-center space-x-4">
-                  <p className="font-semibold">$276.87</p>
-                  <span className="bg-red-100 text-red-600 text-xs px-2 py-1 rounded">OVERDUE</span>
-                </div>
-              </div>
             </div>
-          </div>
+
+       
+        </div>
+    </div>
+    </div>
+
+
+<div class="p-4">
+        <h3 class="text-lg font-semibold">Pending (4)</h3>
+        <div className='shadow-xl rounded-xl'>
+        <div class=" space-y-4 ">
+       
+            <div class="flex items-center justify-between bg-white p-4 ">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center justify-center w-10 h-10 bg-green-600 text-white font-bold rounded-full">
+                        AS
+                    </div>
+                    <div>
+                        <div class="text-sm font-medium">INV-0019</div>
+                        <div class="text-gray-600 text-sm">ACME SRL</div>
+                    </div>
+                </div>
+                <div class="text-sm font-semibold">$55.50</div>
+                <div class="text-gray-500 text-sm flex flex-col">
+                  <span> Issued:</span>
+                  <span> 01/02/2024</span>
+                 
+                  </div>
+                <div class="">
+                    
+                 
+                    <div class="text-gray-500 text-sm flex flex-col">
+                      
+                    <span>Due:</span>
+                    <span> 06/02/2024</span>
+                    </div>
+                </div>
+                <div class="ml-4">
+                    <span class="bg-[#F790091F] text-[#B54708] text-xs px-3 py-1 rounded-full">pending</span>
+                </div>
+                <div class="ml-2">
+                    <button>
+                        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+       
+        </div>
+        <div class="space-y-4">
+       
+            <div class="flex items-center justify-between bg-white p-4 ">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center justify-center w-10 h-10 bg-green-600 text-white font-bold rounded-full">
+                        AS
+                    </div>
+                    <div>
+                        <div class="text-sm font-medium">INV-0019</div>
+                        <div class="text-gray-600 text-sm">ACME SRL</div>
+                    </div>
+                </div>
+                <div class="text-sm font-semibold">$55.50</div>
+                <div class="text-gray-500 text-sm flex flex-col">
+                  <span> Issued:</span>
+                  <span> 01/02/2024</span>
+                 
+                  </div>
+                <div class="">
+                    
+                 
+                    <div class="text-gray-500 text-sm flex flex-col">
+                      
+                    <span>Due:</span>
+                    <span> 06/02/2024</span>
+                    </div>
+                </div>
+                <div class="ml-4">
+                    <span class="bg-[#F790091F] text-[#B54708] text-xs px-3 py-1 rounded-full">pending </span>
+                </div>
+                <div class="ml-2">
+                    <button>
+                        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+       
+        </div>
+        <div class=" space-y-4">
+       
+            <div class="flex items-center justify-between bg- p-white p-4 ">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center justify-center w-10 h-10 bg-green-600 text-white font-bold rounded-full">
+                        AS
+                    </div>
+                    <div>
+                        <div class="text-sm font-medium">INV-0019</div>
+                        <div class="text-gray-600 text-sm">ACME SRL</div>
+                    </div>
+                </div>
+                <div class="text-sm font-semibold">$55.50</div>
+                <div class="text-gray-500 text-sm flex flex-col">
+                  <span> Issued:</span>
+                  <span> 01/02/2024</span>
+                 
+                  </div>
+                <div class="">
+                    
+                 
+                    <div class="text-gray-500 text-sm flex flex-col">
+                      
+                    <span>Due:</span>
+                    <span> 06/02/2024</span>
+                    </div>
+                </div>
+                <div class="ml-4">
+                    <span class="bg-[#F790091F] text-[#B54708] text-xs px-3 py-1 rounded-full">pending</span>
+                </div>
+                <div class="ml-2">
+                    <button>
+                        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+       
+        </div>
+    </div>
+    </div>
+
+        
         </div>
       </div>
     </div>

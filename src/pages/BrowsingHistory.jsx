@@ -122,8 +122,6 @@ const products3 = [
     tag: "HOT",
   },
 ];
-
-
 const BrowsingHistory = () => {
   const [isOn, setIsOn] = useState(false);
 

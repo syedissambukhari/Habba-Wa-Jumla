@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 
 const CustomerSupport = () => {
     const navigate = useNavigate();
-
     return (
         <div>
             {/* Help Center section */}
@@ -44,6 +43,7 @@ const CustomerSupport = () => {
                                     </svg>
                                 </div>
                             </div>
+//                             <button className="bg-green-600 text-white font-semibold py-3 px-6">SEARCH</button>
                             <button onClick={() => navigate('/not-found')} className="bg-[#0B5D51] text-white font-semibold py-3 px-6">SEARCH</button>
                         </div>
 

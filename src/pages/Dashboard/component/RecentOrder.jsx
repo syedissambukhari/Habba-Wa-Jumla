@@ -1,6 +1,5 @@
+
 import { FaArrowRight } from "react-icons/fa";
-
-
 const RecentOrder = () => {
     const orders = [
       { id: '#96459761', status: 'IN PROGRESS', date: 'Dec 30, 2019 05:18', total: '$1,500 (5 Products)', color: 'text-blue-500' },
