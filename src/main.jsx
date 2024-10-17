@@ -27,7 +27,7 @@ import StoreAnalytics from "./pages/vendorDashboard/StoreAnalytics.jsx";
 
 import { OrderList } from "./pages/vendorDashboard/Orders/OrderList.jsx";
 import { OrderFilter } from "./pages/vendorDashboard/Orders/OrderFilter.jsx";
-
+import { OrderDetail } from "./pages/vendorDashboard/Orders/OrderDetail.jsx";
 import ProductLists from "./pages/vendorDashboard/ProductLists.jsx";
 import ProductCreation from "./pages/vendorDashboard/ProductCreation.jsx";
 
@@ -43,6 +43,10 @@ import PostList from "./pages/vendorDashboard/Blog/PostList.jsx";
 import PostDetails from "./pages/vendorDashboard/Blog/PostDetails.jsx";
 import Signin from "./components/Forms/Signin.jsx";
 import PostCreate from "./pages/vendorDashboard/Blog/PostCreate.jsx";
+import { OrderStatus } from "./pages/vendorDashboard/Orders/OrderStatus.jsx";
+import { InvoiceList } from "./pages/vendorDashboard/invoices/InvoiceList.jsx";
+import { InvoiceDetail } from "./pages/vendorDashboard/invoices/InvoiceDetail.jsx";
+import { InoviceFilter } from "./pages/vendorDashboard/invoices/InoviceFilter.jsx";
 
 const router = createBrowserRouter([
   {
@@ -184,6 +188,15 @@ const router = createBrowserRouter([
         path: "OrderList",
         element: <OrderList />,
       },
+
+      {
+        path: "OrderDetail",
+        element: <OrderDetail />,
+      },
+      {
+        path: "OrderStatus",
+        element: <OrderStatus />,
+      },
       {
         path: "CustomerList",
         element: <CustomerList />,
@@ -207,6 +220,21 @@ const router = createBrowserRouter([
       {
         path: "PostCreate",
         element: <PostCreate />,
+      },
+      {
+        path: "InvoiceList",
+        element: <InvoiceList />
+
+      },
+      {
+        path: "InvoiceDetail",
+        element: <InvoiceDetail />
+
+      },
+      {
+        path: "InoviceFilter",
+        element: <InoviceFilter />
+
       },
     ],
   },

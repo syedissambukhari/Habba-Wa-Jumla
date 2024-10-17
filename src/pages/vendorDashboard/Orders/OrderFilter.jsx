@@ -34,7 +34,7 @@ export const OrderFilter = () => {
             id="order-number"
             type="text"
             placeholder="Order number"
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-green-400 focus:border-green-500"
+            className="w-full px-4 py-2 border  rounded-md  "
           />
           <label className="block text-gray-700 text-sm font-medium mb-2">
             Issue date
@@ -42,11 +42,11 @@ export const OrderFilter = () => {
           <div className="grid grid-row-2 gap-2">
             <input
               placeholder="From"
-              className="px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-green-400 focus:border-gray-400"
+              className="px-4 py-2 border  rounded-md  "
             />
             <input
               placeholder="To"
-              className="px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-green-400 focus:border-gray-400"
+              className="px-4 py-2 border  rounded-md   "
             />
           </div>
         </div>
@@ -196,7 +196,7 @@ export const OrderFilter = () => {
        
             <div class="flex items-center justify-between bg-white p-4 ">
                 <div class="flex items-center space-x-4">
-                    <div class="flex items-center justify-center w-10 h-10 bg-green-600 text-white font-bold rounded-full">
+                    <div class="flex items-center justify-center w-10 h-10 bg-[#0B5D51] text-white font-bold rounded-full">
                         AS
                     </div>
                     <div>
@@ -237,7 +237,7 @@ export const OrderFilter = () => {
        
             <div class="flex items-center justify-between bg-white p-4 ">
                 <div class="flex items-center space-x-4">
-                    <div class="flex items-center justify-center w-10 h-10 bg-green-600 text-white font-bold rounded-full">
+                    <div class="flex items-center justify-center w-10 h-10 bg-[#0B5D51] text-white font-bold rounded-full">
                         AS
                     </div>
                     <div>
@@ -278,7 +278,7 @@ export const OrderFilter = () => {
        
             <div class="flex items-center justify-between bg- p-white p-4 ">
                 <div class="flex items-center space-x-4">
-                    <div class="flex items-center justify-center w-10 h-10 bg-green-600 text-white font-bold rounded-full">
+                    <div class="flex items-center justify-center w-10 h-10 bg-[#0B5D51] text-white font-bold rounded-full">
                         AS
                     </div>
                     <div>
@@ -326,7 +326,7 @@ export const OrderFilter = () => {
        
             <div class="flex items-center justify-between bg-white p-4 ">
                 <div class="flex items-center space-x-4">
-                    <div class="flex items-center justify-center w-10 h-10 bg-green-600 text-white font-bold rounded-full">
+                    <div class="flex items-center justify-center w-10 h-10 bg-[#0B5D51] text-white font-bold rounded-full">
                         AS
                     </div>
                     <div>
@@ -367,7 +367,7 @@ export const OrderFilter = () => {
        
             <div class="flex items-center justify-between bg-white p-4 ">
                 <div class="flex items-center space-x-4">
-                    <div class="flex items-center justify-center w-10 h-10 bg-green-600 text-white font-bold rounded-full">
+                    <div class="flex items-center justify-center w-10 h-10 bg-[#0B5D51] text-white font-bold rounded-full">
                         AS
                     </div>
                     <div>
@@ -408,7 +408,7 @@ export const OrderFilter = () => {
        
             <div class="flex items-center justify-between bg- p-white p-4 ">
                 <div class="flex items-center space-x-4">
-                    <div class="flex items-center justify-center w-10 h-10 bg-green-600 text-white font-bold rounded-full">
+                    <div class="flex items-center justify-center w-10 h-10 bg-[#0B5D51] text-white font-bold rounded-full">
                         AS
                     </div>
                     <div>

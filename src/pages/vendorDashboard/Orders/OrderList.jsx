@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+  
 export const OrderList = () => {
   const orders = [
     { id: 'DEV-102', total: '$500.00', status: 'PENDING', date: 'JAN 31' },

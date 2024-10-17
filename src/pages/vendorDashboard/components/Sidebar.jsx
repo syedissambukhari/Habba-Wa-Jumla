@@ -13,6 +13,7 @@ const Sidebar = () => {
     products: false,
     blogs: false,
     customers: false,
+    Invoices:false,
   });
 
   const toggleDropdown = (key) => {
@@ -79,14 +80,28 @@ const Sidebar = () => {
           {dropdowns.orders && (
             <DropdownMenu>
               <DropdownLink to="/vendor/OrderList" text="List" active={location.pathname === "/vendor/OrderList"} />
-              <DropdownItem text="Details" />
-              <DropdownItem text="Order status" />
+              <DropdownLink to="/vendor/OrderDetail" text="Details" active={location.pathname === "/vendor/OrderDetail"}/>
+              <DropdownLink to="/vendor/OrderStatus" text="Order status"active={location.pathname === "/vendor/OrderStatus"} />
             </DropdownMenu>
           )}
         </SidebarItem>
 
-        {/* Other Menu Items */}
-        <SidebarItem imgSrc="/invoices.svg" text="Invoices" arrow />
+        {/* invoice */}
+        <SidebarItem
+          imgSrc="/invoices.svg"
+       text="Invoices"
+          arrow
+          onClick={() => toggleDropdown("Invoices")}
+        >
+          {dropdowns.Invoices && (
+            <DropdownMenu>
+              <DropdownLink to="/vendor/InvoiceList" text="List" active={location.pathname === "/vendor/InvoiceList"} />
+              <DropdownLink to="/vendor/InvoiceDetail" text="Details" active={location.pathname === "/vendor/InvoiceDetail"}/>
+             </DropdownMenu>
+          )}
+        </SidebarItem>
+
+        
         <SidebarItem imgSrc="/logistics.svg" text="Logistics" arrow />
 
         {/* Blog */}
