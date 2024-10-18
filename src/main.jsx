@@ -56,6 +56,7 @@ import AnalaticsBody from "./pages/AdminDashboard/Analytics/AnalaticsBody.jsx";
 import CustomerListAdmin from "./pages/AdminDashboard/Customer/CustomerDetailsAdmin.jsx";
 import CustomerDetailsAdmin from "./pages/AdminDashboard/Customer/CustomerDetailsAdmin.jsx";
 import EditCustomerAdmin from "./pages/AdminDashboard/Customer/EditCustomerAdmin.jsx";
+import { Checkout } from "./pages/vendorDashboard/Checkout.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -241,6 +242,10 @@ const router = createBrowserRouter([
         path: "InoviceFilter",
         element: <InoviceFilter />,
       },
+      {
+        path: "checkout",
+        element: <Checkout/>
+      }
     ],
   },
   {
