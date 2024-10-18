@@ -52,7 +52,10 @@ import VendorsList from "./pages/AdminDashboard/components/VendorsList.jsx";
 import VendorsApproval from "./pages/AdminDashboard/components/VendorsApproval.jsx";
 import VendorsDetails from "./pages/AdminDashboard/components/VendorsDetails.jsx";
 import VendorsEdit from "./pages/AdminDashboard/components/VendorsEdit.jsx";
-
+import AnalaticsBody from "./pages/AdminDashboard/Analytics/AnalaticsBody.jsx";
+import CustomerListAdmin from "./pages/AdminDashboard/Customer/CustomerDetailsAdmin.jsx";
+import CustomerDetailsAdmin from "./pages/AdminDashboard/Customer/CustomerDetailsAdmin.jsx";
+import EditCustomerAdmin from "./pages/AdminDashboard/Customer/EditCustomerAdmin.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -260,6 +263,23 @@ const router = createBrowserRouter([
         path: "vendorsedit",
         element: <VendorsEdit />,
       },
+
+      {
+        path: "AnalaticsBody",
+        element: <AnalaticsBody />,
+      },
+      {
+        path: "CustomerListAdmin",
+        element: <CustomerListAdmin />,
+      },
+      {
+        path: "CustomerDetailsAdmin",
+        element: <CustomerDetailsAdmin />,
+      },
+      {
+        path : "EditCustomerAdmin",
+        element: <EditCustomerAdmin />
+      }
     ],
   },
 ]);
