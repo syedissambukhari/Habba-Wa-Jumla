@@ -47,6 +47,10 @@ import { OrderStatus } from "./pages/vendorDashboard/Orders/OrderStatus.jsx";
 import { InvoiceList } from "./pages/vendorDashboard/invoices/InvoiceList.jsx";
 import { InvoiceDetail } from "./pages/vendorDashboard/invoices/InvoiceDetail.jsx";
 import { InoviceFilter } from "./pages/vendorDashboard/invoices/InoviceFilter.jsx";
+import { AdminDashboard } from "./pages/AdminDashboard/AdminDashboard.jsx";
+import VendorsList from "./pages/AdminDashboard/components/VendorsList.jsx";
+import VendorsApproval from "./pages/AdminDashboard/components/VendorsApproval.jsx";
+import VendorsDetails from "./pages/AdminDashboard/components/VendorsDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -223,18 +227,33 @@ const router = createBrowserRouter([
       },
       {
         path: "InvoiceList",
-        element: <InvoiceList />
-
+        element: <InvoiceList />,
       },
       {
         path: "InvoiceDetail",
-        element: <InvoiceDetail />
-
+        element: <InvoiceDetail />,
       },
       {
         path: "InoviceFilter",
-        element: <InoviceFilter />
-
+        element: <InoviceFilter />,
+      },
+    ],
+  },
+  {
+    path: "admin",
+    element: <AdminDashboard />,
+    children: [
+      {
+        path: "vendorslist",
+        element: <VendorsList />,
+      },
+      {
+        path: "vendorsapproval",
+        element: <VendorsApproval />,
+      },
+      {
+        path: "vendorsdetails",
+        element: <VendorsDetails />,
       },
     ],
   },
