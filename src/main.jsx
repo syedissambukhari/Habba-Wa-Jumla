@@ -51,6 +51,7 @@ import { AdminDashboard } from "./pages/AdminDashboard/AdminDashboard.jsx";
 import VendorsList from "./pages/AdminDashboard/components/VendorsList.jsx";
 import VendorsApproval from "./pages/AdminDashboard/components/VendorsApproval.jsx";
 import VendorsDetails from "./pages/AdminDashboard/components/VendorsDetails.jsx";
+import VendorsEdit from "./pages/AdminDashboard/components/VendorsEdit.jsx";
 
 const router = createBrowserRouter([
   {
@@ -254,6 +255,10 @@ const router = createBrowserRouter([
       {
         path: "vendorsdetails",
         element: <VendorsDetails />,
+      },
+      {
+        path: "vendorsedit",
+        element: <VendorsEdit />,
       },
     ],
   },

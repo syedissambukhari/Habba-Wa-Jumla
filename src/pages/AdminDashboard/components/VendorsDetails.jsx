@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import { MdOutlineEdit } from "react-icons/md";
 import { FaAngleDown } from "react-icons/fa6";
 import person from "../../../assets/Vendor.png";
+import { MdArrowDropDown } from "react-icons/md";
+import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa6";
 const VendorsDetails = () => {
   const [vendors, setVendors] = useState([
     {
@@ -37,7 +40,9 @@ const VendorsDetails = () => {
   return (
     <div className="ml-8 flex flex-col gap-6 py-10 ">
       <div className="flex items-center gap-3">
-        <span></span>
+        <span>
+          <FaArrowLeft />
+        </span>
         <p className="text-[14px] font-[500]">Vendors</p>
       </div>
       <div className="flex items-center justify-between pr-2">
@@ -77,8 +82,8 @@ const VendorsDetails = () => {
         <Link className="text-[14px] hover:text-[#0B5D51]">Invoices</Link>
         <Link className="text-[14px] hover:text-[#0B5D51]">Logs</Link>
       </div>
-      <div className="grid grid-cols-12 gap-8">
-        <div className="p-4 col-span-4  bg-white shadow-custom-1 shadow-custom-2 rounded-lg flex flex-col space-y-5">
+      <div className="grid grid-cols-12 gap-8 p-6">
+        <div className="h-[560px] p-4 col-span-4  bg-white shadow-custom-1 shadow-custom-2 rounded-lg flex flex-col space-y-5">
           <h1 className="text-[16.7px] font-[700]">Basic Details</h1>
           {vendors.map((vendor) => (
             <div key={vendor.id} className=" mb-4 flex flex-col space-y-4">
@@ -190,8 +195,58 @@ const VendorsDetails = () => {
               </button>
             </div>
           </div>
-          <div className=" p-4 col-span-8 bg-white shadow-custom-1 shadow-custom-2 rounded-xlflex flex-col space-y-5">
+          <div className=" p-4 col-span-8 bg-white shadow-custom-1 shadow-custom-2 rounded-xl flex flex-col space-y-5">
             <h1 className="text-[16.7px] font-[700]">Emails</h1>
+            <div className=" w-[300px] h-[60px] border border-[#0B5D51] px-8 py-4 rounded-xl flex  items-center justify-between text-[15px] font-[600]">
+              Resend Last Invoice
+              <span>
+                <MdArrowDropDown size={20} />
+              </span>
+            </div>
+            <button className="w-[140px] h-[40px] flex items-center gap-4  bg-[#0B5D51]  p-3 rounded-xl text-white  text-[14px] font-[600]">
+              Send Email
+              <span>
+                <FaArrowRight size={18} color="white" />
+              </span>
+            </button>
+            <table className="w-full border-collapse">
+              <thead>
+                <tr className="bg-gray-100 text-[15px]">
+                  <th className="py-2 px-4 text-left text-gray-600">
+                    Mail Type
+                  </th>
+                  <th className="py-2 px-4 text-left text-gray-600">Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b hover:bg-gray-50 text-[14px]">
+                  <td className="py-2 px-4 text-gray-800">
+                    Order Confirmation
+                  </td>
+                  <td className="py-2 px-4 text-gray-800">
+                    29/01/2024 | 09:45
+                  </td>
+                </tr>
+                <tr className="border-b hover:bg-gray-50 text-[14px]">
+                  <td className="py-2 px-4 text-gray-800">
+                    Order Confirmation
+                  </td>
+                  <td className="py-2 px-4 text-gray-800">
+                    28/01/2024 | 03:30
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className=" p-4 col-span-8 bg-white shadow-custom-1 shadow-custom-2 rounded-xl flex flex-col space-y-5">
+            <h1 className="text-[17px] font-[700]">Data Managment</h1>
+            <button className="border border-[#0B5D51] text-[#0B5D51] w-[140px] h-[40px] rounded-xl ">
+              Delete Vendor
+            </button>
+            <p className="text-[#6C737F] text-[14px]">
+              Remove this customer’s chart if he requested that, if not please
+              be aware that what has been deleted can never brought back
+            </p>
           </div>
         </div>
       </div>
