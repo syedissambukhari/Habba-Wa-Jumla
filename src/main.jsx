@@ -56,7 +56,8 @@ import AnalaticsBody from "./pages/AdminDashboard/Analytics/AnalaticsBody.jsx";
 import CustomerListAdmin from "./pages/AdminDashboard/Customer/CustomerDetailsAdmin.jsx";
 import CustomerDetailsAdmin from "./pages/AdminDashboard/Customer/CustomerDetailsAdmin.jsx";
 import EditCustomerAdmin from "./pages/AdminDashboard/Customer/EditCustomerAdmin.jsx";
-import { Checkout } from "./pages/vendorDashboard/Checkout.jsx";
+import { VendorCheckout } from "./pages/vendorDashboard/vendorCheckout.jsx";
+import { AdminCheckout } from "./pages/AdminDashboard/adminCheckout.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -244,8 +245,8 @@ const router = createBrowserRouter([
       },
       {
         path: "checkout",
-        element: <Checkout/>
-      }
+        element: <VendorCheckout/>
+      },
     ],
   },
   {
@@ -284,7 +285,11 @@ const router = createBrowserRouter([
       {
         path : "EditCustomerAdmin",
         element: <EditCustomerAdmin />
-      }
+      },
+      {
+        path: "checkout",
+        element: <AdminCheckout/>
+      },
     ],
   },
 ]);
