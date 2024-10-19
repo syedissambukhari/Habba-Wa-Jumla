@@ -58,6 +58,14 @@ import CustomerDetailsAdmin from "./pages/AdminDashboard/Customer/CustomerDetail
 import EditCustomerAdmin from "./pages/AdminDashboard/Customer/EditCustomerAdmin.jsx";
 import { VendorCheckout } from "./pages/vendorDashboard/vendorCheckout.jsx";
 import { AdminCheckout } from "./pages/AdminDashboard/adminCheckout.jsx";
+import AdminBilling from "./pages/AdminDashboard/Account/AdminBilling.jsx";
+import AdminAccount from "./pages/AdminDashboard/Account/AdminAccount.jsx";
+import AdminGeneral from "./pages/AdminDashboard/Account/AdminGeneral.jsx";
+import AdminNotifications from "./pages/AdminDashboard/Account/AdminNotifications.jsx";
+import AdminSecurity from "./pages/AdminDashboard/Account/AdminSecurity.jsx";
+import AdminTeam from "./pages/AdminDashboard/Account/AdminTeam.jsx";
+import AdminProductLists from "./pages/AdminDashboard/Product/AdminProductLists.jsx";
+import AdminProductCreation from "./pages/AdminDashboard/Product/AdminProductCreation.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -253,6 +261,40 @@ const router = createBrowserRouter([
     path: "admin",
     element: <AdminDashboard />,
     children: [
+      {
+        path: "account",
+        element: <AdminAccount />,
+        children: [
+          {
+            path: "general",
+            element: <AdminGeneral />,
+          },
+          {
+            path: "notifications",
+            element: <AdminNotifications />,
+          },
+          {
+            path: "security",
+            element: <AdminSecurity />,
+          },
+          {
+            path: "team",
+            element: <AdminTeam />,
+          },
+          {
+            path: "billing",
+            element: <AdminBilling />,
+          },
+        ],
+      },
+      {
+        path: "productlists",
+        element: <AdminProductLists />,
+      },
+      {
+        path: "productcreates",
+        element: <AdminProductCreation />,
+      },
       {
         path: "vendorslist",
         element: <VendorsList />,
