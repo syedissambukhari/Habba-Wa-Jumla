@@ -58,6 +58,18 @@ import CustomerDetailsAdmin from "./pages/AdminDashboard/Customer/CustomerDetail
 import EditCustomerAdmin from "./pages/AdminDashboard/Customer/EditCustomerAdmin.jsx";
 import { VendorCheckout } from "./pages/vendorDashboard/vendorCheckout.jsx";
 import { AdminCheckout } from "./pages/AdminDashboard/adminCheckout.jsx";
+import AdminLogin from "./pages/AdminDashboard/components/adminauth/AdminLogin.jsx";
+import AdminForgetPassword from "./pages/AdminDashboard/components/adminauth/AdminForgetPassword.jsx";
+import AdminResetPassword from "./pages/AdminDashboard/components/adminauth/AdminResetPassword.jsx";
+import AdminVerification from "./pages/AdminDashboard/components/adminauth/AdminVerification.jsx";
+import VendorLogin from "./pages/vendorAuth/VendorLogin.jsx";
+import vendorRegistration from "./pages/vendorAuth/VendorRegistration.jsx";
+import ForgetPassword from "./pages/vendorAuth/ForgetPassword.jsx";
+import ResetPassword from "./pages/vendorAuth/ResetPassword.jsx";
+import VendorApproval from "./pages/vendorAuth/VendorApproval.jsx";
+import verification from "./pages/vendorAuth/verification.jsx";
+import VendorRegistration from "./pages/vendorAuth/VendorRegistration.jsx";
+import Verification from "./pages/vendorAuth/verification.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -245,7 +257,31 @@ const router = createBrowserRouter([
       },
       {
         path: "checkout",
-        element: <VendorCheckout/>
+        element: <VendorCheckout />,
+      },
+      {
+        path: "vendorlogin",
+        element: <VendorLogin />,
+      },
+      {
+        path: "vendorsignup",
+        element: <VendorRegistration />,
+      },
+      {
+        path: "vendorapproval",
+        element: <VendorApproval />,
+      },
+      {
+        path: "forgetpassword",
+        element: <ForgetPassword />,
+      },
+      {
+        path: "resetpassword",
+        element: <ResetPassword />,
+      },
+      {
+        path: "verify",
+        element: <Verification />,
       },
     ],
   },
@@ -283,12 +319,28 @@ const router = createBrowserRouter([
         element: <CustomerDetailsAdmin />,
       },
       {
-        path : "EditCustomerAdmin",
-        element: <EditCustomerAdmin />
+        path: "EditCustomerAdmin",
+        element: <EditCustomerAdmin />,
       },
       {
         path: "checkout",
-        element: <AdminCheckout/>
+        element: <AdminCheckout />,
+      },
+      {
+        path: "adminlogin",
+        element: <AdminLogin />,
+      },
+      {
+        path: "adminpasswordforget",
+        element: <AdminForgetPassword />,
+      },
+      {
+        path: "adminpasswordreset",
+        element: <AdminResetPassword />,
+      },
+      {
+        path: "adminverify",
+        element: <AdminVerification />,
       },
     ],
   },
