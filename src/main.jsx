@@ -58,8 +58,6 @@ import CustomerDetailsAdmin from "./pages/AdminDashboard/Customer/CustomerDetail
 import EditCustomerAdmin from "./pages/AdminDashboard/Customer/EditCustomerAdmin.jsx";
 import { VendorCheckout } from "./pages/vendorDashboard/vendorCheckout.jsx";
 import { AdminCheckout } from "./pages/AdminDashboard/adminCheckout.jsx";
-<<<<<<< HEAD
-=======
 import AdminBilling from "./pages/AdminDashboard/Account/AdminBilling.jsx";
 import AdminAccount from "./pages/AdminDashboard/Account/AdminAccount.jsx";
 import AdminGeneral from "./pages/AdminDashboard/Account/AdminGeneral.jsx";
@@ -68,7 +66,6 @@ import AdminSecurity from "./pages/AdminDashboard/Account/AdminSecurity.jsx";
 import AdminTeam from "./pages/AdminDashboard/Account/AdminTeam.jsx";
 import AdminProductLists from "./pages/AdminDashboard/Product/AdminProductLists.jsx";
 import AdminProductCreation from "./pages/AdminDashboard/Product/AdminProductCreation.jsx";
->>>>>>> a82e59d8174ba1bb3407fe6ae6b2da4a1c2cb5df
 import AdminLogin from "./pages/AdminDashboard/components/adminauth/AdminLogin.jsx";
 import AdminForgetPassword from "./pages/AdminDashboard/components/adminauth/AdminForgetPassword.jsx";
 import AdminResetPassword from "./pages/AdminDashboard/components/adminauth/AdminResetPassword.jsx";
@@ -83,20 +80,14 @@ import OrderListAdmin from "./pages/AdminDashboard/Orders/OrderListAdmin.jsx";
 import OrderFilterAdmin from "./pages/AdminDashboard/Orders/OrderFilterAdmin.jsx";
 import OrderDetailAdmin from "./pages/AdminDashboard/Orders/OrderDetailAdmin.jsx";
 import OrderStatusAdmin from "./pages/AdminDashboard/Orders/OrderStatusAdmin.jsx";
-<<<<<<< HEAD
 import Forget from "./components/Forms/Forget.jsx";
 import Reset from "./components/Forms/Reset.jsx";
 import EmailVerification from "./components/Forms/EmailVerification.jsx";
 import Calender from "../src/pages/vendorDashboard/Calendar/Calendar.jsx";
 import NewEventPopUp from "../src/pages/vendorDashboard/Calendar/NewEventPopUp.jsx";
 
-=======
-import  Calendar from "./pages/vendorDashboard/Calendar/Calendar.jsx";
-import NewEventPopUp  from "./pages/vendorDashboard/Calendar/NewEventPopUp.jsx"; 
-import Forget from './components/Forms/Forget.jsx'
-import Reset from './components/Forms/Reset.jsx'
-import EmailVerification  from './components/Forms/EmailVerification.jsx';
->>>>>>> a82e59d8174ba1bb3407fe6ae6b2da4a1c2cb5df
+// import NewEventPopUp from "./pages/vendorDashboard/Calendar/NewEventPopUp.jsx";
+
 const router = createBrowserRouter([
   {
     path: "/",
