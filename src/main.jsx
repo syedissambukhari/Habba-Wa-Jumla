@@ -52,6 +52,10 @@ import VendorsList from "./pages/AdminDashboard/components/VendorsList.jsx";
 import VendorsApproval from "./pages/AdminDashboard/components/VendorsApproval.jsx";
 import VendorsDetails from "./pages/AdminDashboard/components/VendorsDetails.jsx";
 import VendorsEdit from "./pages/AdminDashboard/components/VendorsEdit.jsx";
+import AdminStoreAnalytics from "./pages/AdminDashboard/AdminStoreAnalytics.jsx";
+import AdminPostCreate from "./pages/AdminDashboard/Blog/AdminPostCreate.jsx";
+import AdminPostDetails from "./pages/AdminDashboard/Blog/AdminPostDetails.jsx";
+import AdminPostList from "./pages/AdminDashboard/Blog/AdminPostList.jsx";
 
 const router = createBrowserRouter([
   {
@@ -260,6 +264,27 @@ const router = createBrowserRouter([
         path: "vendorsedit",
         element: <VendorsEdit />,
       },
+      {
+        path: "AdminStore-analytics",
+        element: <AdminStoreAnalytics/>
+      },
+      
+        //admin blog
+        {
+        path: "AdminPost-create",
+        element: <AdminPostCreate/>,
+        },
+        {
+          path: "AdminPost-details",
+          element: <AdminPostDetails/>,
+          },
+          {
+            path: "AdminPost-list",
+            element: <AdminPostList/>
+            },
+   
+    
+      
     ],
   },
 ]);

@@ -9,7 +9,13 @@ const AdminSidebar = () => {
     const [isOrdersDropdownOpen, setIsOrdersDropdownOpen] = useState(false);
     const [isOrdersDropdownOpen2, setIsOrdersDropdownOpen2] = useState(false);
     const [isProductOpen, setProductOpen] = useState(false);
+    
+    // blog dropdown
+    const [isBlogOpen, setIsBlogOpen] = useState(false);
 
+const toggleBlogOpen = () => {
+    setIsBlogOpen(!isBlogOpen);
+}
     const toggleProductOpen = () => {
         setProductOpen(!isProductOpen);
     };
@@ -23,7 +29,7 @@ const AdminSidebar = () => {
     };
 
     return (
-        <div className="h-[1610px] w-[280px] bg-[#0B5D51] text-white flex flex-col items-start p-4">
+        <div className="h-full w-[280px] bg-[#0B5D51] text-white flex flex-col items-start p-4">
             {/* Logo Section */}
             <div className="mt-[9px] ml-[35px] w-[95px] h-[86px]">
                 <img src="/logoo.svg" alt="Logo" />
@@ -115,7 +121,39 @@ const AdminSidebar = () => {
 
                 <SidebarItem imgSrc="/invoices.svg" text="Invoices" arrow />
                 <SidebarItem imgSrc="/logistics.svg" text="Logistics" arrow />
-                <SidebarItem imgSrc="/blog.svg" text="Blog" arrow />
+              
+    {/* blog dropdown */}
+            <SidebarItem
+                imgSrc="/blog.svg"
+                text="Blog"
+                arrow
+                onClick={toggleBlogOpen} 
+              >
+                {isBlogOpen && (
+                    <div className="ml-8 mt-2 space-y-3">
+                        <Link to="/admin/AdminPost-create">
+                            <DropdownItem
+                                text="Create"
+                                isActive={location.pathname === "/admin/AdminPost-create"}
+                            />
+                        </Link>
+                        <Link to="/admin/AdminPost-details">
+                            <DropdownItem
+                                text="Post"
+                                isActive={location.pathname === "/admin/AdminPost-details"}
+                            />
+                        </Link>
+                        <Link to="/admin/AdminPost-list">
+                            <DropdownItem
+                                text="Detail"
+                                isActive={location.pathname === "/admin/AdminPost-list"}
+                            />
+                        </Link>
+                    </div>
+                    )}
+            </SidebarItem> 
+
+
                 <SidebarItem imgSrc="/calender.svg" text="Calendar" />
                 <SidebarItem imgSrc="/fileManager.svg" text="File Manager" />
                 <SidebarItem imgSrc="/Auth.svg" text="Auth" />
