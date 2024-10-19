@@ -66,6 +66,27 @@ import AdminSecurity from "./pages/AdminDashboard/Account/AdminSecurity.jsx";
 import AdminTeam from "./pages/AdminDashboard/Account/AdminTeam.jsx";
 import AdminProductLists from "./pages/AdminDashboard/Product/AdminProductLists.jsx";
 import AdminProductCreation from "./pages/AdminDashboard/Product/AdminProductCreation.jsx";
+import AdminLogin from "./pages/AdminDashboard/components/adminauth/AdminLogin.jsx";
+import AdminForgetPassword from "./pages/AdminDashboard/components/adminauth/AdminForgetPassword.jsx";
+import AdminResetPassword from "./pages/AdminDashboard/components/adminauth/AdminResetPassword.jsx";
+import AdminVerification from "./pages/AdminDashboard/components/adminauth/AdminVerification.jsx";
+import VendorLogin from "./pages/vendorAuth/VendorLogin.jsx";
+import vendorRegistration from "./pages/vendorAuth/VendorRegistration.jsx";
+import ForgetPassword from "./pages/vendorAuth/ForgetPassword.jsx";
+import ResetPassword from "./pages/vendorAuth/ResetPassword.jsx";
+import VendorApproval from "./pages/vendorAuth/VendorApproval.jsx";
+import verification from "./pages/vendorAuth/verification.jsx";
+import VendorRegistration from "./pages/vendorAuth/VendorRegistration.jsx";
+import Verification from "./pages/vendorAuth/verification.jsx";
+import OrderListAdmin from "./pages/AdminDashboard/Orders/OrderListAdmin.jsx";
+import OrderFilterAdmin from "./pages/AdminDashboard/Orders/OrderFilterAdmin.jsx";
+import OrderDetailAdmin from "./pages/AdminDashboard/Orders/OrderDetailAdmin.jsx";
+import OrderStatusAdmin from "./pages/AdminDashboard/Orders/OrderStatusAdmin.jsx";
+import  Calendar from "./pages/vendorDashboard/Calendar/Calendar.jsx";
+import NewEventPopUp  from "./pages/vendorDashboard/Calendar/NewEventPopUp.jsx"; 
+import Forget from './components/Forms/Forget.jsx'
+import Reset from './components/Forms/Reset.jsx'
+import EmailVerification  from './components/Forms/EmailVerification.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -75,6 +96,37 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
+      {
+        path: '/User Account/sign In',
+        element: <Signin />,
+        },
+        {
+        path: '/User Account/sign In/Forget Password',
+        element:(
+          <>
+          <Breadcrumb />
+          <Forget />,
+          </>
+        ) 
+        },
+        {
+        path: '/User Account/sign In/Forget Password/Reset Password',
+        element:(
+          <>
+          <Breadcrumb />
+          <Reset/>,
+          </>
+        ) 
+        },
+        {
+          path: '/User Account/Sign Up/Email Verification',
+          element:(
+            <>
+            <Breadcrumb />
+            <EmailVerification/>,
+            </>
+          ) 
+        },
       {
         path: "/Wishlist",
         element: <Wishlist />,
@@ -154,10 +206,7 @@ const router = createBrowserRouter([
         path: "/blogdetails",
         element: <BlogDetailsPage />,
       },
-      {
-        path: "usersignup",
-        element: <Signin />,
-      },
+     
     ],
   },
   {
@@ -168,9 +217,20 @@ const router = createBrowserRouter([
         path: "account",
         element: <Account />,
         children: [
+         
           {
             path: "general",
             element: <General />,
+          },
+          {
+            path: "Calendar",
+            element: <Calendar/>,
+          },
+          {
+            path: "Calendar/new-event",
+            element: <NewEventPopUp />,
+    
+            
           },
           {
             path: "notifications",
@@ -253,7 +313,31 @@ const router = createBrowserRouter([
       },
       {
         path: "checkout",
-        element: <VendorCheckout/>
+        element: <VendorCheckout />,
+      },
+      {
+        path: "vendorlogin",
+        element: <VendorLogin />,
+      },
+      {
+        path: "vendorsignup",
+        element: <VendorRegistration />,
+      },
+      {
+        path: "vendorapproval",
+        element: <VendorApproval />,
+      },
+      {
+        path: "forgetpassword",
+        element: <ForgetPassword />,
+      },
+      {
+        path: "resetpassword",
+        element: <ResetPassword />,
+      },
+      {
+        path: "verify",
+        element: <Verification />,
       },
     ],
   },
@@ -325,12 +409,44 @@ const router = createBrowserRouter([
         element: <CustomerDetailsAdmin />,
       },
       {
-        path : "EditCustomerAdmin",
-        element: <EditCustomerAdmin />
+        path: "EditCustomerAdmin",
+        element: <EditCustomerAdmin />,
       },
       {
         path: "checkout",
-        element: <AdminCheckout/>
+        element: <AdminCheckout />,
+      },
+      {
+        path: "adminlogin",
+        element: <AdminLogin />,
+      },
+      {
+        path: "adminpasswordforget",
+        element: <AdminForgetPassword />,
+      },
+      {
+        path: "adminpasswordreset",
+        element: <AdminResetPassword />,
+      },
+      {
+        path: "adminverify",
+        element: <AdminVerification />,
+      },
+      {
+        path: "orderList",
+        element: <OrderListAdmin/>
+      },
+      {
+        path: "orderFilter",
+        element: <OrderFilterAdmin/>
+      },
+      {
+        path: "orderDetail",
+        element: <OrderDetailAdmin/>
+      },
+      {
+        path: "orderStatus",
+        element: <OrderStatusAdmin/>
       },
     ],
   },

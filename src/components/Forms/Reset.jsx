@@ -66,21 +66,19 @@ const Reset = () => {
           </span>
         </div>
 
-       
-         <button
-      type="submit"
-      className="w-full h-[48px] bg-[#0B5D51] text-white rounded-[2px] font-public-sans text-[14px] font-bold flex justify-center items-center relative"
-           >
-     
-      <div className="flex justify-center items-center  w-full">
-        <div className="flex justify-center ml-[-25px] items-center w-full">
-        RESET PASSWORD
-        </div>
-        <div className="absolute right-[98px]">
-          <FaArrowRight className="text-white w-[20px] h-[20px]" />
-        </div>
-      </div>
-    </button>
+        <button
+          type="submit"
+          className="w-full h-[48px] bg-[#0B5D51] text-white rounded-[2px] font-public-sans text-[14px] font-bold flex justify-center items-center relative"
+        >
+          <div className="flex justify-center items-center  w-full">
+            <div className="flex justify-center ml-[-25px] items-center w-full">
+              RESET PASSWORD
+            </div>
+            <div className="absolute right-[98px]">
+              <FaArrowRight className="text-white w-[20px] h-[20px]" />
+            </div>
+          </div>
+        </button>
       </div>
     </div>
   );
