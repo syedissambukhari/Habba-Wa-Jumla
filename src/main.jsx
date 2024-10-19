@@ -58,7 +58,7 @@ import CustomerDetailsAdmin from "./pages/AdminDashboard/Customer/CustomerDetail
 import EditCustomerAdmin from "./pages/AdminDashboard/Customer/EditCustomerAdmin.jsx";
 import { VendorCheckout } from "./pages/vendorDashboard/vendorCheckout.jsx";
 import { AdminCheckout } from "./pages/AdminDashboard/adminCheckout.jsx";
-<<<<<<< HEAD
+
 import AdminLogin from "./pages/AdminDashboard/components/adminauth/AdminLogin.jsx";
 import AdminForgetPassword from "./pages/AdminDashboard/components/adminauth/AdminForgetPassword.jsx";
 import AdminResetPassword from "./pages/AdminDashboard/components/adminauth/AdminResetPassword.jsx";
@@ -71,21 +71,23 @@ import VendorApproval from "./pages/vendorAuth/VendorApproval.jsx";
 import verification from "./pages/vendorAuth/verification.jsx";
 import VendorRegistration from "./pages/vendorAuth/VendorRegistration.jsx";
 import Verification from "./pages/vendorAuth/verification.jsx";
-=======
+
 import OrderListAdmin from "./pages/AdminDashboard/Orders/OrderListAdmin.jsx";
 import OrderFilterAdmin from "./pages/AdminDashboard/Orders/OrderFilterAdmin.jsx";
 import OrderDetailAdmin from "./pages/AdminDashboard/Orders/OrderDetailAdmin.jsx";
 import OrderStatusAdmin from "./pages/AdminDashboard/Orders/OrderStatusAdmin.jsx";
-<<<<<<< Updated upstream
->>>>>>> 74e049e115998f210b97f3c75263940a83152794
-=======
+
 
 import  Calendar from "./pages/vendorDashboard/Calendar/Calendar.jsx";
 import NewEventPopUp  from "./pages/vendorDashboard/Calendar/NewEventPopUp.jsx"; 
 import Forget from './components/Forms/Forget.jsx'
 import Reset from './components/Forms/Reset.jsx'
 import EmailVerification  from './components/Forms/EmailVerification.jsx';
->>>>>>> Stashed changes
+
+import { AdminInoviceList } from "./pages/AdminDashboard/Admininvoice/AdminInoviceList.jsx";
+import { AdminInoviceDetail } from "./pages/AdminDashboard/Admininvoice/AdminInoviceDetail.jsx";
+import { AdminInoviceFilter } from "./pages/AdminDashboard/Admininvoice/AdminInoviceFilter.jsx";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -413,6 +415,21 @@ const router = createBrowserRouter([
         path: "orderStatus",
         element: <OrderStatusAdmin/>
       },
+      {
+        path: "admininovicelist",
+        element: <AdminInoviceList/>
+
+      }, 
+      {
+        path: "admininovicedetail",
+        element: <AdminInoviceDetail/>
+
+      }, 
+      {
+        path: "admininovicefilter",
+        element: <AdminInoviceFilter/>
+
+      }, 
     ],
   },
 ]);

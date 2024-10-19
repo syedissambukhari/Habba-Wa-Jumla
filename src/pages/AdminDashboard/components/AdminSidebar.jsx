@@ -9,6 +9,9 @@ const AdminSidebar = () => {
     const [isOrdersDropdownOpen, setIsOrdersDropdownOpen] = useState(false);
     const [isOrdersDropdownOpen2, setIsOrdersDropdownOpen2] = useState(false);
     const [isProductOpen, setProductOpen] = useState(false);
+    const [  isInvoicesOpen, setInvoicesOpen] = useState(false);
+
+  
 
     const toggleProductOpen = () => {
         setProductOpen(!isProductOpen);
@@ -20,6 +23,10 @@ const AdminSidebar = () => {
 
     const toggleOrdersDropdown = () => {
         setIsOrdersDropdownOpen(!isOrdersDropdownOpen);
+    };
+
+    const toggleinvoiceDropdown = () => {
+        setInvoicesOpen(!isOrdersDropdownOpen);
     };
 
     return (
@@ -113,7 +120,36 @@ const AdminSidebar = () => {
                     )}
                 </SidebarItem>
 
-                <SidebarItem imgSrc="/invoices.svg" text="Invoices" arrow />
+             
+
+
+                <SidebarItem
+                    imgSrc="/invoices.svg"
+                    text="Invoices"
+                    arrow
+                    onClick={toggleinvoiceDropdown}
+                />
+                {isInvoicesOpen && (
+                    <div className="ml-8 mt-2 space-y-3">
+                        <Link to="/admin/admininovicelist">
+                            <DropdownItem
+                                text="list"
+                                isActive={location.pathname === "/admin/admininovicelist"}
+                            />
+                        </Link>
+                        <Link to="/admin/admininovicedetail">
+                            <DropdownItem
+                                text="Detail"
+                                isActive={location.pathname === "/admin/admininovicedetail"}
+                            />
+                        </Link>
+                    </div>
+                )}
+
+
+
+
+
                 <SidebarItem imgSrc="/logistics.svg" text="Logistics" arrow />
                 <SidebarItem imgSrc="/blog.svg" text="Blog" arrow />
                 <SidebarItem imgSrc="/calender.svg" text="Calendar" />
