@@ -95,9 +95,6 @@ import EmailVerification from "./components/Forms/EmailVerification.jsx";
 import { AdminInoviceList } from "./pages/AdminDashboard/Admininvoice/AdminInoviceList.jsx";
 import { AdminInoviceDetail } from "./pages/AdminDashboard/Admininvoice/AdminInoviceDetail.jsx";
 import { AdminInoviceFilter } from "./pages/AdminDashboard/Admininvoice/AdminInoviceFilter.jsx";
-
-
-// import NewEventPopUp from "./pages/vendorDashboard/Calendar/NewEventPopUp.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
