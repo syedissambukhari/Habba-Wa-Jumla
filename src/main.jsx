@@ -86,25 +86,16 @@ import OrderDetailAdmin from "./pages/AdminDashboard/Orders/OrderDetailAdmin.jsx
 import OrderStatusAdmin from "./pages/AdminDashboard/Orders/OrderStatusAdmin.jsx";
 import AdminCalendar from "./pages/AdminDashboard/AdminCalendar/AdminCalendar.jsx";
 import PopUp from "./pages/AdminDashboard/AdminCalendar/CalendarPopUp.jsx";
-import Calendar from "./pages/vendorDashboard/VendorCalendar/Calendar.jsx";
+import Calendar from './pages/vendorDashboard/VendorCalendar/Calendar.jsx'
 import NewEventPopUp from "./pages/vendorDashboard/VendorCalendar/NewEventPopUp.jsx";
 import Forget from "./components/Forms/Forget.jsx";
 import Reset from "./components/Forms/Reset.jsx";
 import EmailVerification from "./components/Forms/EmailVerification.jsx";
-import  Calendar from "./pages/vendorDashboard/Calendar/Calendar.jsx";
-import NewEventPopUp  from "./pages/vendorDashboard/Calendar/NewEventPopUp.jsx"; 
-// import Forget from './components/Forms/Forget.jsx'
-// import Reset from './components/Forms/Reset.jsx'
-// import EmailVerification  from './components/Forms/EmailVerification.jsx';
 
 import { AdminInoviceList } from "./pages/AdminDashboard/Admininvoice/AdminInoviceList.jsx";
 import { AdminInoviceDetail } from "./pages/AdminDashboard/Admininvoice/AdminInoviceDetail.jsx";
 import { AdminInoviceFilter } from "./pages/AdminDashboard/Admininvoice/AdminInoviceFilter.jsx";
-import Forget from "./components/Forms/Forget.jsx";
-import Reset from "./components/Forms/Reset.jsx";
-import Calender from "../src/pages/vendorDashboard/Calendar/Calendar.jsx";
-// import NewEventPopUp from "../src/pages/vendorDashboard/Calendar/NewEventPopUp.jsx";
-import EmailVerification from "./components/Forms/EmailVerification.jsx";
+
 
 // import NewEventPopUp from "./pages/vendorDashboard/Calendar/NewEventPopUp.jsx";
 const router = createBrowserRouter([
