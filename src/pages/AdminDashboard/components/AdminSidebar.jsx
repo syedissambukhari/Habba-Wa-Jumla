@@ -45,7 +45,7 @@ const toggleBlogOpen = () => {
 
             {/* Menu Items */}
             <nav className="flex-grow space-y-4 ml-2 mt-10">
-                <Link to="/vendor/account/general">
+                <Link to="/admin/account/general">
                     <SidebarItem imgSrc="/accountSVG.svg" text="Account" />
                 </Link>
 
@@ -83,16 +83,16 @@ const toggleBlogOpen = () => {
                 />
                 {isProductOpen && (
                     <div className="ml-8 mt-2 space-y-3">
-                        <Link to="/vendor/productlists">
+                        <Link to="/admin/productlists">
                             <DropdownItem
                                 text="Product List"
-                                isActive={location.pathname === "/vendor/productlists"}
+                                isActive={location.pathname === "/admin/productlists"}
                             />
                         </Link>
-                        <Link to="/vendor/productcreates">
+                        <Link to="/admin/productcreates">
                             <DropdownItem
                                 text="Product Create"
-                                isActive={location.pathname === "/vendor/productcreates"}
+                                isActive={location.pathname === "/admin/productcreates"}
                             />
                         </Link>
                     </div>
@@ -157,10 +157,10 @@ const toggleBlogOpen = () => {
                 <SidebarItem imgSrc="/calender.svg" text="Calendar" />
                 <SidebarItem imgSrc="/fileManager.svg" text="File Manager" />
                 <SidebarItem imgSrc="/Auth.svg" text="Auth" />
-                <SidebarItem
-                    icon={<PiShoppingCartDuotone className="w-5 h-[18px]" />}
-                    text="Checkout"
-                />
+                <Link  to="/admin/Checkout"><SidebarItem   
+                icon={<PiShoppingCartDuotone className="w-5 h-[18px]" />}
+                text="Checkout"
+                /></Link>
             </nav>
         </div>
     );

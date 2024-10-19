@@ -4,18 +4,16 @@ import { FaApple } from "react-icons/fa";
 import { FiEye } from "react-icons/fi";
 import googleLogo from "../../assets/google-logo.png";
 import { Link } from "react-router-dom";
-import BreadCrumb from "../../homecomponents/BreadCrumb"; // Adjust the path as necessary
+import BreadCrumb from "../../homecomponents/BreadCrumb";
 
 const Signin = () => {
   const [isSignIn, setIsSignIn] = useState(false); // Toggle between sign-in and sign-up
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
-  // State for Sign In form
   const [signInPhoneNumber, setSignInPhoneNumber] = useState("");
   const [signInPassword, setSignInPassword] = useState("");
 
-  // State for Sign Up form
   const [signUpName, setSignUpName] = useState("");
   const [signUpPhoneNumber, setSignUpPhoneNumber] = useState("+966");
   const [signUpEmail, setSignUpEmail] = useState("");
@@ -25,7 +23,7 @@ const Signin = () => {
   return (
     <>
       <BreadCrumb isSignIn={isSignIn} />
-      <div className="flex justify-center items-center min-h-screen bg-[#f5f5f5]">
+      <div className="flex justify-center items-center min-h-screen ">
         <div
           className={`w-[424px]  rounded-[4px] bg-white shadow-[0_8px_40px_rgba(0,0,0,0.12)] border border-[#E4E7E9] pb-[32px]`}
         >
@@ -239,7 +237,7 @@ const Signin = () => {
                       to="/User Account/Sign Up/Email Verification"
                       className="flex justify-center items-center w-full h-full"
                     >
-                      SIGN UP{" "}
+                      SIGN UP
                     </Link>
                   </div>
                   <div className="absolute right-[138px]">

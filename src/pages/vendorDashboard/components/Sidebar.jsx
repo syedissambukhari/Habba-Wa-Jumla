@@ -123,7 +123,11 @@ const Sidebar = () => {
         <SidebarItem imgSrc="/calender.svg" text="Calendar" />
         <SidebarItem imgSrc="/fileManager.svg" text="File Manager" />
         <SidebarItem imgSrc="/Auth.svg" text="Auth" />
-        <SidebarItem icon={<PiShoppingCartDuotone className="w-5 h-[18px]" />} text="Checkout" />
+        
+        <Link  to="/vendor/Checkout"><SidebarItem   
+          icon={<PiShoppingCartDuotone className="w-5 h-[18px]" />}
+          text="Checkout"
+        /></Link>
       </nav>
     </div>
   );

@@ -56,6 +56,41 @@ import AdminStoreAnalytics from "./pages/AdminDashboard/AdminStoreAnalytics.jsx"
 import AdminPostCreate from "./pages/AdminDashboard/Blog/AdminPostCreate.jsx";
 import AdminPostDetails from "./pages/AdminDashboard/Blog/AdminPostDetails.jsx";
 import AdminPostList from "./pages/AdminDashboard/Blog/AdminPostList.jsx";
+import AnalaticsBody from "./pages/AdminDashboard/Analytics/AnalaticsBody.jsx";
+import CustomerListAdmin from "./pages/AdminDashboard/Customer/CustomerDetailsAdmin.jsx";
+import CustomerDetailsAdmin from "./pages/AdminDashboard/Customer/CustomerDetailsAdmin.jsx";
+import EditCustomerAdmin from "./pages/AdminDashboard/Customer/EditCustomerAdmin.jsx";
+import { VendorCheckout } from "./pages/vendorDashboard/vendorCheckout.jsx";
+import { AdminCheckout } from "./pages/AdminDashboard/adminCheckout.jsx";
+import AdminBilling from "./pages/AdminDashboard/Account/AdminBilling.jsx";
+import AdminAccount from "./pages/AdminDashboard/Account/AdminAccount.jsx";
+import AdminGeneral from "./pages/AdminDashboard/Account/AdminGeneral.jsx";
+import AdminNotifications from "./pages/AdminDashboard/Account/AdminNotifications.jsx";
+import AdminSecurity from "./pages/AdminDashboard/Account/AdminSecurity.jsx";
+import AdminTeam from "./pages/AdminDashboard/Account/AdminTeam.jsx";
+import AdminProductLists from "./pages/AdminDashboard/Product/AdminProductLists.jsx";
+import AdminProductCreation from "./pages/AdminDashboard/Product/AdminProductCreation.jsx";
+import AdminLogin from "./pages/AdminDashboard/components/adminauth/AdminLogin.jsx";
+import AdminForgetPassword from "./pages/AdminDashboard/components/adminauth/AdminForgetPassword.jsx";
+import AdminResetPassword from "./pages/AdminDashboard/components/adminauth/AdminResetPassword.jsx";
+import AdminVerification from "./pages/AdminDashboard/components/adminauth/AdminVerification.jsx";
+import VendorLogin from "./pages/vendorAuth/VendorLogin.jsx";
+import VendorRegistration from "./pages/vendorAuth/VendorRegistration.jsx";
+import ForgetPassword from "./pages/vendorAuth/ForgetPassword.jsx";
+import ResetPassword from "./pages/vendorAuth/ResetPassword.jsx";
+import VendorApproval from "./pages/vendorAuth/VendorApproval.jsx";
+import Verification from "./pages/vendorAuth/verification.jsx";
+import OrderListAdmin from "./pages/AdminDashboard/Orders/OrderListAdmin.jsx";
+import OrderFilterAdmin from "./pages/AdminDashboard/Orders/OrderFilterAdmin.jsx";
+import OrderDetailAdmin from "./pages/AdminDashboard/Orders/OrderDetailAdmin.jsx";
+import OrderStatusAdmin from "./pages/AdminDashboard/Orders/OrderStatusAdmin.jsx";
+import Forget from "./components/Forms/Forget.jsx";
+import Reset from "./components/Forms/Reset.jsx";
+import EmailVerification from "./components/Forms/EmailVerification.jsx";
+import Calender from "../src/pages/vendorDashboard/Calendar/Calendar.jsx";
+import NewEventPopUp from "../src/pages/vendorDashboard/Calendar/NewEventPopUp.jsx";
+
+// import NewEventPopUp from "./pages/vendorDashboard/Calendar/NewEventPopUp.jsx";
 
 const router = createBrowserRouter([
   {
@@ -65,6 +100,37 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/User Account/sign In",
+        element: <Signin />,
+      },
+      {
+        path: "/User Account/sign In/Forget Password",
+        element: (
+          <>
+            <Breadcrumb />
+            <Forget />,
+          </>
+        ),
+      },
+      {
+        path: "/User Account/sign In/Forget Password/Reset Password",
+        element: (
+          <>
+            <Breadcrumb />
+            <Reset />,
+          </>
+        ),
+      },
+      {
+        path: "/User Account/Sign Up/Email Verification",
+        element: (
+          <>
+            <Breadcrumb />
+            <EmailVerification />,
+          </>
+        ),
       },
       {
         path: "/Wishlist",
@@ -145,10 +211,6 @@ const router = createBrowserRouter([
         path: "/blogdetails",
         element: <BlogDetailsPage />,
       },
-      {
-        path: "usersignup",
-        element: <Signin />,
-      },
     ],
   },
   {
@@ -162,6 +224,14 @@ const router = createBrowserRouter([
           {
             path: "general",
             element: <General />,
+          },
+          {
+            path: "Calendar",
+            element: <Calender />,
+          },
+          {
+            path: "Calendar/new-event",
+            element: <NewEventPopUp />,
           },
           {
             path: "notifications",
@@ -242,12 +312,74 @@ const router = createBrowserRouter([
         path: "InoviceFilter",
         element: <InoviceFilter />,
       },
+      {
+        path: "checkout",
+        element: <VendorCheckout />,
+      },
+      {
+        path: "vendorlogin",
+        element: <VendorLogin />,
+      },
+      {
+        path: "vendorsignup",
+        element: <VendorRegistration />,
+      },
+      {
+        path: "vendorapproval",
+        element: <VendorApproval />,
+      },
+      {
+        path: "forgetpassword",
+        element: <ForgetPassword />,
+      },
+      {
+        path: "resetpassword",
+        element: <ResetPassword />,
+      },
+      {
+        path: "verify",
+        element: <Verification />,
+      },
     ],
   },
   {
     path: "admin",
     element: <AdminDashboard />,
     children: [
+      {
+        path: "account",
+        element: <AdminAccount />,
+        children: [
+          {
+            path: "general",
+            element: <AdminGeneral />,
+          },
+          {
+            path: "notifications",
+            element: <AdminNotifications />,
+          },
+          {
+            path: "security",
+            element: <AdminSecurity />,
+          },
+          {
+            path: "team",
+            element: <AdminTeam />,
+          },
+          {
+            path: "billing",
+            element: <AdminBilling />,
+          },
+        ],
+      },
+      {
+        path: "productlists",
+        element: <AdminProductLists />,
+      },
+      {
+        path: "productcreates",
+        element: <AdminProductCreation />,
+      },
       {
         path: "vendorslist",
         element: <VendorsList />,
@@ -285,6 +417,59 @@ const router = createBrowserRouter([
    
     
       
+
+      {
+        path: "AnalaticsBody",
+        element: <AnalaticsBody />,
+      },
+      {
+        path: "CustomerListAdmin",
+        element: <CustomerListAdmin />,
+      },
+      {
+        path: "CustomerDetailsAdmin",
+        element: <CustomerDetailsAdmin />,
+      },
+      {
+        path: "EditCustomerAdmin",
+        element: <EditCustomerAdmin />,
+      },
+      {
+        path: "checkout",
+        element: <AdminCheckout />,
+      },
+      {
+        path: "adminlogin",
+        element: <AdminLogin />,
+      },
+      {
+        path: "adminpasswordforget",
+        element: <AdminForgetPassword />,
+      },
+      {
+        path: "adminpasswordreset",
+        element: <AdminResetPassword />,
+      },
+      {
+        path: "adminverify",
+        element: <AdminVerification />,
+      },
+      {
+        path: "orderList",
+        element: <OrderListAdmin />,
+      },
+      {
+        path: "orderFilter",
+        element: <OrderFilterAdmin />,
+      },
+      {
+        path: "orderDetail",
+        element: <OrderDetailAdmin />,
+      },
+      {
+        path: "orderStatus",
+        element: <OrderStatusAdmin />,
+      },
     ],
   },
 ]);
