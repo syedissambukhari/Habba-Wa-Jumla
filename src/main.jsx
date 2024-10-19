@@ -58,6 +58,10 @@ import CustomerDetailsAdmin from "./pages/AdminDashboard/Customer/CustomerDetail
 import EditCustomerAdmin from "./pages/AdminDashboard/Customer/EditCustomerAdmin.jsx";
 import { VendorCheckout } from "./pages/vendorDashboard/vendorCheckout.jsx";
 import { AdminCheckout } from "./pages/AdminDashboard/adminCheckout.jsx";
+import OrderListAdmin from "./pages/AdminDashboard/Orders/OrderListAdmin.jsx";
+import OrderFilterAdmin from "./pages/AdminDashboard/Orders/OrderFilterAdmin.jsx";
+import OrderDetailAdmin from "./pages/AdminDashboard/Orders/OrderDetailAdmin.jsx";
+import OrderStatusAdmin from "./pages/AdminDashboard/Orders/OrderStatusAdmin.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -289,6 +293,22 @@ const router = createBrowserRouter([
       {
         path: "checkout",
         element: <AdminCheckout/>
+      },
+      {
+        path: "orderList",
+        element: <OrderListAdmin/>
+      },
+      {
+        path: "orderFilter",
+        element: <OrderFilterAdmin/>
+      },
+      {
+        path: "orderDetail",
+        element: <OrderDetailAdmin/>
+      },
+      {
+        path: "orderStatus",
+        element: <OrderStatusAdmin/>
       },
     ],
   },
