@@ -9,7 +9,7 @@ export const AdminDashboard = () => {
   const authRoutes = [
     "/admin/adminlogin",
     "/admin/adminpasswordforget",
-    "/admin/asswordreset",
+    "/admin/adminpasswordreset",
     "/admin/adminverify",
   ]; // Add other auth-related routes as needed
 
