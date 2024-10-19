@@ -89,9 +89,9 @@ import OrderStatusAdmin from "./pages/AdminDashboard/Orders/OrderStatusAdmin.jsx
 
 import  Calendar from "./pages/vendorDashboard/Calendar/Calendar.jsx";
 import NewEventPopUp  from "./pages/vendorDashboard/Calendar/NewEventPopUp.jsx"; 
-import Forget from './components/Forms/Forget.jsx'
-import Reset from './components/Forms/Reset.jsx'
-import EmailVerification  from './components/Forms/EmailVerification.jsx';
+// import Forget from './components/Forms/Forget.jsx'
+// import Reset from './components/Forms/Reset.jsx'
+// import EmailVerification  from './components/Forms/EmailVerification.jsx';
 
 import { AdminInoviceList } from "./pages/AdminDashboard/Admininvoice/AdminInoviceList.jsx";
 import { AdminInoviceDetail } from "./pages/AdminDashboard/Admininvoice/AdminInoviceDetail.jsx";
@@ -101,7 +101,7 @@ import Forget from "./components/Forms/Forget.jsx";
 import Reset from "./components/Forms/Reset.jsx";
 import EmailVerification from "./components/Forms/EmailVerification.jsx";
 import Calender from "../src/pages/vendorDashboard/Calendar/Calendar.jsx";
-import NewEventPopUp from "../src/pages/vendorDashboard/Calendar/NewEventPopUp.jsx";
+// import NewEventPopUp from "../src/pages/vendorDashboard/Calendar/NewEventPopUp.jsx";
 
 // import NewEventPopUp from "./pages/vendorDashboard/Calendar/NewEventPopUp.jsx";
 
