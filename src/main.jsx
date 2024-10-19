@@ -80,28 +80,20 @@ import OrderListAdmin from "./pages/AdminDashboard/Orders/OrderListAdmin.jsx";
 import OrderFilterAdmin from "./pages/AdminDashboard/Orders/OrderFilterAdmin.jsx";
 import OrderDetailAdmin from "./pages/AdminDashboard/Orders/OrderDetailAdmin.jsx";
 import OrderStatusAdmin from "./pages/AdminDashboard/Orders/OrderStatusAdmin.jsx";
-
-
-
-import  Calendar from "./pages/vendorDashboard/Calendar/Calendar.jsx";
-import NewEventPopUp  from "./pages/vendorDashboard/Calendar/NewEventPopUp.jsx"; 
-import Forget from './components/Forms/Forget.jsx'
-import Reset from './components/Forms/Reset.jsx'
-import EmailVerification  from './components/Forms/EmailVerification.jsx';
+import AdminCalendar from "./pages/AdminDashboard/AdminCalendar/AdminCalendar.jsx";
+import PopUp from "./pages/AdminDashboard/AdminCalendar/CalendarPopUp.jsx";
+import Calendar from "./pages/vendorDashboard/VendorCalendar/Calendar.jsx";
+import NewEventPopUp from "./pages/vendorDashboard/VendorCalendar/NewEventPopUp.jsx";
+import Forget from "./components/Forms/Forget.jsx";
+import Reset from "./components/Forms/Reset.jsx";
+import EmailVerification from "./components/Forms/EmailVerification.jsx";
 
 import { AdminInoviceList } from "./pages/AdminDashboard/Admininvoice/AdminInoviceList.jsx";
 import { AdminInoviceDetail } from "./pages/AdminDashboard/Admininvoice/AdminInoviceDetail.jsx";
 import { AdminInoviceFilter } from "./pages/AdminDashboard/Admininvoice/AdminInoviceFilter.jsx";
 
-import Forget from "./components/Forms/Forget.jsx";
-import Reset from "./components/Forms/Reset.jsx";
-import EmailVerification from "./components/Forms/EmailVerification.jsx";
-import Calender from "../src/pages/vendorDashboard/Calendar/Calendar.jsx";
-import NewEventPopUp from "../src/pages/vendorDashboard/Calendar/NewEventPopUp.jsx";
 
 // import NewEventPopUp from "./pages/vendorDashboard/Calendar/NewEventPopUp.jsx";
-
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -120,7 +112,7 @@ const router = createBrowserRouter([
         element: (
           <>
             <Breadcrumb />
-            <Forget />,
+            <Forget />
           </>
         ),
       },
@@ -129,7 +121,7 @@ const router = createBrowserRouter([
         element: (
           <>
             <Breadcrumb />
-            <Reset />,
+            <Reset />
           </>
         ),
       },
@@ -138,7 +130,17 @@ const router = createBrowserRouter([
         element: (
           <>
             <Breadcrumb />
-            <EmailVerification />,
+            <EmailVerification />
+          </>
+        ),
+      },
+      {
+        path: "/User Account/Sign Up",
+        element: (
+          <>
+            {/* <Breadcrumb /> */}
+            <Signin />
+            {/* <EmailVerification /> */}
           </>
         ),
       },
@@ -236,14 +238,6 @@ const router = createBrowserRouter([
             element: <General />,
           },
           {
-            path: "Calendar",
-            element: <Calender />,
-          },
-          {
-            path: "Calendar/new-event",
-            element: <NewEventPopUp />,
-          },
-          {
             path: "notifications",
             element: <Notifications />,
           },
@@ -277,7 +271,6 @@ const router = createBrowserRouter([
         path: "OrderList",
         element: <OrderList />,
       },
-
       {
         path: "OrderDetail",
         element: <OrderDetail />,
@@ -305,6 +298,14 @@ const router = createBrowserRouter([
       {
         path: "PostDetails",
         element: <PostDetails />,
+      },
+      {
+        path: "Calendar",
+        element: <Calendar />,
+      },
+      {
+        path: "Calendar/new-event",
+        element: <NewEventPopUp />,
       },
       {
         path: "PostCreate",
@@ -406,7 +407,6 @@ const router = createBrowserRouter([
         path: "vendorsedit",
         element: <VendorsEdit />,
       },
-
       {
         path: "AnalaticsBody",
         element: <AnalaticsBody />,
@@ -418,6 +418,14 @@ const router = createBrowserRouter([
       {
         path: "CustomerDetailsAdmin",
         element: <CustomerDetailsAdmin />,
+      },
+      {
+        path: "Calendar",
+        element: <AdminCalendar />,
+      },
+      {
+        path: "Calendar/new-event",
+        element: <PopUp />,
       },
       {
         path: "EditCustomerAdmin",
@@ -461,19 +469,16 @@ const router = createBrowserRouter([
       },
       {
         path: "admininovicelist",
-        element: <AdminInoviceList/>
-
-      }, 
+        element: <AdminInoviceList />,
+      },
       {
         path: "admininovicedetail",
-        element: <AdminInoviceDetail/>
-
-      }, 
+        element: <AdminInoviceDetail />,
+      },
       {
         path: "admininovicefilter",
-        element: <AdminInoviceFilter/>
-
-      }, 
+        element: <AdminInoviceFilter />,
+      },
     ],
   },
 ]);

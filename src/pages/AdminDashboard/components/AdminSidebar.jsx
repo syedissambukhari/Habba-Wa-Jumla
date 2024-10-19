@@ -152,7 +152,9 @@ const AdminSidebar = () => {
 
                 <SidebarItem imgSrc="/logistics.svg" text="Logistics" arrow />
                 <SidebarItem imgSrc="/blog.svg" text="Blog" arrow />
+                <Link  to="/admin/Calendar">
                 <SidebarItem imgSrc="/calender.svg" text="Calendar" />
+                </Link>
                 <SidebarItem imgSrc="/fileManager.svg" text="File Manager" />
                 <SidebarItem imgSrc="/Auth.svg" text="Auth" />
                 <Link  to="/admin/Checkout"><SidebarItem   

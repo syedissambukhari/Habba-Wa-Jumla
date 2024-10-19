@@ -10,7 +10,7 @@ const Breadcrumb = () => {
   const pathnames = location.pathname.split("/").filter((x) => x);
 
   // Include logic to handle sign-up route
-  const isSignup = pathnames.includes("Sign%20In"); // Check if 'Sign Up' is part of the current path
+  const isSignup = pathnames.includes("Sign%Up"); // Check if 'Sign Up' is part of the current path
   
   return (
     <nav className="flex h-[72px] py-3 text-gray-700 bg-[#F2F4F5] rounded-lg w-full px-[120px]" aria-label="Breadcrumb">
