@@ -12,6 +12,9 @@ const AdminSidebar = () => {
     
     // blog dropdown
     const [isBlogOpen, setIsBlogOpen] = useState(false);
+    const [  isInvoicesOpen, setInvoicesOpen] = useState(false);
+
+  
 
 const toggleBlogOpen = () => {
     setIsBlogOpen(!isBlogOpen);
@@ -26,6 +29,10 @@ const toggleBlogOpen = () => {
 
     const toggleOrdersDropdown = () => {
         setIsOrdersDropdownOpen(!isOrdersDropdownOpen);
+    };
+
+    const toggleinvoiceDropdown = () => {
+        setInvoicesOpen(!isOrdersDropdownOpen);
     };
 
     return (
@@ -119,7 +126,36 @@ const toggleBlogOpen = () => {
                     )}
                 </SidebarItem>
 
-                <SidebarItem imgSrc="/invoices.svg" text="Invoices" arrow />
+             
+
+
+                <SidebarItem
+                    imgSrc="/invoices.svg"
+                    text="Invoices"
+                    arrow
+                    onClick={toggleinvoiceDropdown}
+                />
+                {isInvoicesOpen && (
+                    <div className="ml-8 mt-2 space-y-3">
+                        <Link to="/admin/admininovicelist">
+                            <DropdownItem
+                                text="list"
+                                isActive={location.pathname === "/admin/admininovicelist"}
+                            />
+                        </Link>
+                        <Link to="/admin/admininovicedetail">
+                            <DropdownItem
+                                text="Detail"
+                                isActive={location.pathname === "/admin/admininovicedetail"}
+                            />
+                        </Link>
+                    </div>
+                )}
+
+
+
+
+
                 <SidebarItem imgSrc="/logistics.svg" text="Logistics" arrow />
               
     {/* blog dropdown */}

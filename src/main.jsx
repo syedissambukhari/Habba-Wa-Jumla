@@ -84,6 +84,19 @@ import OrderListAdmin from "./pages/AdminDashboard/Orders/OrderListAdmin.jsx";
 import OrderFilterAdmin from "./pages/AdminDashboard/Orders/OrderFilterAdmin.jsx";
 import OrderDetailAdmin from "./pages/AdminDashboard/Orders/OrderDetailAdmin.jsx";
 import OrderStatusAdmin from "./pages/AdminDashboard/Orders/OrderStatusAdmin.jsx";
+
+
+
+import  Calendar from "./pages/vendorDashboard/Calendar/Calendar.jsx";
+import NewEventPopUp  from "./pages/vendorDashboard/Calendar/NewEventPopUp.jsx"; 
+import Forget from './components/Forms/Forget.jsx'
+import Reset from './components/Forms/Reset.jsx'
+import EmailVerification  from './components/Forms/EmailVerification.jsx';
+
+import { AdminInoviceList } from "./pages/AdminDashboard/Admininvoice/AdminInoviceList.jsx";
+import { AdminInoviceDetail } from "./pages/AdminDashboard/Admininvoice/AdminInoviceDetail.jsx";
+import { AdminInoviceFilter } from "./pages/AdminDashboard/Admininvoice/AdminInoviceFilter.jsx";
+
 import Forget from "./components/Forms/Forget.jsx";
 import Reset from "./components/Forms/Reset.jsx";
 import EmailVerification from "./components/Forms/EmailVerification.jsx";
@@ -91,6 +104,7 @@ import Calender from "../src/pages/vendorDashboard/Calendar/Calendar.jsx";
 import NewEventPopUp from "../src/pages/vendorDashboard/Calendar/NewEventPopUp.jsx";
 
 // import NewEventPopUp from "./pages/vendorDashboard/Calendar/NewEventPopUp.jsx";
+
 
 const router = createBrowserRouter([
   {
@@ -470,6 +484,21 @@ const router = createBrowserRouter([
         path: "orderStatus",
         element: <OrderStatusAdmin />,
       },
+      {
+        path: "admininovicelist",
+        element: <AdminInoviceList/>
+
+      }, 
+      {
+        path: "admininovicedetail",
+        element: <AdminInoviceDetail/>
+
+      }, 
+      {
+        path: "admininovicefilter",
+        element: <AdminInoviceFilter/>
+
+      }, 
     ],
   },
 ]);
