@@ -52,6 +52,10 @@ import VendorsList from "./pages/AdminDashboard/components/VendorsList.jsx";
 import VendorsApproval from "./pages/AdminDashboard/components/VendorsApproval.jsx";
 import VendorsDetails from "./pages/AdminDashboard/components/VendorsDetails.jsx";
 import VendorsEdit from "./pages/AdminDashboard/components/VendorsEdit.jsx";
+import AdminStoreAnalytics from "./pages/AdminDashboard/AdminStoreAnalytics.jsx";
+import AdminPostCreate from "./pages/AdminDashboard/Blog/AdminPostCreate.jsx";
+import AdminPostDetails from "./pages/AdminDashboard/Blog/AdminPostDetails.jsx";
+import AdminPostList from "./pages/AdminDashboard/Blog/AdminPostList.jsx";
 import AnalaticsBody from "./pages/AdminDashboard/Analytics/AnalaticsBody.jsx";
 import CustomerListAdmin from "./pages/AdminDashboard/Customer/CustomerDetailsAdmin.jsx";
 import CustomerDetailsAdmin from "./pages/AdminDashboard/Customer/CustomerDetailsAdmin.jsx";
@@ -87,6 +91,11 @@ import NewEventPopUp from "./pages/vendorDashboard/VendorCalendar/NewEventPopUp.
 import Forget from "./components/Forms/Forget.jsx";
 import Reset from "./components/Forms/Reset.jsx";
 import EmailVerification from "./components/Forms/EmailVerification.jsx";
+import  Calendar from "./pages/vendorDashboard/Calendar/Calendar.jsx";
+import NewEventPopUp  from "./pages/vendorDashboard/Calendar/NewEventPopUp.jsx"; 
+// import Forget from './components/Forms/Forget.jsx'
+// import Reset from './components/Forms/Reset.jsx'
+// import EmailVerification  from './components/Forms/EmailVerification.jsx';
 
 import { AdminInoviceList } from "./pages/AdminDashboard/Admininvoice/AdminInoviceList.jsx";
 import { AdminInoviceDetail } from "./pages/AdminDashboard/Admininvoice/AdminInoviceDetail.jsx";
@@ -94,7 +103,7 @@ import { AdminInoviceFilter } from "./pages/AdminDashboard/Admininvoice/AdminIno
 import Forget from "./components/Forms/Forget.jsx";
 import Reset from "./components/Forms/Reset.jsx";
 import Calender from "../src/pages/vendorDashboard/Calendar/Calendar.jsx";
-import NewEventPopUp from "../src/pages/vendorDashboard/Calendar/NewEventPopUp.jsx";
+// import NewEventPopUp from "../src/pages/vendorDashboard/Calendar/NewEventPopUp.jsx";
 import EmailVerification from "./components/Forms/EmailVerification.jsx";
 
 // import NewEventPopUp from "./pages/vendorDashboard/Calendar/NewEventPopUp.jsx";
@@ -411,6 +420,24 @@ const router = createBrowserRouter([
         path: "vendorsedit",
         element: <VendorsEdit />,
       },
+      {
+        path: "AdminStore-analytics",
+        element: <AdminStoreAnalytics/>
+      },
+      
+        //admin blog
+        {
+        path: "AdminPost-create",
+        element: <AdminPostCreate/>,
+        },
+        {
+          path: "AdminPost-details",
+          element: <AdminPostDetails/>,
+          },
+          {
+            path: "AdminPost-list",
+            element: <AdminPostList/>
+            },
       {
         path: "AnalaticsBody",
         element: <AnalaticsBody />,
