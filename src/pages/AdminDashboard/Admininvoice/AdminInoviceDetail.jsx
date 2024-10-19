@@ -1,5 +1,5 @@
 import React from 'react'
-import SVG from "../../../../public/SVG.png"
+import SVG from "../../../assets/SVG.png"
 export const AdminInoviceDetail = () => {
     return (
       <div className="p-8 bg-gray-100  mt-9">
@@ -19,7 +19,7 @@ export const AdminInoviceDetail = () => {
         {/* Company and Invoice Details */}
         <div className="grid grid-cols-2 gap-6 border-b pb-6 mb-6">
           <div>
-            <img src={SVG} className="w-10 h-10 mb-5" alt="image" />
+            <img src={SVG } className="w-10 h-10 mb-5" alt="image" />
             <p className="font-bold mb-6">www.devias.io</p>
             <p>Street King William, 123</p>
             <p>Level 2, C, 442456</p>
