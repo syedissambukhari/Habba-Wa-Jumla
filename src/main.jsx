@@ -58,25 +58,20 @@ import CustomerDetailsAdmin from "./pages/AdminDashboard/Customer/CustomerDetail
 import EditCustomerAdmin from "./pages/AdminDashboard/Customer/EditCustomerAdmin.jsx";
 import { VendorCheckout } from "./pages/vendorDashboard/vendorCheckout.jsx";
 import { AdminCheckout } from "./pages/AdminDashboard/adminCheckout.jsx";
-<<<<<<< HEAD
 import AdminLogin from "./pages/AdminDashboard/components/adminauth/AdminLogin.jsx";
 import AdminForgetPassword from "./pages/AdminDashboard/components/adminauth/AdminForgetPassword.jsx";
 import AdminResetPassword from "./pages/AdminDashboard/components/adminauth/AdminResetPassword.jsx";
 import AdminVerification from "./pages/AdminDashboard/components/adminauth/AdminVerification.jsx";
 import VendorLogin from "./pages/vendorAuth/VendorLogin.jsx";
-import vendorRegistration from "./pages/vendorAuth/VendorRegistration.jsx";
+import VendorRegistration from "./pages/vendorAuth/VendorRegistration.jsx";
 import ForgetPassword from "./pages/vendorAuth/ForgetPassword.jsx";
 import ResetPassword from "./pages/vendorAuth/ResetPassword.jsx";
 import VendorApproval from "./pages/vendorAuth/VendorApproval.jsx";
-import verification from "./pages/vendorAuth/verification.jsx";
-import VendorRegistration from "./pages/vendorAuth/VendorRegistration.jsx";
 import Verification from "./pages/vendorAuth/verification.jsx";
-=======
 import OrderListAdmin from "./pages/AdminDashboard/Orders/OrderListAdmin.jsx";
 import OrderFilterAdmin from "./pages/AdminDashboard/Orders/OrderFilterAdmin.jsx";
 import OrderDetailAdmin from "./pages/AdminDashboard/Orders/OrderDetailAdmin.jsx";
 import OrderStatusAdmin from "./pages/AdminDashboard/Orders/OrderStatusAdmin.jsx";
->>>>>>> 74e049e115998f210b97f3c75263940a83152794
 const router = createBrowserRouter([
   {
     path: "/",
@@ -351,19 +346,19 @@ const router = createBrowserRouter([
       },
       {
         path: "orderList",
-        element: <OrderListAdmin/>
+        element: <OrderListAdmin />,
       },
       {
         path: "orderFilter",
-        element: <OrderFilterAdmin/>
+        element: <OrderFilterAdmin />,
       },
       {
         path: "orderDetail",
-        element: <OrderDetailAdmin/>
+        element: <OrderDetailAdmin />,
       },
       {
         path: "orderStatus",
-        element: <OrderStatusAdmin/>
+        element: <OrderStatusAdmin />,
       },
     ],
   },
