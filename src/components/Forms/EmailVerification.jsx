@@ -26,7 +26,10 @@ const EmailVerification = () => {
         <form onSubmit={handleSubmit}>
           <div className="mb-[20px]">
             <div className="flex justify-between items-center mb-2">
-              <label htmlFor="code" className="font-[Public_Sans] text-[#191C1F] text-[14px]  font-[400] block" >
+              <label
+                htmlFor="code"
+                className="font-[Public_Sans] text-[#191C1F] text-[14px]  font-[400] block"
+              >
                 Verification Code
               </label>
               <button
@@ -46,21 +49,20 @@ const EmailVerification = () => {
               required
             />
           </div>
-         
+
           <button
-      type="submit"
-      className="w-full h-[48px] bg-[#0B5D51] text-white rounded-[2px] font-public-sans text-[14px] font-bold flex justify-center items-center relative"
-           >
-     
-      <div className="flex justify-center items-center  w-full">
-        <div className="flex justify-center ml-[-25px] items-center w-full">
-        VERIFY ME
-        </div>
-        <div className="absolute right-[121px]">
-          <FaArrowRight className="text-white w-[20px] h-[20px]" />
-        </div>
-      </div>
-    </button>
+            type="submit"
+            className="w-full h-[48px] bg-[#0B5D51] text-white rounded-[2px] font-public-sans text-[14px] font-bold flex justify-center items-center relative"
+          >
+            <div className="flex justify-center items-center  w-full">
+              <div className="flex justify-center ml-[-25px] items-center w-full">
+                VERIFY ME
+              </div>
+              <div className="absolute right-[121px]">
+                <FaArrowRight className="text-white w-[20px] h-[20px]" />
+              </div>
+            </div>
+          </button>
         </form>
       </div>
     </div>

@@ -8,7 +8,7 @@ const Forget = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(`Password reset email sent to: ${email}`);
-    // Here you can add API call logic to send the password reset email
+    // Here add API call logic to send the password reset email
   };
 
   return (
@@ -38,32 +38,28 @@ const Forget = () => {
               required
             />
           </div>
-          
+
           <div className="w-full flex justify-center items-center">
- 
-    <button
-      type="submit"
-      className="w-full h-[48px] bg-[#0B5D51] text-white rounded-[2px] font-public-sans text-[14px] font-bold flex justify-center items-center relative"
-    >
-      <div className="flex justify-center items-center  w-full">
-        <div className="flex justify-center ml-[-20px] items-center w-full">
-          <Link
-            to="/User Account/Sign In/Forget Password/Reset Password"
-            className="w-full flex justify-center items-center"
-          >
-            SEND CODE
-          </Link>
-        </div>
+            <button
+              type="submit"
+              className="w-full h-[48px] bg-[#0B5D51] text-white rounded-[2px] font-public-sans text-[14px] font-bold flex justify-center items-center relative"
+            >
+              <div className="flex justify-center items-center  w-full">
+                <div className="flex justify-center ml-[-20px] items-center w-full">
+                  <Link
+                    to="/User Account/Sign In/Forget Password/Reset Password"
+                    className="w-full flex justify-center items-center"
+                  >
+                    SEND CODE
+                  </Link>
+                </div>
 
-        <div className="absolute right-[120px]">
-          <FaArrowRight className="text-white w-[20px] h-[20px]" />
-        </div>
-      </div>
-    </button>
- 
-</div>
-
-
+                <div className="absolute right-[120px]">
+                  <FaArrowRight className="text-white w-[20px] h-[20px]" />
+                </div>
+              </div>
+            </button>
+          </div>
         </form>
 
         <div className="mt-[15px] text-left">

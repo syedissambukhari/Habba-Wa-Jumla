@@ -72,6 +72,12 @@ import OrderListAdmin from "./pages/AdminDashboard/Orders/OrderListAdmin.jsx";
 import OrderFilterAdmin from "./pages/AdminDashboard/Orders/OrderFilterAdmin.jsx";
 import OrderDetailAdmin from "./pages/AdminDashboard/Orders/OrderDetailAdmin.jsx";
 import OrderStatusAdmin from "./pages/AdminDashboard/Orders/OrderStatusAdmin.jsx";
+import Forget from "./components/Forms/Forget.jsx";
+import Reset from "./components/Forms/Reset.jsx";
+import EmailVerification from "./components/Forms/EmailVerification.jsx";
+import Calender from "../src/pages/vendorDashboard/Calendar/Calendar.jsx";
+import NewEventPopUp from "../src/pages/vendorDashboard/Calendar/NewEventPopUp.jsx";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -80,6 +86,37 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/User Account/sign In",
+        element: <Signin />,
+      },
+      {
+        path: "/User Account/sign In/Forget Password",
+        element: (
+          <>
+            <Breadcrumb />
+            <Forget />,
+          </>
+        ),
+      },
+      {
+        path: "/User Account/sign In/Forget Password/Reset Password",
+        element: (
+          <>
+            <Breadcrumb />
+            <Reset />,
+          </>
+        ),
+      },
+      {
+        path: "/User Account/Sign Up/Email Verification",
+        element: (
+          <>
+            <Breadcrumb />
+            <EmailVerification />,
+          </>
+        ),
       },
       {
         path: "/Wishlist",
@@ -160,10 +197,6 @@ const router = createBrowserRouter([
         path: "/blogdetails",
         element: <BlogDetailsPage />,
       },
-      {
-        path: "usersignup",
-        element: <Signin />,
-      },
     ],
   },
   {
@@ -177,6 +210,14 @@ const router = createBrowserRouter([
           {
             path: "general",
             element: <General />,
+          },
+          {
+            path: "Calendar",
+            element: <Calender />,
+          },
+          {
+            path: "Calendar/new-event",
+            element: <NewEventPopUp />,
           },
           {
             path: "notifications",
