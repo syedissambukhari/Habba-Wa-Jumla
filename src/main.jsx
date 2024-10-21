@@ -85,6 +85,11 @@ import Reset from "./components/Forms/Reset.jsx";
 import EmailVerification from "./components/Forms/EmailVerification.jsx";
 import Calender from "../src/pages/vendorDashboard/Calendar/Calendar.jsx";
 import NewEventPopUp from "../src/pages/vendorDashboard/Calendar/NewEventPopUp.jsx";
+import AdminLogisticsDashboard from "./pages/AdminDashboard/components/AdminLogisticsDashboard.jsx";
+import LogisticsFleet from "./pages/AdminDashboard/components/LogisticsFleet.jsx";
+import VendorLogisticDashboard from "./pages/vendorlogistics/VendorLogisticDashboard.jsx";
+import AddVehicle from "./pages/AdminDashboard/components/adminauth/AddVehicle.jsx";
+import VendorLogisticFleet from "../src/pages/vendorlogistics/VendorLogisticsFleet.jsx";
 
 // import NewEventPopUp from "./pages/vendorDashboard/Calendar/NewEventPopUp.jsx";
 
@@ -336,6 +341,18 @@ const router = createBrowserRouter([
         path: "verify",
         element: <Verification />,
       },
+      {
+        path: "vendorlogistics",
+        element: <VendorLogisticDashboard />,
+      },
+      {
+        path: "vendorlogisticsfleet",
+        element: <VendorLogisticFleet />,
+      },
+      {
+        path: "addvehicle",
+        element: <AddVehicle />,
+      },
     ],
   },
   {
@@ -444,6 +461,18 @@ const router = createBrowserRouter([
       {
         path: "orderStatus",
         element: <OrderStatusAdmin />,
+      },
+      {
+        path: "adminlogistics",
+        element: <AdminLogisticsDashboard />,
+      },
+      {
+        path: "logisticsfleet",
+        element: <LogisticsFleet />,
+      },
+      {
+        path: "addvehicle",
+        element: <AddVehicle />,
       },
     ],
   },
