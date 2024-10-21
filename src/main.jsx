@@ -24,7 +24,7 @@ import BlogList from "./homecomponents/BlogList.jsx";
 import BlogDetailsPage from "./pages/BlogDetailsPage.jsx";
 import { VendorDashboard } from "./pages/vendorDashboard/VendorDashboard.jsx";
 import StoreAnalytics from "./pages/vendorDashboard/StoreAnalytics.jsx";
-
+import Verification from "./pages/vendorAuth/Verification.jsx";
 import { OrderList } from "./pages/vendorDashboard/Orders/OrderList.jsx";
 import { OrderFilter } from "./pages/vendorDashboard/Orders/OrderFilter.jsx";
 import { OrderDetail } from "./pages/vendorDashboard/Orders/OrderDetail.jsx";
@@ -52,6 +52,10 @@ import VendorsList from "./pages/AdminDashboard/components/VendorsList.jsx";
 import VendorsApproval from "./pages/AdminDashboard/components/VendorsApproval.jsx";
 import VendorsDetails from "./pages/AdminDashboard/components/VendorsDetails.jsx";
 import VendorsEdit from "./pages/AdminDashboard/components/VendorsEdit.jsx";
+import AdminStoreAnalytics from "./pages/AdminDashboard/AdminStoreAnalytics.jsx";
+import AdminPostCreate from "./pages/AdminDashboard/Blog/AdminPostCreate.jsx";
+import AdminPostDetails from "./pages/AdminDashboard/Blog/AdminPostDetails.jsx";
+import AdminPostList from "./pages/AdminDashboard/Blog/AdminPostList.jsx";
 import AnalaticsBody from "./pages/AdminDashboard/Analytics/AnalaticsBody.jsx";
 import CustomerListAdmin from "./pages/AdminDashboard/Customer/CustomerDetailsAdmin.jsx";
 import CustomerDetailsAdmin from "./pages/AdminDashboard/Customer/CustomerDetailsAdmin.jsx";
@@ -75,16 +79,19 @@ import VendorRegistration from "./pages/vendorAuth/VendorRegistration.jsx";
 import ForgetPassword from "./pages/vendorAuth/ForgetPassword.jsx";
 import ResetPassword from "./pages/vendorAuth/ResetPassword.jsx";
 import VendorApproval from "./pages/vendorAuth/VendorApproval.jsx";
-import Verification from "./pages/vendorAuth/verification.jsx";
+
 import OrderListAdmin from "./pages/AdminDashboard/Orders/OrderListAdmin.jsx";
 import OrderFilterAdmin from "./pages/AdminDashboard/Orders/OrderFilterAdmin.jsx";
 import OrderDetailAdmin from "./pages/AdminDashboard/Orders/OrderDetailAdmin.jsx";
 import OrderStatusAdmin from "./pages/AdminDashboard/Orders/OrderStatusAdmin.jsx";
+import AdminCalendar from "./pages/AdminDashboard/AdminCalendar/AdminCalendar.jsx";
+import PopUp from "./pages/AdminDashboard/AdminCalendar/CalendarPopUp.jsx";
+import Calendar from "./pages/vendorDashboard/VendorCalendar/Calendar.jsx";
+import NewEventPopUp from "./pages/vendorDashboard/VendorCalendar/NewEventPopUp.jsx";
 import Forget from "./components/Forms/Forget.jsx";
 import Reset from "./components/Forms/Reset.jsx";
 import EmailVerification from "./components/Forms/EmailVerification.jsx";
-import Calender from "../src/pages/vendorDashboard/Calendar/Calendar.jsx";
-import NewEventPopUp from "../src/pages/vendorDashboard/Calendar/NewEventPopUp.jsx";
+
 import AdminLogisticsDashboard from "./pages/AdminDashboard/components/AdminLogisticsDashboard.jsx";
 import LogisticsFleet from "./pages/AdminDashboard/components/LogisticsFleet.jsx";
 import VendorLogisticDashboard from "./pages/vendorlogistics/VendorLogisticDashboard.jsx";
@@ -93,6 +100,9 @@ import VendorLogisticFleet from "../src/pages/vendorlogistics/VendorLogisticsFle
 
 // import NewEventPopUp from "./pages/vendorDashboard/Calendar/NewEventPopUp.jsx";
 
+import { AdminInoviceList } from "./pages/AdminDashboard/Admininvoice/AdminInoviceList.jsx";
+import { AdminInoviceDetail } from "./pages/AdminDashboard/Admininvoice/AdminInoviceDetail.jsx";
+import { AdminInoviceFilter } from "./pages/AdminDashboard/Admininvoice/AdminInoviceFilter.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -111,7 +121,7 @@ const router = createBrowserRouter([
         element: (
           <>
             <Breadcrumb />
-            <Forget />,
+            <Forget />
           </>
         ),
       },
@@ -120,7 +130,7 @@ const router = createBrowserRouter([
         element: (
           <>
             <Breadcrumb />
-            <Reset />,
+            <Reset />
           </>
         ),
       },
@@ -129,7 +139,17 @@ const router = createBrowserRouter([
         element: (
           <>
             <Breadcrumb />
-            <EmailVerification />,
+            <EmailVerification />
+          </>
+        ),
+      },
+      {
+        path: "/User Account/Sign Up",
+        element: (
+          <>
+            {/* <Breadcrumb /> */}
+            <Signin />
+            {/* <EmailVerification /> */}
           </>
         ),
       },
@@ -227,14 +247,6 @@ const router = createBrowserRouter([
             element: <General />,
           },
           {
-            path: "Calendar",
-            element: <Calender />,
-          },
-          {
-            path: "Calendar/new-event",
-            element: <NewEventPopUp />,
-          },
-          {
             path: "notifications",
             element: <Notifications />,
           },
@@ -268,7 +280,6 @@ const router = createBrowserRouter([
         path: "OrderList",
         element: <OrderList />,
       },
-
       {
         path: "OrderDetail",
         element: <OrderDetail />,
@@ -296,6 +307,14 @@ const router = createBrowserRouter([
       {
         path: "PostDetails",
         element: <PostDetails />,
+      },
+      {
+        path: "Calendar",
+        element: <Calendar />,
+      },
+      {
+        path: "Calendar/new-event",
+        element: <NewEventPopUp />,
       },
       {
         path: "PostCreate",
@@ -409,7 +428,24 @@ const router = createBrowserRouter([
         path: "vendorsedit",
         element: <VendorsEdit />,
       },
+      {
+        path: "AdminStore-analytics",
+        element: <AdminStoreAnalytics />,
+      },
 
+      //admin blog
+      {
+        path: "AdminPost-create",
+        element: <AdminPostCreate />,
+      },
+      {
+        path: "AdminPost-details",
+        element: <AdminPostDetails />,
+      },
+      {
+        path: "AdminPost-list",
+        element: <AdminPostList />,
+      },
       {
         path: "AnalaticsBody",
         element: <AnalaticsBody />,
@@ -421,6 +457,14 @@ const router = createBrowserRouter([
       {
         path: "CustomerDetailsAdmin",
         element: <CustomerDetailsAdmin />,
+      },
+      {
+        path: "Calendar",
+        element: <AdminCalendar />,
+      },
+      {
+        path: "Calendar/new-event",
+        element: <PopUp />,
       },
       {
         path: "EditCustomerAdmin",
@@ -473,6 +517,16 @@ const router = createBrowserRouter([
       {
         path: "addvehicle",
         element: <AddVehicle />,
+        path: "admininovicelist",
+        element: <AdminInoviceList />,
+      },
+      {
+        path: "admininovicedetail",
+        element: <AdminInoviceDetail />,
+      },
+      {
+        path: "admininovicefilter",
+        element: <AdminInoviceFilter />,
       },
     ],
   },

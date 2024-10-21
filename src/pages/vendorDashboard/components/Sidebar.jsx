@@ -203,7 +203,10 @@ const Sidebar = () => {
           )}
         </SidebarItem>
 
+        <Link  to="/vendor/Calendar"> 
         <SidebarItem imgSrc="/calender.svg" text="Calendar" />
+        </Link>
+
         <SidebarItem imgSrc="/fileManager.svg" text="File Manager" />
         <SidebarItem imgSrc="/Auth.svg" text="Auth" />
 

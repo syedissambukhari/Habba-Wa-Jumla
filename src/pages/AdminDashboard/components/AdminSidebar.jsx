@@ -10,6 +10,8 @@ const AdminSidebar = () => {
   const [isOrdersDropdownOpen2, setIsOrdersDropdownOpen2] = useState(false);
   const [isProductOpen, setProductOpen] = useState(false);
   const [isLogisticsOpen, setIsLogisticsOpen] = useState(false);
+  const [isBlogOpen, setIsBlogOpen] = useState(false);
+  const [isInvoicesOpen, setInvoicesOpen] = useState(false);
 
   const toggleProductOpen = () => {
     setProductOpen(!isProductOpen);
@@ -22,9 +24,19 @@ const AdminSidebar = () => {
   const toggleOrdersDropdown = () => {
     setIsOrdersDropdownOpen(!isOrdersDropdownOpen);
   };
+
   const handleLogisticsDropdown = () => {
     setIsLogisticsOpen(!isLogisticsOpen); // Toggle the sub-menu when clicked
   };
+
+  const toggleinvoiceDropdown = () => {
+    setInvoicesOpen(!isInvoicesOpen);
+  };
+
+  const toggleBlogOpen = () => {
+    setIsBlogOpen(!isBlogOpen);
+  };
+
   return (
     <div className="h-[1610px] w-[280px] bg-[#0B5D51] text-white flex flex-col items-start p-4">
       {/* Logo Section */}
@@ -71,7 +83,6 @@ const AdminSidebar = () => {
         </SidebarItem>
 
         {/* Products Dropdown */}
-        {/* Products dropdown */}
         <SidebarItem
           imgSrc="/product.svg"
           text="Products"
@@ -116,7 +127,31 @@ const AdminSidebar = () => {
           )}
         </SidebarItem>
 
-        <SidebarItem imgSrc="/invoices.svg" text="Invoices" arrow />
+        {/* Invoices Dropdown */}
+        <SidebarItem
+          imgSrc="/invoices.svg"
+          text="Invoices"
+          arrow
+          onClick={toggleinvoiceDropdown}
+        />
+        {isInvoicesOpen && (
+          <div className="ml-8 mt-2 space-y-3">
+            <Link to="/admin/admininovicelist">
+              <DropdownItem
+                text="List"
+                isActive={location.pathname === "/admin/admininovicelist"}
+              />
+            </Link>
+            <Link to="/admin/admininovicedetail">
+              <DropdownItem
+                text="Detail"
+                isActive={location.pathname === "/admin/admininovicedetail"}
+              />
+            </Link>
+          </div>
+        )}
+
+        {/* Logistics Dropdown */}
         <SidebarItem
           imgSrc="/logistics.svg"
           text="Logistics"
@@ -150,8 +185,40 @@ const AdminSidebar = () => {
             </div>
           )}
         </SidebarItem>
-        <SidebarItem imgSrc="/blog.svg" text="Blog" arrow />
-        <SidebarItem imgSrc="/calender.svg" text="Calendar" />
+
+        {/* Blog Dropdown */}
+        <SidebarItem
+          imgSrc="/blog.svg"
+          text="Blog"
+          arrow
+          onClick={toggleBlogOpen}
+        />
+        {isBlogOpen && (
+          <div className="ml-8 mt-2 space-y-3">
+            <Link to="/admin/AdminPost-create">
+              <DropdownItem
+                text="Create"
+                isActive={location.pathname === "/admin/AdminPost-create"}
+              />
+            </Link>
+            <Link to="/admin/AdminPost-details">
+              <DropdownItem
+                text="Post"
+                isActive={location.pathname === "/admin/AdminPost-details"}
+              />
+            </Link>
+            <Link to="/admin/AdminPost-list">
+              <DropdownItem
+                text="Detail"
+                isActive={location.pathname === "/admin/AdminPost-list"}
+              />
+            </Link>
+          </div>
+        )}
+
+        <Link to="/admin/Calendar">
+          <SidebarItem imgSrc="/calender.svg" text="Calendar" />
+        </Link>
         <SidebarItem imgSrc="/fileManager.svg" text="File Manager" />
         <SidebarItem imgSrc="/Auth.svg" text="Auth" />
         <Link to="/admin/Checkout">
@@ -166,7 +233,6 @@ const AdminSidebar = () => {
 };
 
 // Sidebar Item Component
-// eslint-disable-next-line react/prop-types
 const SidebarItem = ({
   imgSrc,
   icon,
@@ -197,7 +263,6 @@ const SidebarItem = ({
 );
 
 // Dropdown Item Component
-// eslint-disable-next-line react/prop-types
 const DropdownItem = ({ text, isActive }) => (
   <div className="flex items-center text-sm text-white hover:text-gray-300 cursor-pointer">
     {isActive && <div className="w-2 h-2 bg-blue-500 rounded-full mr-2" />}

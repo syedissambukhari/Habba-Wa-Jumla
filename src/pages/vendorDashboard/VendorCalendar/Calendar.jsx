@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FiPlus } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import {LuSettings2} from "react-icons/lu";
 
 const Calendar = () => {
   const [currentMonth, setCurrentMonth] = useState(2); //new Date().getMonth() + 1
@@ -294,11 +295,14 @@ const Calendar = () => {
             ))}
           </div>
         </div>
-        <img
+        {/* <img
           src="/icon.svg"
           alt="SVG Icon"
           className="absolute bottom-7 right-0  w-[93.99px] h-[93.99px]"
-        />
+        /> */}
+         <div className="bg-[#0B5D51] p-3 rounded-3xl absolute top-[696px] right-0 mt-2 ">
+         <LuSettings2 size={28} color="white"/>
+         </div>
       </div>
     </div>
   );
