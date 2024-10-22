@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 import { FaArrowLeftLong } from "react-icons/fa6";
 
 const EditCustomerAdmin = () => {
@@ -23,7 +24,7 @@ const EditCustomerAdmin = () => {
           <div className="flex gap-3 justify-start w-full mt-6 mb-9">
             <img
               src="https://via.placeholder.com/50"
-              alt="image"
+              alt="img"
               className="h-[64px] w-[64px] rounded-full"
             />
             <div>

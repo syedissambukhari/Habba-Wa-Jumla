@@ -27,7 +27,8 @@ import StoreAnalytics from "./pages/vendorDashboard/StoreAnalytics.jsx";
 
 import { OrderList } from "./pages/vendorDashboard/Orders/OrderList.jsx";
 import { OrderFilter } from "./pages/vendorDashboard/Orders/OrderFilter.jsx";
-import { OrderDetail } from "./pages/vendorDashboard/Orders/OrderDetail.jsx";
+import OrderDetail from "./homecomponents/UserDashborad/UserOrderDetail.jsx";
+import OrderHistory from "./pages/vendorDashboard/Orders/OrderHistory.jsx";
 import ProductLists from "./pages/vendorDashboard/ProductLists.jsx";
 import ProductCreation from "./pages/vendorDashboard/ProductCreation.jsx";
 
@@ -52,10 +53,20 @@ import VendorsList from "./pages/AdminDashboard/components/VendorsList.jsx";
 import VendorsApproval from "./pages/AdminDashboard/components/VendorsApproval.jsx";
 import VendorsDetails from "./pages/AdminDashboard/components/VendorsDetails.jsx";
 import VendorsEdit from "./pages/AdminDashboard/components/VendorsEdit.jsx";
+
+// import AdminAccount from "./pages/AdminDashboard/Account/AdminAccount.jsx";
+// import AdminGeneral from "./pages/AdminDashboard/Account/AdminGeneral.jsx";
+// import AdminTeam from "./pages/AdminDashboard/Account/AdminTeam.jsx";
+// import AdminNotifications from "./pages/AdminDashboard/Account/AdminNotifications.jsx";
+// import AdminSecurity from "./pages/AdminDashboard/Account/AdminSecurity.jsx";
+// import AdminBilling from "./pages/AdminDashboard/Account/AdminBilling.jsx";
+// import Signin from "./components/Signin.jsx";
+
 import AnalaticsBody from "./pages/AdminDashboard/Analytics/AnalaticsBody.jsx";
 import CustomerListAdmin from "./pages/AdminDashboard/Customer/CustomerDetailsAdmin.jsx";
 import CustomerDetailsAdmin from "./pages/AdminDashboard/Customer/CustomerDetailsAdmin.jsx";
 import EditCustomerAdmin from "./pages/AdminDashboard/Customer/EditCustomerAdmin.jsx";
+import FileManagerBody from "./pages/AdminDashboard/AdminFileManager/FileManagerBody.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -196,9 +207,13 @@ const router = createBrowserRouter([
         path: "OrderList",
         element: <OrderList />,
       },
+      {
+        path: "OrderHistory",
+        element: <OrderHistory />,
+      },
 
       {
-        path: "OrderDetail",
+        path: "OrderDetails",
         element: <OrderDetail />,
       },
       {
@@ -251,6 +266,7 @@ const router = createBrowserRouter([
         path: "vendorslist",
         element: <VendorsList />,
       },
+
       {
         path: "vendorsapproval",
         element: <VendorsApproval />,
@@ -277,9 +293,10 @@ const router = createBrowserRouter([
         element: <CustomerDetailsAdmin />,
       },
       {
-        path : "EditCustomerAdmin",
-        element: <EditCustomerAdmin />
-      }
+        path: "EditCustomerAdmin",
+        element: <EditCustomerAdmin />,
+      },
+      { path: "FileManagerBody", element: <FileManagerBody /> },
     ],
   },
 ]);
