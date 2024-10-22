@@ -6,20 +6,22 @@ import { useState } from "react";
 // Sidebar component
 const Sidebar = () => {
   const location = useLocation(); // Get current location
-
+  const [isLogisticsOpen, setIsLogisticsOpen] = useState(false);
   // State management for dropdowns
   const [dropdowns, setDropdowns] = useState({
     orders: false,
     products: false,
     blogs: false,
     customers: false,
-    Invoices:false,
+    Invoices: false,
   });
 
   const toggleDropdown = (key) => {
     setDropdowns((prev) => ({ ...prev, [key]: !prev[key] }));
   };
-
+  const handleLogisticsDropdown = () => {
+    setIsLogisticsOpen(!isLogisticsOpen); // Toggle the sub-menu when clicked
+  };
   return (
     <div className="h-full w-[280px] bg-[#0B5D51] text-white flex flex-col items-start p-4">
       {/* Logo Section */}
@@ -30,7 +32,9 @@ const Sidebar = () => {
       {/* Store Analytics */}
       <div className="flex items-center bg-[#073741] w-[247.2px] h-[36px] mt-6 p-[6px_16px] gap-0 rounded-lg">
         <img src="/store.svg" className="w-5 h-5 mr-4" />
-        <span className="font-inter font-semibold text-[14px]">Store Analytics</span>
+        <span className="font-inter font-semibold text-[14px]">
+          Store Analytics
+        </span>
       </div>
 
       {/* Menu Items */}
@@ -49,8 +53,16 @@ const Sidebar = () => {
         >
           {dropdowns.customers && (
             <DropdownMenu>
-              <DropdownLink to="/vendor/CustomerList" text="List" active={location.pathname === "/vendor/CustomerList"} />
-              <DropdownLink to="/vendor/CustomerDetails" text="Details" active={location.pathname === "/vendor/CustomerDetails"} />
+              <DropdownLink
+                to="/vendor/CustomerList"
+                text="List"
+                active={location.pathname === "/vendor/CustomerList"}
+              />
+              <DropdownLink
+                to="/vendor/CustomerDetails"
+                text="Details"
+                active={location.pathname === "/vendor/CustomerDetails"}
+              />
             </DropdownMenu>
           )}
         </SidebarItem>
@@ -64,8 +76,16 @@ const Sidebar = () => {
         >
           {dropdowns.products && (
             <DropdownMenu>
-              <DropdownLink to="/vendor/productlists" text="Product List" active={location.pathname === "/vendor/productlists"} />
-              <DropdownLink to="/vendor/productcreates" text="Product Create" active={location.pathname === "/vendor/productcreates"} />
+              <DropdownLink
+                to="/vendor/productlists"
+                text="Product List"
+                active={location.pathname === "/vendor/productlists"}
+              />
+              <DropdownLink
+                to="/vendor/productcreates"
+                text="Product Create"
+                active={location.pathname === "/vendor/productcreates"}
+              />
             </DropdownMenu>
           )}
         </SidebarItem>
@@ -79,9 +99,21 @@ const Sidebar = () => {
         >
           {dropdowns.orders && (
             <DropdownMenu>
-              <DropdownLink to="/vendor/OrderList" text="List" active={location.pathname === "/vendor/OrderList"} />
-              <DropdownLink to="/vendor/OrderDetail" text="Details" active={location.pathname === "/vendor/OrderDetail"}/>
-              <DropdownLink to="/vendor/OrderStatus" text="Order status"active={location.pathname === "/vendor/OrderStatus"} />
+              <DropdownLink
+                to="/vendor/OrderList"
+                text="List"
+                active={location.pathname === "/vendor/OrderList"}
+              />
+              <DropdownLink
+                to="/vendor/OrderDetail"
+                text="Details"
+                active={location.pathname === "/vendor/OrderDetail"}
+              />
+              <DropdownLink
+                to="/vendor/OrderStatus"
+                text="Order status"
+                active={location.pathname === "/vendor/OrderStatus"}
+              />
             </DropdownMenu>
           )}
         </SidebarItem>
@@ -89,20 +121,59 @@ const Sidebar = () => {
         {/* invoice */}
         <SidebarItem
           imgSrc="/invoices.svg"
-       text="Invoices"
+          text="Invoices"
           arrow
           onClick={() => toggleDropdown("Invoices")}
         >
           {dropdowns.Invoices && (
             <DropdownMenu>
-              <DropdownLink to="/vendor/InvoiceList" text="List" active={location.pathname === "/vendor/InvoiceList"} />
-              <DropdownLink to="/vendor/InvoiceDetail" text="Details" active={location.pathname === "/vendor/InvoiceDetail"}/>
-             </DropdownMenu>
+              <DropdownLink
+                to="/vendor/InvoiceList"
+                text="List"
+                active={location.pathname === "/vendor/InvoiceList"}
+              />
+              <DropdownLink
+                to="/vendor/InvoiceDetail"
+                text="Details"
+                active={location.pathname === "/vendor/InvoiceDetail"}
+              />
+            </DropdownMenu>
           )}
         </SidebarItem>
 
-        
-        <SidebarItem imgSrc="/logistics.svg" text="Logistics" arrow />
+        <SidebarItem
+          imgSrc="/logistics.svg"
+          text="Logistics"
+          arrow
+          onClick={handleLogisticsDropdown}
+        >
+          {isLogisticsOpen && (
+            <div className="ml-8 mt-2 space-y-2">
+              <Link to="/vendor/vendorlogistics">
+                <DropdownItem
+                  text="Dashboard"
+                  isActive={location.pathname === "/vendor/vendorlogistics"}
+                />
+              </Link>
+              <Link to="/vendor/vendorlogisticsfleet">
+                <DropdownItem
+                  text="Fleet"
+                  isActive={
+                    location.pathname === "/vendor/vendorlogisticsfleet"
+                  }
+                />
+              </Link>
+              <Link to="/vendor/addvehicle">
+                <DropdownItem
+                  text="Vehicle"
+                  isActive={
+                    location.pathname === "/vendor/vendorlogisticsfleet"
+                  }
+                />
+              </Link>
+            </div>
+          )}
+        </SidebarItem>
 
         {/* Blog */}
         <SidebarItem
@@ -113,9 +184,21 @@ const Sidebar = () => {
         >
           {dropdowns.blogs && (
             <DropdownMenu>
-              <DropdownLink to="/vendor/PostList" text="Post List" active={location.pathname === "/vendor/PostList"} />
-              <DropdownLink to="/vendor/PostDetails" text="Post Details" active={location.pathname === "/vendor/PostDetails"} />
-              <DropdownLink to="/vendor/PostCreate" text="Post Create" active={location.pathname === "/vendor/PostCreate"} />
+              <DropdownLink
+                to="/vendor/PostList"
+                text="Post List"
+                active={location.pathname === "/vendor/PostList"}
+              />
+              <DropdownLink
+                to="/vendor/PostDetails"
+                text="Post Details"
+                active={location.pathname === "/vendor/PostDetails"}
+              />
+              <DropdownLink
+                to="/vendor/PostCreate"
+                text="Post Create"
+                active={location.pathname === "/vendor/PostCreate"}
+              />
             </DropdownMenu>
           )}
         </SidebarItem>
@@ -126,11 +209,13 @@ const Sidebar = () => {
 
         <SidebarItem imgSrc="/fileManager.svg" text="File Manager" />
         <SidebarItem imgSrc="/Auth.svg" text="Auth" />
-        
-        <Link  to="/vendor/Checkout"><SidebarItem   
-          icon={<PiShoppingCartDuotone className="w-5 h-[18px]" />}
-          text="Checkout"
-        /></Link>
+
+        <Link to="/vendor/Checkout">
+          <SidebarItem
+            icon={<PiShoppingCartDuotone className="w-5 h-[18px]" />}
+            text="Checkout"
+          />
+        </Link>
       </nav>
     </div>
   );

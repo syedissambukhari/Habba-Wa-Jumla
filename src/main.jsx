@@ -24,7 +24,7 @@ import BlogList from "./homecomponents/BlogList.jsx";
 import BlogDetailsPage from "./pages/BlogDetailsPage.jsx";
 import { VendorDashboard } from "./pages/vendorDashboard/VendorDashboard.jsx";
 import StoreAnalytics from "./pages/vendorDashboard/StoreAnalytics.jsx";
-
+import Verification from "./pages/vendorAuth/Verification.jsx";
 import { OrderList } from "./pages/vendorDashboard/Orders/OrderList.jsx";
 import { OrderFilter } from "./pages/vendorDashboard/Orders/OrderFilter.jsx";
 import { OrderDetail } from "./pages/vendorDashboard/Orders/OrderDetail.jsx";
@@ -79,18 +79,26 @@ import VendorRegistration from "./pages/vendorAuth/VendorRegistration.jsx";
 import ForgetPassword from "./pages/vendorAuth/ForgetPassword.jsx";
 import ResetPassword from "./pages/vendorAuth/ResetPassword.jsx";
 import VendorApproval from "./pages/vendorAuth/VendorApproval.jsx";
-import Verification from "./pages/vendorAuth/verification.jsx";
+
 import OrderListAdmin from "./pages/AdminDashboard/Orders/OrderListAdmin.jsx";
 import OrderFilterAdmin from "./pages/AdminDashboard/Orders/OrderFilterAdmin.jsx";
 import OrderDetailAdmin from "./pages/AdminDashboard/Orders/OrderDetailAdmin.jsx";
 import OrderStatusAdmin from "./pages/AdminDashboard/Orders/OrderStatusAdmin.jsx";
 import AdminCalendar from "./pages/AdminDashboard/AdminCalendar/AdminCalendar.jsx";
 import PopUp from "./pages/AdminDashboard/AdminCalendar/CalendarPopUp.jsx";
-import Calendar from './pages/vendorDashboard/VendorCalendar/Calendar.jsx'
+import Calendar from "./pages/vendorDashboard/VendorCalendar/Calendar.jsx";
 import NewEventPopUp from "./pages/vendorDashboard/VendorCalendar/NewEventPopUp.jsx";
 import Forget from "./components/Forms/Forget.jsx";
 import Reset from "./components/Forms/Reset.jsx";
 import EmailVerification from "./components/Forms/EmailVerification.jsx";
+
+import AdminLogisticsDashboard from "./pages/AdminDashboard/components/AdminLogisticsDashboard.jsx";
+import LogisticsFleet from "./pages/AdminDashboard/components/LogisticsFleet.jsx";
+import VendorLogisticDashboard from "./pages/vendorlogistics/VendorLogisticDashboard.jsx";
+import AddVehicle from "./pages/AdminDashboard/components/adminauth/AddVehicle.jsx";
+import VendorLogisticFleet from "../src/pages/vendorlogistics/VendorLogisticsFleet.jsx";
+
+// import NewEventPopUp from "./pages/vendorDashboard/Calendar/NewEventPopUp.jsx";
 
 import { AdminInoviceList } from "./pages/AdminDashboard/Admininvoice/AdminInoviceList.jsx";
 import { AdminInoviceDetail } from "./pages/AdminDashboard/Admininvoice/AdminInoviceDetail.jsx";
@@ -352,6 +360,18 @@ const router = createBrowserRouter([
         path: "verify",
         element: <Verification />,
       },
+      {
+        path: "vendorlogistics",
+        element: <VendorLogisticDashboard />,
+      },
+      {
+        path: "vendorlogisticsfleet",
+        element: <VendorLogisticFleet />,
+      },
+      {
+        path: "addvehicle",
+        element: <AddVehicle />,
+      },
     ],
   },
   {
@@ -410,22 +430,22 @@ const router = createBrowserRouter([
       },
       {
         path: "AdminStore-analytics",
-        element: <AdminStoreAnalytics/>
+        element: <AdminStoreAnalytics />,
       },
-      
-        //admin blog
-        {
+
+      //admin blog
+      {
         path: "AdminPost-create",
-        element: <AdminPostCreate/>,
-        },
-        {
-          path: "AdminPost-details",
-          element: <AdminPostDetails/>,
-          },
-          {
-            path: "AdminPost-list",
-            element: <AdminPostList/>
-            },
+        element: <AdminPostCreate />,
+      },
+      {
+        path: "AdminPost-details",
+        element: <AdminPostDetails />,
+      },
+      {
+        path: "AdminPost-list",
+        element: <AdminPostList />,
+      },
       {
         path: "AnalaticsBody",
         element: <AnalaticsBody />,
@@ -487,6 +507,16 @@ const router = createBrowserRouter([
         element: <OrderStatusAdmin />,
       },
       {
+        path: "adminlogistics",
+        element: <AdminLogisticsDashboard />,
+      },
+      {
+        path: "logisticsfleet",
+        element: <LogisticsFleet />,
+      },
+      {
+        path: "addvehicle",
+        element: <AddVehicle />,
         path: "admininovicelist",
         element: <AdminInoviceList />,
       },
