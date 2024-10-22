@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 // import { useNavigate } from "react-router-dom";
-import DashboardSider from "../../../homecomponents/DashboardSider";
+import DashboardSider from "../DashboardSider";
 // import { Link } from "react-router-dom";
 // import {OrderDetails} from "../Orders/OrderDetail";
 
-const OrderHistory = () => {
+const UserOrderHistory = () => {
     // const navigate = useNavigate();
 
     // const handleClick = () => {
@@ -215,4 +215,4 @@ const OrderHistory = () => {
   );
 };
 
-export default OrderHistory;
+export default UserOrderHistory;

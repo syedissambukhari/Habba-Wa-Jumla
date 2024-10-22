@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import OrderReviewPage from "./OrderReviewPage";
-
+import OrderReviewPage from '../../homecomponents/UserDashborad/OrderReviewPage';
 const ReviewModel = ({ showModal, onClose }) => {
   const modalRef = useRef(); // Create a ref for the modal container
 

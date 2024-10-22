@@ -20,6 +20,11 @@ import OrderCheckout from "../homecomponents/OrderCheckout.jsx";
 import OrderSuccess from "../homecomponents/OrderSuccess.jsx";
 import BlogList from "../homecomponents/BlogList.jsx";
 import BlogDetailsPage from "../pages/BlogDetailsPage.jsx";
+import UserOrderDetail from "../homecomponents/UserDashborad/UserOrderDetail.jsx";
+// import { elements } from "chart.js";
+// import OrderHistory from "../homecomponents/UserDashborad/OrderHistory.jsx";
+import UserOrderHistory from "../homecomponents/UserDashborad/UserOrderHistory.jsx";
+
 
 
 const UserRoutes = [
@@ -147,6 +152,15 @@ const UserRoutes = [
         path: "/blogdetails",
         element: <BlogDetailsPage />,
     },
+    {
+        path: "/UserOrderDetails",
+        element: <UserOrderDetail />,
+    },
+    {
+        path :"/OrderHistory",
+        elements : <UserOrderHistory/>
+    },
+    
 ];
 
 export default UserRoutes;

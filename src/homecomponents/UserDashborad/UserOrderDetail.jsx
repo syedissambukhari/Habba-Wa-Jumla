@@ -11,8 +11,8 @@ import { PiMapPinLine } from "react-icons/pi";
 import { PiMapTrifold } from "react-icons/pi";
 import { BsCheckCircle } from "react-icons/bs";
 import { PiNotepad } from "react-icons/pi";
-import gamepad from "../../../assets/gamepad.png";
 import { GoArrowLeft } from "react-icons/go";
+import gamepade from "../../assets/gamepad.png";
 import { FaPlus } from "react-icons/fa6";
 import ReviewModel from "./ReviewModel";
 
@@ -245,7 +245,7 @@ const UserOrderDetail = () => {
                 <tbody>
                   {[
                     {
-                      image: gamepad, // Example image URL
+                      image: gamepade, // Example image URL
                       name: "Smart Phone",
                       text: "Google Pixel 6 Pro - 5G Android Phone...",
                       price: 899,
@@ -253,7 +253,7 @@ const UserOrderDetail = () => {
                       total: 899,
                     },
                     {
-                      image: gamepad, // Example image URL
+                      image: gamepade, // Example image URL
                       name: "Smart Phone",
                       text: "Tech21 Evo Clear for Google Pixel 6 Pro...",
                       price: 39,
