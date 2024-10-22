@@ -6,8 +6,8 @@ import { GoHome } from "react-icons/go";
 
 function FaqPage() {
     return (
-        <div className="px-[120px] py-[48px]">
-            <div className="mb-8 flex items-center  gap-2">
+        <div className="px-[24px] lg:px-[120px] py-[48px]">
+            <div className="mb-8 flex items-center gap-2">
                 <GoHome color="#475156" />
                 <span className="font-medium text-sm text-[#475156]">Home</span>
                 <FaAngleRight color="#475156" />
@@ -16,7 +16,7 @@ function FaqPage() {
                 <span className="font-medium text-sm text-[#0B5D51]">FAQs</span>
             </div>
             <p className="font-semibold text-[32px] mb-10">Frequently Asked Questions</p>
-            <div className="flex gap-10">
+            <div className="flex  flex-col lg:flex-row gap-4">
                 <div>
                     <Accordion title="Fusce molestie condimentum facilisis.">
                         <p className="font-sans leading-6 text-[#475156]">Nulla malesuada iaculis nisi, vitae sagittis
