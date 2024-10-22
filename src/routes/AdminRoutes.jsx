@@ -35,6 +35,8 @@ import AddVehicle from "../pages/AdminDashboard/components/adminauth/AddVehicle.
 import {AdminInoviceList} from "../pages/AdminDashboard/Admininvoice/AdminInoviceList.jsx";
 import {AdminInoviceDetail} from "../pages/AdminDashboard/Admininvoice/AdminInoviceDetail.jsx";
 import {AdminInoviceFilter} from "../pages/AdminDashboard/Admininvoice/AdminInoviceFilter.jsx";
+import FileManagerBody from "../pages/AdminDashboard/AdminFileManager/FileManagerBody.jsx";
+import { elements } from "chart.js";
 
 
 const AdminRoutes = [
@@ -190,6 +192,10 @@ const AdminRoutes = [
         path: "admininovicefilter",
         element: <AdminInoviceFilter />,
     },
+    {
+        path : "FileManagerBody",
+        element: <FileManagerBody />
+    }
 ];
 
 export default AdminRoutes;
