@@ -53,7 +53,7 @@ export const OrderStatus = () => {
 
       {/* Order Info Box */}
       <div className="bg-white border rounded-lg shadow-lg p-10">
-        <div className="flex bg-yellow-200 h-[100px] rounded-lg px-5 justify-between items-center mb-4">
+        <div className="flex bg-[#FDFAE7] h-[100px] rounded-lg px-5 justify-between items-center mb-4">
           <div>
             <p className="text-sm font-bold">#96459761</p>
             <p className="text-xs text-gray-500">
