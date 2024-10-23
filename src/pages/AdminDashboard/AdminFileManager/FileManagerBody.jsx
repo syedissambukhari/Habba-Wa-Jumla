@@ -2,7 +2,10 @@ import React from "react";
 import HeadingAdmin from "./HeadingAdmin";
 import FileGridAdmin from "./FileGridAdmin";
 import StorageCard from "./FileStorageAdmin";
+
+
 const FileManagerBody = () => {
+
   return (
     <div className="container max-w-[1920px] p-0">
       {/* Grid layout for responsive design */}

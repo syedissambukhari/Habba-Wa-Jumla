@@ -5,6 +5,7 @@ import { BsThreeDotsVertical } from "react-icons/bs"; // Star and more options i
 import { FaFilePdf, FaFileImage } from "react-icons/fa"; // Example file type icons
 import { FcFolder } from "react-icons/fc";
 import { IoIosStarOutline } from "react-icons/io";
+import { BsListCheck } from "react-icons/bs";
 
 const FileGridAdmin = () => {
   const options = [9, 15, 25]; // You can add more options as needed
@@ -86,7 +87,7 @@ const FileGridAdmin = () => {
           border: "0.5px solid rgba(0, 0, 0, 0.05)",
         }}
       >
-        <div className="w-full pl-3 ">
+        <div className="w-[637px] pl-3 ">
           <input
             type="text"
             placeholder="Search"
@@ -94,11 +95,17 @@ const FileGridAdmin = () => {
           />
         </div>
 
-        <div className="flex items-center space-x-4 mr-3">
-          <button className="flex items-center justify-center px-4 py-2 border rounded-md bg-gray-100 text-gray-600 hover:bg-gray-200">
-            <FiGrid className="h-5 w-5" />
-          </button>
+        <div className=" flex w-[98px] h-[42px] rounded-md border-[1px] ">
+            {" "}
+            <button className="flex items-center justify-center px-4 py-2 border rounded-md bg-gray-100 text-gray-600 hover:bg-gray-200">
+              <FiGrid className="h-[15px] w-[20px]" />
+            </button>
+            <button className="flex items-center pl-3 ">
+            <BsListCheck  className="h-5 w-5" />
+            </button >
+          </div>
 
+        <div className="flex items-center space-x-4 mr-3">
           <select className="border bg-white rounded-md text-gray-600 p-2 ">
             <option>Latest</option>
             <option>Oldest</option>
@@ -158,7 +165,7 @@ const FileGridAdmin = () => {
             value={selectedOption}
             onChange={(e) => setSelectedOption(e.target.value)}
             className="border bg-white rounded-md text-gray-600 p-1 ml-2"
-            style={{ zIndex: 10, position: "relative" }} 
+            style={{ zIndex: 10, position: "relative" }}
           >
             {options.map((option) => (
               <option key={option} value={option}>
