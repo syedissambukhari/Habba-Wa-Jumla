@@ -26,6 +26,7 @@ const Header = () => {
   const [isCurrencyOpen, setIsCurrencyOpen] = useState(false);
   const [language, setLanguage] = useState("ENG");
   const [currency, setCurrency] = useState("SR");
+  const [isBlackFridayVisible, setIsBlackFridayVisible] = useState(true);
 
   const popupRef = useRef(null); // Reference for the login popup
   const cartRef = useRef(null); // Reference for the cart popup
@@ -57,7 +58,9 @@ const Header = () => {
     setCurrency(curr);
     setIsCurrencyOpen(false);
   };
-
+  const closeBlackFridayPopup = () => {
+    setIsBlackFridayVisible(false);
+  };
   // Close popups when clicking outside
   useEffect(() => {
     function handleClickOutside(event) {
@@ -80,6 +83,7 @@ const Header = () => {
 
   return (
     <div className="flex flex-col">
+      {isBlackFridayVisible &&(
       <div className="bg-black flex justify-between items-center p-2">
         <div className="flex gap-2 items-center px-[100px]">
           <p
@@ -104,10 +108,10 @@ const Header = () => {
           </button>
         </div>
         <div className="bg-[#073741] p-2">
-          <RxCross2 color="white" size={18} />
+          <RxCross2 color="white" size={18} onClick={closeBlackFridayPopup}/>
         </div>
       </div>
-
+      )}
       {/* Social Media Links */}
       <div className="flex justify-between bg-[#073741] p-2 px-[120px] w-full">
         <div>
