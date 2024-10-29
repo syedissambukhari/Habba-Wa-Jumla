@@ -23,7 +23,7 @@ const CostBreakdown = () => {
   };
 
   return (
-    <div className='w-[373px] h-auto mt-8 ml-8 rounded-[20px] shadow-[0_5px_25px_0_rgba(11,93,81,0.5)] p-4'>
+    <div className=' w-full h-auto mt-8 ml-8 rounded-[20px] shadow-[0_5px_25px_0_rgba(11,93,81,0.5)] p-4'>
       <div className='pl-6 pt-4'>
         <h1 className='font-plusjakartasans font-bold text-[16.7px] leading-5 text-[#111927]'>
           Cost Breakdown
@@ -37,15 +37,15 @@ const CostBreakdown = () => {
           <Doughnut data={data} />
         </div>
       </div>
-      <div className="mt-6">
+      <div className="mt-6 flex justify-between">
         <table className='w-full text-left'>
           <thead>
-            <tr className=''>
+            <tr className=' '>
               <th className='pb-2 pl-4 font-semibold font-inter text-[12px] flex items-center text-[#111927]'>Top Channel</th>
-              <th className='pb-2 font-semibold font-inter text-[12px] text-[#111927]'>Value</th>
+              <th className=' pb-2 font-semibold font-inter text-[12px] text-[#111927]'>Value</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody >
             {/* <tr className='border-b border-[#E2E3E6] '> */}
               <td className='py-2 flex items-center space-y-2 '>
                 <div className='w-3 h-3 mr-2 bg-[#E5E7EB] rounded-full'></div>

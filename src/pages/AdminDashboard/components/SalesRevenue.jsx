@@ -55,11 +55,11 @@ const SalesRevenue = () => {
   };
 
   return (
-    <div className='w-[778px] h-[435px] mt-8 ml-8 rounded-[20px] shadow-[0_5px_25px_0_rgba(11,93,81,0.5)] p-6'>
+    <div className='w-full h-[435px] mt-8 ml-8 rounded-[20px] shadow-[0_5px_25px_0_rgba(11,93,81,0.5)] p-6'>
       <h1 className='font-plusjakartasans font-bold text-[16.7px] leading-5 text-[#111927] pt-2'>
         Sales Revenue
       </h1>
-      <div className="mt-8">
+      <div className="mt-20">
         <Line data={data} options={options} />
       </div>
     </div>

@@ -41,7 +41,7 @@ const TopSellingProducts = () => {
         },
       ];
   return (
-    <div className='w-[372px] h-[686px] mt-4 ml-8 rounded-[20px] shadow-[0_5px_25px_0_rgba(11,93,81,0.5)] mr-8'>
+    <div className=' w-full h-[686px] mt-4 ml-8 rounded-[20px] shadow-[0_5px_25px_0_rgba(11,93,81,0.5)] mr-8'>
         <div className='flex justify-between items-center mb-4 pt-8 '>
         <h1 className='font-plusjakartasans font-bold text-[16.7px] leading-5 text-[#111927] pl-6 '>
         Top Selling Products

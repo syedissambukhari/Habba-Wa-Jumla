@@ -20,11 +20,11 @@ font-inter font-medium flex rounded-[20px] items-center justify-between px-5  h-
           New Post
         </button>
       </div>
-      <div className="w-[600px]">
+      <div className="w-full">
         <h2 className="font-bold font-plusjakartasans text-[36px] text-[#111927]">
           Recent Articles
         </h2>
-        <p className="font-inter font-normal text-4 text-[#6C737F] w-[665px]">
+        <p className="font-inter font-normal text-4 text-[#6C737F] w-full ">
           Discover the latest news, tips and user research insights from Acme.
           You will learn about web infrastructure, design systems and devops
           APIs best practices.
@@ -35,73 +35,74 @@ font-inter font-medium flex rounded-[20px] items-center justify-between px-5  h-
         
         
   
-  <div className="w-full md:w-[48%] rounded-[20px] shadow-[0_5px_25px_0_rgba(11,93,81,0.5)]">
-    <div className="h-full w-full flex flex-col rounded-[20px] ">
-      <div className="h-1/2 w-full">
-        <img
-          src="/blog/program.svg"
-          alt="program"
-          className="h-full w-full object-cover rounded-t-[20px]"
-        />
-      </div>
-      <div className="h-1/2 w-full flex flex-col mt-2 p-4 gap-2">
-        <h2 className="p-2 text-[13px] w-[107px] bg-[#1119271F] flex items-center justify-center rounded-[16px] font-inter font-[500]">
-          Programming
-        </h2>
-        <h1 className="font-bold font-plusjakartasans text-[23px] text-[#111927]">
-          Why I Still Lisp, and You Should Too
-        </h1>
-        <p className="font-inter font-normal text-[16px] text-[#6C737F]">
-          Aliquam dapibus elementum nulla at malesuada. Ut mi nisl, aliquet non mollis vel, feugiat non nibh.
-        </p>
-        <div className="flex gap-2 items-center justify-between flex-wrap mb-6">
-          <div className="flex gap-2 items-center min-w-0">
-            <img
-              src="/blog/avatar1.svg"
-              alt="author"
-              className="h-[40px] w-[40px] rounded-full"
-            />
-            <p className="font-semibold truncate">By Jie Yan Song • Feb 1, 2024</p>
-          </div>
-          <p className="text-gray-500">5 min read</p>
+        <div className="w-full md:w-[48%] rounded-[20px] shadow-[0_5px_25px_0_rgba(11,93,81,0.5)]">
+  <div className="h-full w-full flex flex-col rounded-[20px] ">
+    <div className="h-[200px] w-full">
+      <img
+        src="/blog/program.svg"
+        alt="program"
+        className="h-full w-full object-cover rounded-t-[20px]"
+      />
+    </div>
+    <div className="flex-grow w-full flex flex-col mt-2 p-4 gap-2">
+      <h2 className="p-2 text-[13px] w-[107px] bg-[#1119271F] flex items-center justify-center rounded-[16px] font-inter font-[500]">
+        Programming
+      </h2>
+      <h1 className="font-bold font-plusjakartasans text-[23px] text-[#111927]">
+        Why I Still Lisp, and You Should Too
+      </h1>
+      <p className="font-inter font-normal text-[16px] text-[#6C737F]">
+        Aliquam dapibus elementum nulla at malesuada. Ut mi nisl, aliquet non mollis vel, feugiat non nibh.
+      </p>
+      <div className="flex gap-2 items-center justify-between flex-wrap mt-auto">
+        <div className="flex gap-2 items-center min-w-0">
+          <img
+            src="/blog/avatar1.svg"
+            alt="author"
+            className="h-[40px] w-[40px] rounded-full"
+          />
+          <p className="font-semibold truncate">By Jie Yan Song • Feb 1, 2024</p>
         </div>
+        <p className="text-gray-500">5 min read</p>
       </div>
     </div>
   </div>
+</div>
 
-  <div className="w-full md:w-[48%] rounded-[20px] shadow-[0_5px_25px_0_rgba(11,93,81,0.5)]">
-    <div className="h-full w-full flex flex-col rounded-[20px]">
-      <div className="h-1/2 w-full">
-        <img
-          src="/blog/productivity.svg"
-          alt="productivity"
-          className="h-full w-full object-cover rounded-t-[20px]"
-        />
-      </div>
-      <div className="h-1/2 w-full flex flex-col mt-2 p-4 gap-2">
-        <h2 className="p-2 text-[13px] w-[107px]  flex items-center justify-center rounded-[16px] font-inter font-[500] bg-[#1119271F]">
-          Productivity
-        </h2>
-        <h1 className="font-bold font-plusjakartasans text-[23px] text-[#111927]">
+<div className="w-full md:w-[48%] rounded-[20px] shadow-[0_5px_25px_0_rgba(11,93,81,0.5)]">
+  <div className="h-full w-full flex flex-col rounded-[20px]">
+    <div className="h-[200px] w-full">
+      <img
+        src="/blog/productivity.svg"
+        alt="productivity"
+        className="h-full w-full object-cover rounded-t-[20px]"
+      />
+    </div>
+    <div className="flex-grow w-full flex flex-col mt-2 p-4 gap-2">
+      <h2 className="p-2 text-[13px] w-[107px]  flex items-center justify-center rounded-[16px] font-inter font-[500] bg-[#1119271F]">
+        Productivity
+      </h2>
+      <h1 className="font-bold font-plusjakartasans text-[23px] text-[#111927]">
         Scrum Has Hit the Glass Ceiling
-        </h1>
-        <p className="font-inter font-normal text-[16px] text-[#6C737F]">
+      </h1>
+      <p className="font-inter font-normal text-[16px] text-[#6C737F]">
         Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-        </p>
-        <div className="flex gap-2 items-center justify-between flex-wrap mb-6">
-          <div className="flex gap-2 items-center">
-            <img
-              src="/blog/avatar2.svg"
-              alt="author"
-              className="h-[40px] w-[40px] rounded-full"
-            />
-            <p className="font-semibold">By Omar Darobe • Feb 1, 2024</p>
-          </div>
-          <p className="text-gray-500">6 min read</p>
+      </p>
+      <div className="flex gap-2 items-center justify-between flex-wrap mt-auto">
+        <div className="flex gap-2 items-center">
+          <img
+            src="/blog/avatar2.svg"
+            alt="author"
+            className="h-[40px] w-[40px] rounded-full"
+          />
+          <p className="font-semibold">By Omar Darobe • Feb 1, 2024</p>
         </div>
+        <p className="text-gray-500">6 min read</p>
       </div>
     </div>
   </div>
+</div>
+
 {/* </div> */}
 
         
@@ -116,7 +117,7 @@ font-inter font-medium flex rounded-[20px] items-center justify-between px-5  h-
           className="h-full w-full object-cover rounded-t-[20px]"
         />
       </div>
-      <div className="h-1/2 w-full flex flex-col mt-2 p-4 gap-2">
+      <div className="flex-grow w-full flex flex-col mt-2 p-4 gap-2">
         <h2 className="p-2 text-[13px] w-[107px] bg-gray-300 flex items-center justify-center rounded-[16px] font-inter font-[500] bg-[#1119271F]">
           Entreprenuers
         </h2>
@@ -151,7 +152,7 @@ font-inter font-medium flex rounded-[20px] items-center justify-between px-5  h-
           className="h-full w-full object-cover rounded-t-[20px]"
         />
       </div>
-      <div className="h-1/2 w-full flex flex-col mt-2 p-4 gap-2">
+      <div className="flex-grow w-full flex flex-col mt-2 p-4 gap-2">
         <h2 className="p-2 text-[13px] w-[107px] bg-gray-300 flex items-center justify-center rounded-[16px] font-inter font-[500] bg-[#1119271F]">
           Innovations
         </h2>
@@ -162,7 +163,7 @@ font-inter font-medium flex rounded-[20px] items-center justify-between px-5  h-
         Phasellus eu commodo lacus, eget tristique nunc. Ut ullamcorper semper nunc
         sit amet vehicula.
         </p>
-        <div className="flex gap-2 items-center justify-between flex-wrap mb-6">
+        <div className="flex gap-2 items-center justify-between flex-wrap mt-auto">
           <div className="flex gap-2 items-center">
             <img
               src="/blog/avatar4.svg"
@@ -188,31 +189,40 @@ font-inter font-medium flex rounded-[20px] items-center justify-between px-5  h-
         </div>
       </div>
 
-      <div className="mt-5 w-full h-[373px]  p-20 flex justify-center flex-col  border rounded-[20px] mb-5  
-      shadow-[0_5px_25px_0_rgba(11,93,81,0.5)]">
-        <div className="flex justify-between flex-col lg:flex-row gap-4">
-          <div>
-        <h1 className="font-bold font-plusjakartasans text-[33px] text-[#111927]">
-          Join the developer list
-        </h1>
+      <div className="mt-5 w-full h-auto p-6 sm:p-20 flex justify-center flex-col border rounded-[20px] mb-5 shadow-[0_5px_25px_0_rgba(11,93,81,0.5)]">
+  <div className="flex flex-col lg:flex-row justify-between gap-6">
+    {/* Text and Input Section */}
+    <div className="w-full lg:w-1/2">
+      <h1 className="font-bold font-plusjakartasans text-[24px] sm:text-[33px] text-[#111927]">
+        Join the developer list
+      </h1>
       <p className="text-[14px] font-inter font-normal text-[#6C737F]">
-          Subscribe to our newsletter to make sure you don't miss anything.
-        </p>
-        <div className="flex mt-5 items-center border border-gray-300 rounded-lg p-2 w-full sm:w-[600px] ">
-          <input
-            type="email"
-            placeholder="Email address"
-            className="flex-grow p-2 outline-none border-none text-gray-700"
-          />
-          <BsMailbox size={24} className="text-[#0B5D51]" />
-        </div>
-        <button className="sm:w-[600px] w-full p-4 font-inter font-semibold text-white rounded-[12px] bg-[#0B5D51] mt-5">
-          Subscribe
-        </button>
-        </div>
-        <img src="/blog/iconly-glass.svg" alt="glass" className="sm:w-[260px] w-full sm:h-[183px] h-[80px] mt-4"/>
-        </div>
+        Subscribe to our newsletter to make sure you don't miss anything.
+      </p>
+      <div className="flex mt-5 items-center border border-gray-300 rounded-lg p-2 w-full">
+        <input
+          type="email"
+          placeholder="Email address"
+          className="flex-grow p-2 outline-none border-none text-gray-700"
+        />
+        <BsMailbox size={24} className="text-[#0B5D51]" />
       </div>
+      <button className="w-full   p-4 font-inter font-semibold text-white rounded-[12px] bg-[#0B5D51] mt-5">
+        Subscribe
+      </button>
+    </div>
+
+    {/* Image Section */}
+    <div className="flex justify-center lg:justify-end">
+      <img
+        src="/blog/iconly-glass.svg"
+        alt="glass"
+        className=" w-32 h-32 sm:w-40 sm:h-40 lg:w-52 lg:h-52 "
+      />
+    </div>
+  </div>
+</div>
+
     </div>
   );
 };

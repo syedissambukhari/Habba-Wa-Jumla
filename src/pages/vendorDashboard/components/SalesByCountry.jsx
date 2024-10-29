@@ -13,19 +13,19 @@ const SalesByCountry = () => {
         ],
       };
   return (
-    <div className='w-[778px] h-[507px] mt-8 ml-8 rounded-[20px] shadow-[0_5px_25px_0_rgba(11,93,81,0.5)] p-6 '>
+    <div className='w-full h-full mt-8 ml-8 rounded-[20px] shadow-[0_5px_25px_0_rgba(11,93,81,0.5)] p-6 '>
        <h1 className='font-plusjakartasans font-bold text-[16.7px] leading-5 text-[#111927]  pt-2'>
        Sales By Country
        </h1>  
        <div className='flex '>
-         <div className='pt-[120px] pl-6'>
+         <div className='pt-[120px] lg:pl-6'>
             <img src="/map.svg" alt="" />
          </div>
               {/* data */}
               <div className="bg-white p-4 ">
             <p className="text-[14px]  font-inter font-normal text-[#6C737F]">Total</p>
-             <h1 className='text-[#111927] font-plusjakartasans font-bold text-[23.3px] mb-4'>$152k</h1>
-            <ul className="space-y-8">
+             <h1 className='text-[#111927] font-plusjakartasans font-bold lg:text-[23.3px] mb-4'>$152k</h1>
+            <ul className="lg:space-y-8 space-y-4">
               {data.countries.map((country) => (
              <li key={country.name} className="flex items-center font-inter font-[500] text-[14px]  text-[#111927] ">
                 

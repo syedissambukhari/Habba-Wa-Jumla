@@ -4,7 +4,7 @@ import { IoSearchOutline } from "react-icons/io5";
 
 const VendorHeader = () => {
   return (
-    <div className='w-full h-[64px] pt-8 bg-[#FFFFFFCC] backdrop-blur-[6px] flex items-center px-8 '>
+    <div className='w-full h-[64px] pt-8 bg-[#FFFFFFCC] backdrop-blur-[6px] flex items-center pl-14 lg:px-8 '>
       {/* Search Icon */}
       <IoSearchOutline className='w-[40px] h-[40px] text-[#0B5D51]' />
       

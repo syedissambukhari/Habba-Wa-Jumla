@@ -36,7 +36,7 @@ font-inter font-medium flex rounded-[20px] items-center justify-between px-5  h-
       </div>
 
       <div className="h-[198px] w-full rounded-[20px] shadow-[0_3px_10px_0px_rgba(11,93,81,0.5)] flex justify-between px-5 ">
-        <h2 className="inline mt-10 font-plusjakartasans font-bold text-[16.7px] text-[#111927] ">
+        <h2 className="inline mt-10 font-plusjakartasans font-bold text-[16.7px] text-[#111927] mx-auto ">
           Basic Details
         </h2>
         <div className="flex flex-col w-[861px] gap-10 h-full justify-center">
@@ -57,14 +57,14 @@ font-inter font-medium flex rounded-[20px] items-center justify-between px-5  h-
         <h2 className="inline mt-10 font-plusjakartasans font-bold text-[16.7px] text-[#111927] ">
           Post Cover
         </h2>
-        <div className="flex flex-col w-[861px] gap-3 h-full justify-center ">
-        <div className="relative">
+        <div className="flex flex-col w-[861px] gap-3 h-full justify-center  ">
+        <div className="relative  ">
   <img
     src="/blog/create1.svg"
     alt=""
     className="w-full h-[230px] rounded-2xl"
   />
-    <div className="absolute bottom-[-15px] right-[-15px] bg-[#0B5D51] text-white rounded-[22px] w-11 h-11 flex items-center justify-center font-bold text-sm">
+    <div className="absolute bottom-[-15px]  right-[-15px] bg-[#0B5D51] text-white rounded-[22px] w-11 h-11 flex items-center justify-center font-bold text-sm">
     <img src="/setting.svg" alt="badge" className="w-6 h-6" />
      </div>
   </div>

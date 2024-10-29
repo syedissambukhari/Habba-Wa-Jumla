@@ -15,11 +15,11 @@ const TrackOrder = () => {
           below and press the “Track Order” button. This was given to you on
           your receipt and in the confirmation email you should have received.
         </p>
-        <form className="grid grid-rows-1 gap-6 lg:grid-rows-1 lg:gap-[24px] w-full lg:w-[872px] sm:grid-cols-2">
+        <form className=" lg:flex gap-6  ">
           <div className="w-full">
             <label
               htmlFor="orderId"
-              className="text-[14px] font-medium leading-[20px] text-left font-public-sans  text-[#191C1F] "
+              className="text-[14px] font-medium leading-[20px] text-left font-publicsans  text-[#191C1F] "
             >
               Order ID
             </label>
@@ -48,7 +48,8 @@ const TrackOrder = () => {
               required
             />
           </div>
-          <div className="flex col-span-1 gap-[6px] mb-1">
+          </form>
+          <div className="flex col-span-1 gap-[6px] my-4">
             <BsInfoCircle
               className="w-[22px] h-[21px] gap-0 top-[6.75px] left-[10.69px] text-gray-600 mr-2
 
@@ -60,7 +61,7 @@ const TrackOrder = () => {
             </p>
           </div>
 
-          <div className="col-span-2">
+          <div className="col-span-2 mt-8">
             <Link
               to="/TrackOrderDetails"
               className=" w-[217px] h-[56px] px-[32px] py-[0px] gap-[12px] rounded-[3px]  bg-[#0B5D51] 
@@ -75,7 +76,7 @@ const TrackOrder = () => {
               <GoArrowRight className="w-[24px] h-[24px] text-white" />
             </Link>
           </div>
-        </form>
+        
       </div>
     </div>
   );

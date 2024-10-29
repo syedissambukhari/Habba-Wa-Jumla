@@ -2,11 +2,14 @@ import { Link, useLocation } from "react-router-dom";
 import { PiShoppingCartDuotone } from "react-icons/pi";
 import { IoMdArrowDropright } from "react-icons/io";
 import { useState } from "react";
-
+import { IoMdMenu } from "react-icons/io";
+import { IoMdClose } from "react-icons/io";
 // Sidebar component
 const Sidebar = () => {
   const location = useLocation(); // Get current location
   const [isLogisticsOpen, setIsLogisticsOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   // State management for dropdowns
   const [dropdowns, setDropdowns] = useState({
     orders: false,
@@ -24,19 +27,43 @@ const Sidebar = () => {
     setIsLogisticsOpen(!isLogisticsOpen); // Toggle the sub-menu when clicked
   };
   return (
-    <div className="h-full w-[280px] bg-[#0B5D51] text-white flex flex-col items-start p-4">
+    <> 
+    <div className="md:hidden fixed top-5 left-4 z-[100]">
+    {isSidebarOpen ? (
+      <IoMdClose
+        className="text-white w-8 h-8 cursor-pointer"
+        onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+      />
+    ) : (
+      <IoMdMenu
+        className="text-black w-8 h-8 cursor-pointer"
+        onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+      />
+    )}
+  </div>
+  <div
+        className={`fixed top-0 left-0 sm:h-full lg:w-[280px] bg-[#0B5D51] text-white flex-col items-start p-4 transition-transform transform z-[50] ${
+          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+        } md:relative lg:h-full md:translate-x-0 md:flex md:overflow-visible overflow-y-auto h-[100vh]`}
+           // Fixed scroll issue with overflow
+        // height: '100vh'   // Sidebar takes full viewport height
+      >
+
+    {/* <div className="h-full w-[280px] bg-[#0B5D51] text-white flex flex-col items-start p-4"> */}
       {/* Logo Section */}
       <div className="mt-[9px] ml-[35px] w-[95px] h-[86px]">
         <img src="/logoo.svg" alt="Logo" />
       </div>
 
       {/* Store Analytics */}
+      <Link to="/vendor/store-analytics">
       <div className="flex items-center bg-[#073741] w-[247.2px] h-[36px] mt-6 p-[6px_16px] gap-0 rounded-lg">
         <img src="/store.svg" className="w-5 h-5 mr-4" />
         <span className="font-inter font-semibold text-[14px]">
           Store Analytics
         </span>
       </div>
+      </Link>
 
       {/* Menu Items */}
       <nav className="flex-grow space-y-4 ml-2 mt-10">
@@ -250,6 +277,7 @@ const Sidebar = () => {
         </Link>
       </nav>
     </div>
+    </>
   );
 };
 
