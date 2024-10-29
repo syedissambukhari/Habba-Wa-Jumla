@@ -14,6 +14,7 @@ const Sidebar = () => {
     blogs: false,
     customers: false,
     Invoices: false,
+    Vendors: false,
   });
 
   const toggleDropdown = (key) => {
@@ -61,6 +62,37 @@ const Sidebar = () => {
               <DropdownLink
                 to="/vendor/CustomerDetails"
                 text="Details"
+                active={location.pathname === "/vendor/CustomerDetails"}
+              />
+            </DropdownMenu>
+          )}
+        </SidebarItem>
+        <SidebarItem
+          imgSrc="/customer.svg"
+          text="Vendors"
+          arrow
+          onClick={() => toggleDropdown("customers")}
+        >
+          {dropdowns.customers && (
+            <DropdownMenu>
+              <DropdownLink
+                to="/vendor/productlists"
+                text="List"
+                active={location.pathname === "/vendor/CustomerList"}
+              />
+              <DropdownLink
+                to="/vendor/productcreates"
+                text="Details"
+                active={location.pathname === "/vendor/CustomerDetails"}
+              />
+              <DropdownLink
+                to="/vendor/productcreates"
+                text="Edit"
+                active={location.pathname === "/vendor/CustomerDetails"}
+              />
+              <DropdownLink
+                to="/vendor/productcreates"
+                text="Vendor Approval"
                 active={location.pathname === "/vendor/CustomerDetails"}
               />
             </DropdownMenu>
@@ -203,8 +235,8 @@ const Sidebar = () => {
           )}
         </SidebarItem>
 
-        <Link  to="/vendor/Calendar"> 
-        <SidebarItem imgSrc="/calender.svg" text="Calendar" />
+        <Link to="/vendor/Calendar">
+          <SidebarItem imgSrc="/calender.svg" text="Calendar" />
         </Link>
 
         <SidebarItem imgSrc="/fileManager.svg" text="File Manager" />

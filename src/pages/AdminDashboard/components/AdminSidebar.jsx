@@ -12,6 +12,7 @@ const AdminSidebar = () => {
   const [isLogisticsOpen, setIsLogisticsOpen] = useState(false);
   const [isBlogOpen, setIsBlogOpen] = useState(false);
   const [isInvoicesOpen, setInvoicesOpen] = useState(false);
+  const [isVendorOpen, setIsVendorOpen] = useState(false);
 
   const toggleProductOpen = () => {
     setProductOpen(!isProductOpen);
@@ -36,7 +37,9 @@ const AdminSidebar = () => {
   const toggleBlogOpen = () => {
     setIsBlogOpen(!isBlogOpen);
   };
-
+  const toggleVendorOpen = () => {
+    setIsVendorOpen(!isVendorOpen);
+  };
   return (
     <div className="h-[1610px] w-[280px] bg-[#0B5D51] text-white flex flex-col items-start p-4">
       {/* Logo Section */}
@@ -105,6 +108,40 @@ const AdminSidebar = () => {
             </Link>
           </div>
         )}
+        <SidebarItem
+          imgSrc="/product.svg"
+          text="Vendors"
+          arrow
+          onClick={toggleVendorOpen}
+        />
+        {isVendorOpen && (
+          <div className="ml-8 mt-2 space-y-3">
+            <Link to="/admin/vendorslist">
+              <DropdownItem
+                text=" List"
+                isActive={location.pathname === "/admin/vendorslist"}
+              />
+            </Link>
+            <Link to="/admin/vendorsdetails">
+              <DropdownItem
+                text=" Details"
+                isActive={location.pathname === "/admin/vendorsdetails"}
+              />
+            </Link>
+            <Link to="/admin/vendorsedit">
+              <DropdownItem
+                text=" Edit"
+                isActive={location.pathname === "/admin/vendorsedit"}
+              />
+            </Link>
+            <Link to="/admin/vendorsapproval">
+              <DropdownItem
+                text=" Vendor Approval"
+                isActive={location.pathname === "/admin/vendorsapproval"}
+              />
+            </Link>
+          </div>
+        )}
 
         {/* Orders Dropdown */}
         <SidebarItem
@@ -160,26 +197,22 @@ const AdminSidebar = () => {
         >
           {isLogisticsOpen && (
             <div className="ml-8 mt-2 space-y-2">
-              <Link to="/vendor/vendorlogistics">
+              <Link to="/admin/adminlogistics">
                 <DropdownItem
                   text="Dashboard"
-                  isActive={location.pathname === "/vendor/vendorlogistics"}
+                  isActive={location.pathname === "/admin/adminlogistics"}
                 />
               </Link>
-              <Link to="/vendor/vendorlogisticsfleet">
+              <Link to="/admin/logisticsfleet">
                 <DropdownItem
                   text="Fleet"
-                  isActive={
-                    location.pathname === "/vendor/vendorlogisticsfleet"
-                  }
+                  isActive={location.pathname === "/admin/logisticsfleet"}
                 />
               </Link>
-              <Link to="/vendor/addvehicle">
+              <Link to="/admin/addvehicle">
                 <DropdownItem
                   text="Vehicle"
-                  isActive={
-                    location.pathname === "/vendor/vendorlogisticsfleet"
-                  }
+                  isActive={location.pathname === "/admin/addvehicle"}
                 />
               </Link>
             </div>
